@@ -40,6 +40,35 @@ void sceneButton(String t, float x, float y, int i, float ys) {
   text(t, x + w / 2, y + h / 2);
 }
 
+void sceneButtone(String t, float x, float y, float ys) {
+  float w = 180 + ys;
+  float h = 50;
+  fill(96, 96, 96, 96);
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    fill(56, 56, 56, 146);
+    if (mousePressed) {
+      exit();
+    }
+  } 
+  strokeWeight(1);
+  stroke(0);
+  rect(x, y, w, h, 2);
+  textSize(35);
+  textAlign(CENTER, CENTER);
+  fill(0, 0, 0);
+  text(t, x + w / 2, y + h / 2);
+  
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && floor(wins) > 0) {
+    stroke(0);
+    fill(255);
+    rect(mouseX + 10, mouseY, 150, 20, 5);
+    fill(0);
+    textSize(10);
+    textAlign(CENTER, CENTER);
+    text("WARNING will reset progress", mouseX+((150 / 2) + 10), mouseY + 10);
+  }
+}
+
 void sceneButtonr(String t, float x, float y, int i, float ys) {
   float w = 180 + ys;
   float h = 50;
