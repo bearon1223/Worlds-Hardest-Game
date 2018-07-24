@@ -58,7 +58,7 @@ void sceneButtone(String t, float x, float y, float ys) {
   fill(0, 0, 0);
   text(t, x + w / 2, y + h / 2);
   
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && floor(wins) > 0) {
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
     stroke(0);
     fill(255);
     rect(mouseX + 10, mouseY, 150, 20, 5);
