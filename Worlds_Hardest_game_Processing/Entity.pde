@@ -11,12 +11,12 @@ class player {
   }
 
   void render() {
-    stroke(0);
-    strokeWeight(2);
+    stroke(121, 0, 0);
+    strokeWeight(3);
     fill(255, 0, 0);
     rect(this.x, this.y, 15, 15);
   }
-  
+
   void win() {
     setup = false;
     scene++;
@@ -36,15 +36,15 @@ class player {
       fail++;
       allowd = false;
     }
-    if(a3 == color(0, 255, 119) || a2 == color(0, 255, 119)){
+    if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
       psx = this.x;
       psy = this.y;
     }
-    if(a1 == color(0, 254, 119) || a2 == color(0, 254, 119) || a3 == color(0, 254, 119) || a4 == color(0, 254, 119)){
+    if (a1 == color(0, 254, 119) || a2 == color(0, 254, 119) || a3 == color(0, 254, 119) || a4 == color(0, 254, 119)) {
       win();
     }
-    
-    if((a1 == color(255, 255, 0) || a2 == color(255, 255, 0) || a3 == color(255, 255, 0) || a4 == color(255, 255, 0))){
+
+    if ((a1 == color(255, 255, 0) || a2 == color(255, 255, 0) || a3 == color(255, 255, 0) || a4 == color(255, 255, 0))) {
       allowd = true;
     }
 
@@ -102,7 +102,7 @@ class enemys {
     this.Dx =x0 * 25;
     this.i = i;
     this.x = this.Sx;
-    
+
     this.speed = s;
   }
   void move() {
@@ -130,5 +130,48 @@ class enemys {
     stroke(0, 0, 0);
     noStroke();
     ellipse(this.x, y, 15, 15);
+  }
+}
+
+class enemyu {
+  float speeds = 2, Sy, y, x, Dy, speed;
+  boolean i;
+  enemyu(float x, float y, float y0, boolean i,float speedr) {
+    this.Sy = (y * 25);
+    this.y = this.Sy;
+    this.x = (x * 25);
+    this.Dy = (y0 * 25);
+    this.i = i;
+    if (i) {
+      this.speed = -speedr;
+    } else {
+      this.speed = speedr;
+    }
+  }
+
+  void move() {
+    if (!i) {
+      if (this.y > this.Dy) {
+        this.speed = -speeds;
+      }
+      if (this.y < this.Sy) {
+        this.speed = speeds;
+      }
+    } else if (i) {
+      if (this.y < this.Dy) {
+        this.speed = speeds;
+      }
+      if (this.y > this.Sy) {
+        this.speed = -speeds;
+      }
+    }
+    this.y += this.speed;
+  }
+  
+  void render() {
+    fill(0, 0, 255);
+    stroke(0, 0, 0);
+    noStroke();
+    ellipse(x, this.y, 15, 15);
   }
 }
