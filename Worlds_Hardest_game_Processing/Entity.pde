@@ -142,6 +142,7 @@ class enemyu {
     this.x = (x * 25);
     this.Dy = (y0 * 25);
     this.i = i;
+    speeds = speedr;
     if (i) {
       this.speed = -speedr;
     } else {
