@@ -9,8 +9,6 @@ void draw() {
   
   Scene();
   
-  text("X: " + mouseX + ", Y: " + mouseY, 300, 300);
-  
   if (scene != 0) {
     fill(255);
     textAlign(CORNER, CORNER);
