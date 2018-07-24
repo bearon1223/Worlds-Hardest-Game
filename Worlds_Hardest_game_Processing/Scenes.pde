@@ -9,6 +9,7 @@ void Scene() {
     fill(255, 255, 255);
     textAlign(CENTER, CENTER);
     text("Worlds Hardest Game", 300, 108);
+    sceneButtone("Exit", 300 - 190 / 2, 320, 0);
     level = 0;
   } else if (scene == 1) {
     background(0, 187, 255);
