@@ -1,4 +1,4 @@
-float fail = 0, wins = 0, level = 0;
+float fail = 0, wins = 30, level = 0;
 float psx, psy;
 
 void setup() {
@@ -8,6 +8,8 @@ player p = new player(91, 268, 1);
 void draw() {
   
   Scene();
+  
+  text("X: " + mouseX + ", Y: " + mouseY, 300, 300);
   
   if (scene != 0) {
     fill(255);

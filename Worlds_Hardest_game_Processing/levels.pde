@@ -1,4 +1,5 @@
 boolean setup;
+boolean allowd = false;
 enemys e = new enemys(7.5, 7.9, 16.5, false);
 enemys e2 = new enemys(16.5, 9.1, 7.5, true);
 enemys e3 = new enemys(7.5, 10.2, 16.5, false);
@@ -37,7 +38,7 @@ void level1(boolean display) {
     checkerboard2x2(6, 3);
     checkerboard2x2(7, 3);
     checkerboard1x2(15, 5, false);
-    end(18, 6, 4, 8);
+    end(18, 6, 4, 8, true);
     // start
     lineg(2, 6, 4, 0);
     lineg(2, 14, 6, 0);
@@ -90,11 +91,35 @@ void level1(boolean display) {
 };
 
 void level2() {
-  background(0, 187, 255);
-  checkpoint(2, 11, 3, 2);
-  checkerboard2x2(2, 5);
-  checkerboard2x2(3, 5);
-  checkerboard2x2(4, 5);
-  checkerboard2x2(5, 5);
-  checkerboard2x2(6, 5);
+  if (!setup) {
+    p = new player(86, 291, 1);
+    setup = true;
+  } else {
+    background(0, 187, 255);
+    checkpoint(2, 11, 3, 2);
+    checkerboard2x2(2, 5);
+    checkerboard2x2(3, 5);
+    checkerboard2x2(4, 5);
+    checkerboard2x2(5, 5);
+    checkerboard2x2(6, 5);
+    checkerboard2x2(7, 5);
+    checkerboard2x2(2, 4);
+    checkerboard2x2(3, 4);
+    checkerboard2x2(4, 4);
+    checkerboard2x2(5, 4);
+    checkerboard2x2(6, 4);
+    checkerboard2x2(7, 4);
+    checkerboard2x2(2, 6);
+    checkerboard2x2(3, 6);
+    checkerboard2x2(4, 6);
+    checkerboard2x2(5, 6);
+    checkerboard2x2(6, 6);
+    checkerboard2x2(7, 6);
+    end(17, 11, 3, 2, allowd);
+    fill(255, 255, 0);
+    ellipse(275, 300, 15, 15);
+    p.movement();
+    p.collision();
+    p.render();
+  }
 }
