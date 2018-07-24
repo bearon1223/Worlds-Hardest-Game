@@ -27,7 +27,7 @@ void end(float x, float y, float sx, float sy, boolean allow) {
   if (allow) {
     fill(0, 254, 119);
   } else {
-    fill(1, 254, 119);
+    fill(0, 255, 119);
   }
   noStroke();
   rect(x * 25, y * 25, sx * 25, sy * 25);
