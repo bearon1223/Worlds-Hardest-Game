@@ -5,6 +5,19 @@ void lineg(float x, float y, float sx, float sy) {
   line(x * 25, y * 25, (x * 25) + (sx * 25), (y * 25) + (sy * 25));
 }
 
+void coin(float x, float y, boolean stroked) {
+  if (!allowd) {
+    if (stroked) {
+      stroke(1);
+      strokeWeight(1);
+    } else {
+      noStroke();
+    }
+    fill(255, 255, 0);
+    ellipse(x, y, 15, 15);
+  }
+}
+
 void checkpoint(float x, float y, float  sx, float sy) {
   fill(0, 255, 119);
   noStroke();
@@ -29,6 +42,7 @@ void sceneButton(String t, float x, float y, int i, float ys) {
     if (mousePressed) {
       scene = i;
       setup = false;
+      allowd = false;
     }
   } 
   strokeWeight(1);
@@ -57,7 +71,7 @@ void sceneButtone(String t, float x, float y, float ys) {
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
   text(t, x + w / 2, y + h / 2);
-  
+
   if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
     stroke(0);
     fill(255);
@@ -82,6 +96,7 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
       setup = false;
       fail = 0;
       wins = 0;
+      allowd = false;
     }
   } 
   strokeWeight(1);

@@ -8,6 +8,41 @@ enemys e5 = new enemys(7.5, 12.4, 16.5, false);
 //enemys e6 = new enemys(414, 333, 186, true);
 //enemys e7 = new enemys(186, 363, 414, false);
 
+enemyu eu = new enemyu(0, 0, 0, false, 0);
+enemyu eu2 = new enemyu(0, 0, 0, false, 0);
+enemyu eu3 = new enemyu(0, 0, 0, false, 0);
+enemyu eu4 = new enemyu(0, 0, 0, false, 0);
+enemyu eu5 = new enemyu(0, 0, 0, false, 0);
+enemyu eu6 = new enemyu(0, 0, 0, false, 0);
+enemyu eu7 = new enemyu(0, 0, 0, false, 0);
+enemyu eu8 = new enemyu(0, 0, 0, false, 0);
+enemyu eu9 = new enemyu(0, 0, 0, false, 0);
+enemyu eu10 = new enemyu(0, 0, 0, false, 0);
+enemyu eu11 = new enemyu(0, 0, 0, false, 0);
+
+/*
+ checkpoint(2, 11, 3, 2);
+ checkerboard2x2(2, 5);
+ checkerboard2x2(3, 5);
+ checkerboard2x2(4, 5);
+ checkerboard2x2(5, 5);
+ checkerboard2x2(6, 5);
+ checkerboard2x2(7, 5);
+ checkerboard2x2(2, 4);
+ checkerboard2x2(3, 4);
+ checkerboard2x2(4, 4);
+ checkerboard2x2(5, 4);
+ checkerboard2x2(6, 4);
+ checkerboard2x2(7, 4);
+ checkerboard2x2(2, 6);
+ checkerboard2x2(3, 6);
+ checkerboard2x2(4, 6);
+ checkerboard2x2(5, 6);
+ checkerboard2x2(6, 6);
+ checkerboard2x2(7, 6);
+ end(17, 11, 3, 2, allowd);
+ */
+
 
 void level1(boolean display) {
   if (!setup) {
@@ -91,8 +126,21 @@ void level1(boolean display) {
 };
 
 void level2() {
+  float s = 1.5;
   if (!setup) {
     p = new player(86, 291, 1);
+    eu = new enemyu(5.9, 9.8, 14.2, false, s);
+    eu2 = new enemyu(7, 14.2, 9.8, true, s);
+    eu3 = new enemyu(8, 9.8, 14.2, false, s);
+    eu4 = new enemyu(9, 14.2, 9.8, true, s);
+    eu5 = new enemyu(10, 9.8, 14.2, false, s);
+    eu6 = new enemyu(11, 14.2, 9.8, true, s);
+    eu7 = new enemyu(12, 9.8, 14.2, false, s);
+    eu8 = new enemyu(13, 14.2, 9.8, true, s);
+    eu9 = new enemyu(14, 9.8, 14.2, false, s);
+    eu10 = new enemyu(15, 14.2, 9.8, true, s);
+    eu11 = new enemyu(16.1, 9.8, 14.2, false, s);
+    
     setup = true;
   } else {
     background(0, 187, 255);
@@ -116,8 +164,43 @@ void level2() {
     checkerboard2x2(6, 6);
     checkerboard2x2(7, 6);
     end(17, 11, 3, 2, allowd);
-    fill(255, 255, 0);
-    ellipse(275, 300, 15, 15);
+    lineg(2, 11, 3, 0);
+    lineg(17, 11, 3, 0);
+    lineg(2, 13, 3, 0);
+    lineg(17, 13, 3, 0);
+    lineg(17, 9, 0, 2);
+    lineg(5, 13, 0, 2);
+    lineg(17, 13, 0, 2);
+    lineg(5, 9, 0, 2);
+    lineg(5, 9, 12, 0);
+    lineg(5, 15, 12, 0);
+    lineg(2, 11, 0, 2);
+    lineg(20, 11, 0, 2);
+    coin(275, 300, true);
+
+    eu.move();
+    eu.render();
+    eu2.move();
+    eu2.render();
+    eu3.move();
+    eu3.render();
+    eu4.move();
+    eu4.render();
+    eu5.move();
+    eu5.render();
+    eu6.move();
+    eu6.render();
+    eu7.move();
+    eu7.render();
+    eu8.move();
+    eu8.render();
+    eu9.move();
+    eu9.render();
+    eu10.move();
+    eu10.render();
+    eu11.move();
+    eu11.render();
+
     p.movement();
     p.collision();
     p.render();
