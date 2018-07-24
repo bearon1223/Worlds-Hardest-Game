@@ -16,6 +16,13 @@ class player {
     fill(255, 0, 0);
     rect(this.x, this.y, 15, 15);
   }
+  
+  void win() {
+    setup = false;
+    scene++;
+    wins++;
+    allowd = false;
+  }
 
   void collision() {
     color a1 = get(int(this.x), int(this.y));
@@ -27,15 +34,18 @@ class player {
       this.x = psx;
       this.y = psy;
       fail++;
+      allowd = false;
     }
     if(a3 == color(0, 255, 119) || a2 == color(0, 255, 119)){
       psx = this.x;
       psy = this.y;
     }
     if(a1 == color(0, 254, 119) || a2 == color(0, 254, 119) || a3 == color(0, 254, 119) || a4 == color(0, 254, 119)){
-      setup = false;
-      scene++;
-      wins++;
+      win();
+    }
+    
+    if((a1 == color(255, 255, 0) || a2 == color(255, 255, 0) || a3 == color(255, 255, 0) || a4 == color(255, 255, 0))){
+      allowd = true;
     }
 
     if ((a1 == color(0) || a2 == color(0) || a3 == color(0) || a4 == color(0)) && keyCode == LEFT) {
