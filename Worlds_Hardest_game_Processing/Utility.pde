@@ -14,6 +14,18 @@ void coin(float x, float y, boolean stroked) {
       noStroke();
     }
     fill(255, 255, 0);
+    ellipse((x * 25) + (25 / 2), (y * 25) + (25 / 2), 15, 15);
+  }
+}
+void coin(float x, float y, boolean stroked, float i) {
+  if (!allowd) {
+    if (stroked) {
+      stroke(1);
+      strokeWeight(1);
+    } else {
+      noStroke();
+    }
+    fill(255, 255, 0);
     ellipse(x, y, 15, 15);
   }
 }
@@ -47,7 +59,7 @@ void sceneButton(String t, float x, float y, int i, float ys) {
   } 
   strokeWeight(1);
   stroke(0);
-  rect(x, y, w, h, 2);
+  rect(x, y, w, h, 3);
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
@@ -66,7 +78,7 @@ void sceneButtone(String t, float x, float y, float ys) {
   } 
   strokeWeight(1);
   stroke(0);
-  rect(x, y, w, h, 2);
+  rect(x, y, w, h, 3);
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
@@ -101,7 +113,7 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
   } 
   strokeWeight(1);
   stroke(0);
-  rect(x, y, w, h, 2);
+  rect(x, y, w, h, 3);
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
@@ -129,6 +141,18 @@ void checkerboard2x2(float x, float y) {
   rect(25+(25*(offx+1)), 25+(25*(offy+1)), widths, widths);
   fill(240, 240, 240);
   rect(25+(25*(offx+1)), 25+(25*offy), widths, widths);
+}
+
+void checkerboard1x1(float x, float y, boolean i) {
+  float offx = x;
+  float offy = y;
+  float widths = 25;
+  if (i) {
+    fill(240, 240, 240);
+  } else {
+    fill(255, 255, 255);
+  }
+  rect(25+(25*offx), 25+(25*offy), widths, widths);
 }
 
 void checkerboard1x2(float x, float y, boolean i) {

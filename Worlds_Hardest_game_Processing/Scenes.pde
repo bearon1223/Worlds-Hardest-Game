@@ -19,11 +19,17 @@ void Scene() {
     if (floor(wins) >= 1) {
       sceneButton("Level 2", 10, 260, 3, 0);
     }
+    if (floor(wins) >= 2) {
+      sceneButton("Level 3", 10, 320, 4, 0);
+    }
   } else if (scene == 2) {
     level1(false);
     level = 1;
-  } else if ( scene == 3) {
+  } else if (scene == 3) {
     level2();
     level = 2;
+  } else if (scene == 4) {
+    level3();
+    level = 3;
   }
 }
