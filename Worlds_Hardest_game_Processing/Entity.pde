@@ -176,3 +176,34 @@ class enemyu {
     ellipse(x, this.y, 15, 15);
   }
 }
+
+class enemyp {
+
+  void howto() {
+    fill(255);
+    textSize(20);
+    text("px1 / py1 = top left, px2 / py2 = top right, px3 / py3 = bottom right, px4 / py4 = bottom left", 10, 50);
+  }
+
+  float x1, x2, x3, x4, y1, y2, y3, y4, x, y;
+
+  enemyp(float px1, float py1, float px2, float py2, float px3, float py3, float px4, float py4) {
+    this.x1 = px1 * 25;
+    this.x2 = px2 * 25;
+    this.x3 = px3 * 25;
+    this.x4 = px4 * 25;
+    this.y1 = py1 * 25;
+    this.y2 = py2 * 25;
+    this.y3 = py3 * 25;
+    this.y4 = py4 * 25;
+    this.x = x1;
+    this.y = y1;
+  }
+
+
+  void movement() {
+    if(this.x >= this.x2 && this.y >= this.y2){
+      
+    }
+  }
+}
