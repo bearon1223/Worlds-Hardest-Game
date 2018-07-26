@@ -111,6 +111,16 @@ class enemys {
 
     this.speed = s;
   }
+  
+  enemys(float x, float y, float x0, boolean i, float ss) {
+    this.Sx = (x * 25);
+    this.y = (y * 25);
+    this.Dx =x0 * 25;
+    this.i = i;
+    this.x = this.Sx;
+    s = ss;
+    this.speed = ss;
+  }
   void move() {
     if (!i) {
       if (this.x < this.Sx) {

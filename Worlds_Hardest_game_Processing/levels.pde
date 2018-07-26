@@ -1,5 +1,8 @@
 boolean setup;
 boolean allowd = false;
+
+player p = new player(91, 268, 1);
+
 enemys e = new enemys(7.5, 7.9, 16.5, false);
 enemys e2 = new enemys(16.5, 9.1, 7.5, true);
 enemys e3 = new enemys(7.5, 10.2, 16.5, false);
@@ -224,68 +227,63 @@ void level2() {
 void level3() {
   if (!setup) {
     p = new player(2.5*25, 11.5 * 25, 1);
+    e = new enemys(6, 11.5, 18, false, 1);
+    e2 = new enemys(6, 12.5, 18, false, 1);
+    e3 = new enemys(18, 11.5, 6, true, 1);
+    e4 = new enemys(18, 12.5, 6, true, 1);
+    //e = new enemys(170 / 25, 290 / 25, 297.5 / 25, false, 1.5);
+    //e2 = new enemys(170 / 25, 310 / 25, 297.5 / 25, false, 1.5);
+    //e3 = new enemys(425 / 25, 290 / 25, 297.5 / 25, true, 1.5);
+    //e4 = new enemys(425 / 25, 310 / 25, 297.5 / 25, true, 1.5);
     setup = true;
   } else {
     background(0, 187, 255);
     checkpoint(2, 11, 3, 2);
     checkerboard2x2(2, 5);
-    
-    p.movement();
-    p.collision();
-    p.render();
-  }
-}
+    checkerboard2x2(3, 5);
+    checkerboard2x2(4, 5);
+    checkerboard2x2(5, 5);
+    checkerboard2x2(6, 5);
+    checkerboard2x2(7, 5);
+    checkerboard2x2(8, 5);
+    checkpoint(7, 9, 1, 1);
+    checkpoint(10, 14, 1, 1);
+    checkpoint(13, 9, 1, 1);
+    checkpoint(16, 14, 1, 1);
+    checkerboard1x1(12, 9, true);
+    checkerboard1x1(15, 12, true);
+    checkerboard1x1(9, 12, true);
+    checkerboard1x1(6, 9, true);
+    end(19, 11, 3, 2, true);
+    lineg(2, 11, 5, 0);
+    lineg(8, 11, 5, 0);
+    lineg(14, 11, 8, 0);
+    lineg(2, 13, 8, 0);
+    lineg(11, 13, 5, 0);
+    lineg(17, 13, 5, 0);
+    lineg(2, 11, 0, 2);
+    lineg(22, 11, 0, 2);
+    lineg(7, 9, 0, 2);
+    lineg(8, 9, 0, 2);
+    lineg(13, 9, 0, 2);
+    lineg(14, 9, 0, 2);
+    lineg(10, 13, 0, 2);
+    lineg(11, 13, 0, 2);
+    lineg(16, 13, 0, 2);
+    lineg(17, 13, 0, 2);
+    lineg(7, 9, 1, 0);
+    lineg(13, 9, 1, 0);
+    lineg(10, 15, 1, 0);
+    lineg(16, 15, 1, 0);
 
-void level3b() {
-  if (!setup) {
-    setup = true;
-    p = new player(12.25 * 25, 11.25 * 25, 1);
-    ep = new enemyp(8.5, 8.5, 16.5, 8.5, 16.5, 14.5, 8.5, 14.5, 8.5, 8.5);
-    ep2 = new enemyp(8.5, 8.5, 16.5, 8.5, 16.5, 14.5, 8.5, 14.5, 9, 8.5);
-    ep3 = new enemyp(8.5, 8.5, 16.5, 8.5, 16.5, 14.5, 8.5, 14.5, 9.5, 8.5);
-    ep4 = new enemyp(8.5, 8.5, 16.5, 8.5, 16.5, 14.5, 8.5, 14.5, 10, 8.5);
-    ep5 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    ep6 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    ep7 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    ep8 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    ep9 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    ep10 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    ep11 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-  } else if (setup) {
-    background(0, 187, 255);
-    end(10, 10, 5, 3, allowd);
-    checkerboard1x1(15, 7, true);
-    checkerboard1x1(15, 8, false);
-    checkerboard1x1(15, 9, true);
-    checkerboard1x2(14, 10, true);
-    checkerboard1x1(15, 11, true);
-    checkerboard1x2(14, 7, false);
-    checkerboard1x2(12, 7, false);
-    checkerboard1x2(10, 7, false);
-    checkerboard1x2(8, 7, false);
-    checkerboard1x1(7, 7, true);
-    checkerboard1x1(7, 8, false);
-    checkerboard1x1(7, 9, true);
-    checkerboard1x2(7, 10, false);
-    checkerboard1x1(7, 11, true);
-    checkerboard1x1(7, 12, false);
-    checkerboard1x1(7, 13, true);
-    checkerboard1x1(15, 12, false);
-    checkerboard1x1(15, 13, true);
-    checkerboard1x2(14, 13, false);
-    checkerboard1x2(12, 13, false);
-    checkerboard1x2(10, 13, false);
-    checkerboard1x2(8, 13, false);
-    //ep.howto();
-
-    ep.movement();
-    ep.render();
-    ep2.movement();
-    ep2.render();
-    ep3.movement();
-    ep3.render();
-    ep4.movement();
-    ep4.render();
+    e.move();
+    e.render();
+    e2.move();
+    e2.render();
+    e3.move();
+    e3.render();
+    e4.move();
+    e4.render();
 
     p.movement();
     p.collision();

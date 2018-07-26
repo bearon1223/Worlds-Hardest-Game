@@ -28,6 +28,9 @@ void coin(float x, float y, boolean stroked, float i) {
     fill(255, 255, 0);
     ellipse(x, y, 15, 15);
   }
+  if (i == 1) {
+    text("the is 'the' most used word in 'the' english language!", 10, -20);
+  }
 }
 
 void checkpoint(float x, float y, float  sx, float sy) {
@@ -118,7 +121,7 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
   text(t, x + w / 2, y + h / 2);
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && floor(wins) > 0) {
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && (floor(fail) > 0 || floor(wins) > 0)) {
     stroke(0);
     fill(255);
     rect(mx + 10, my, 150, 20, 5);
