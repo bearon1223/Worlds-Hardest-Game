@@ -290,3 +290,14 @@ void level3() {
     p.render();
   }
 }
+
+void level4() {
+  if (!setup) {
+    p = new player(1, 1, 1);
+    setup = true;
+  } else {
+    background(0, 187, 255);
+    checkpoint(10, 2, 2, 2);
+    
+  }
+}

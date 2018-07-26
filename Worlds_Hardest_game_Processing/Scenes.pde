@@ -31,5 +31,8 @@ void Scene() {
   } else if (scene == 4) {
     level3();
     level = 3;
+  } else if (scene == 5) {
+    level4();
+    level = 4;
   }
 }
