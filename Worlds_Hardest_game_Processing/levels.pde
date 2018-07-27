@@ -1,5 +1,6 @@
 boolean setup;
 boolean allowd = false;
+float rotatary_dude = 0;
 
 player p = new player(91, 268, 1);
 
@@ -295,9 +296,48 @@ void level4() {
   if (!setup) {
     p = new player(1, 1, 1);
     setup = true;
+    rotatary_dude = 0;
   } else {
     background(0, 187, 255);
     checkpoint(10, 2, 2, 2);
-    
+    translate(300, 300);
+    rotate(rotatary_dude);
+    fill(0, 0, 255);
+    ellipse(0, 0, 15, 15);
+    ellipse(0, -30, 15, 15);
+    ellipse(0, 30, 15, 15);
+    ellipse(-30, 0, 15, 15);
+    ellipse(30, 0, 15, 15);
+    ellipse(0, -60, 15, 15);
+    ellipse(0, 60, 15, 15);
+    ellipse(-60, 0, 15, 15);
+    ellipse(60, 0, 15, 15);
+    ellipse(0, -90, 15, 15);
+    ellipse(0, 90, 15, 15);
+    ellipse(-90, 0, 15, 15);
+    ellipse(90, 0, 15, 15);
+    ellipse(0, -120, 15, 15);
+    ellipse(0, 120, 15, 15);
+    ellipse(-120, 0, 15, 15);
+    ellipse(120, 0, 15, 15);
+    ellipse(0, -150, 15, 15);
+    ellipse(0, 150, 15, 15);
+    ellipse(-150, 0, 15, 15);
+    ellipse(150, 0, 15, 15);
+    ellipse(0, -180, 15, 15);
+    ellipse(0, 180, 15, 15);
+    ellipse(-180, 0, 15, 15);
+    ellipse(180, 0, 15, 15);
+    rotate(-rotatary_dude);
+    rotatary_dude+=0.007;
+    if(rotatary_dude >= 360){
+      rotatary_dude = 0;
+    }
+    translate(-300, -300);
+    fill(255);
+    text(rotatary_dude, 300, 300);
+    p.movement();
+    p.collision();
+    p.render();
   }
 }

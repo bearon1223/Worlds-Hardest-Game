@@ -22,6 +22,9 @@ void Scene() {
     if (floor(wins) >= 2) {
       sceneButton("Level 3", 10, 320, 4, 0);
     }
+    if (floor(wins) >= 3) {
+      sceneButton("Level 4", 10, 380, 5, 0);
+    }
   } else if (scene == 2) {
     level1(false);
     level = 1;
