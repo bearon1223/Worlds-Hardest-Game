@@ -20,7 +20,9 @@ class player {
   void win() {
     setup = false;
     scene++;
-    wins++;
+    if (level > wins) {
+      wins++;
+    }
     allowd = false;
     allowed = false;
   }
@@ -37,7 +39,11 @@ class player {
       this.x = psx;
       this.y = psy;
       fail++;
-      allowd = allowed;
+      if (coinAmountPublic < 1) {
+        allowd = allowed;
+      } else if (coinAmountPublic > 1) {
+        coinsCollected = 0;
+      }
     }
     if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
       psx = this.x;
@@ -46,12 +52,18 @@ class player {
         allowed = true;
       }
     }
+
     if (a1 == color(0, 254, 119) || a2 == color(0, 254, 119) || a3 == color(0, 254, 119) || a4 == color(0, 254, 119)) {
       win();
     }
 
     if ((a1 == color(255, 255, 0) || a2 == color(255, 255, 0) || a3 == color(255, 255, 0) || a4 == color(255, 255, 0))) {
-      allowd = true;
+      if (coinAmountPublic <= 0) {
+        allowd = true;
+      } else {
+        coinsCollected++;
+      }
+      getMoney(5);
     }
 
     if ((a1 == color(0) || a2 == color(0) || a3 == color(0) || a4 == color(0)) && keyCode == LEFT) {
@@ -111,7 +123,7 @@ class enemys {
 
     this.speed = s;
   }
-  
+
   enemys(float x, float y, float x0, boolean i, float ss) {
     this.Sx = (x * 25);
     this.y = (y * 25);
@@ -243,7 +255,7 @@ class enemyp {
 }
 class enemypr {
   float x1, x2, x3, x4, y1, y2, y3, y4, x, y, speed = 1, speedx = 1, speedy = 0;
-  
+
   enemypr(float px1, float py1, float px2, float py2, float px3, float py3, float px4, float py4, float sx, float sy) {
     this.x1 = px1 * 25;
     this.x2 = px2 * 25;

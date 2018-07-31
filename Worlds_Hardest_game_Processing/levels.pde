@@ -194,7 +194,7 @@ void level2() {
     lineg(5, 15, 12, 0);
     lineg(2, 11, 0, 2);
     lineg(20, 11, 0, 2);
-    coin(275, 300, true, 1);
+    coin((275 - 12.5) / 25, (300 - 12.5) / 25);
 
     eu.move();
     eu.render();
@@ -396,69 +396,67 @@ void level4() {
     checkerboard2x2(7, 8);
     checkerboard2x2(8, 3);
     checkerboard2x2(7, 2);
-    
-    
+
     lineg(9, 3, 2, 0);
     lineg(11, 1, 2, 0);
     lineg(13, 3, 2, 0);
     lineg(7, 5, 2, 0);
     lineg(5, 7, 2, 0);
     lineg(3, 9, 2, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    lineg(0, 0, 1, 0);
-    
-    coin(3, 11.5, true);
+    lineg(15, 5, 2, 0);
+    lineg(17, 7, 2, 0);
+    lineg(19, 9, 2, 0);
+    lineg(19, 15, 2, 0);
+    lineg(17, 17, 2, 0);
+    lineg(15, 19, 2, 0);
+    lineg(13, 21, 2, 0);
+    lineg(11, 23, 2, 0);
+    lineg(9, 21, 2, 0);
+    lineg(7, 19, 2, 0);
+    lineg(5, 17, 2, 0);
+    lineg(3, 15, 2, 0);
+    lineg(3, 9, 0, 6);
+    lineg(21, 9, 0, 6);
+    lineg(11, 1, 0, 2);
+    lineg(13, 1, 0, 2);
+    lineg(9, 3, 0, 2);
+    lineg(7, 5, 0, 2);
+    lineg(5, 7, 0, 2);
+    lineg(5, 15, 0, 2);
+    lineg(7, 17, 0, 2);
+    lineg(9, 19, 0, 2);
+    lineg(15, 3, 0, 2);
+    lineg(17, 5, 0, 2);
+    lineg(19, 7, 0, 2);
+    lineg(19, 15, 0, 2);
+    lineg(17, 17, 0, 2);
+    lineg(15, 19, 0, 2);
+    lineg(13, 21, 0, 2);
+    lineg(11, 21, 0, 2);
+
+    coin(3, 11.5);
 
     level4rotationenemy();
+
+    p.movement();
+    p.collision();
+    p.render();
+  }
+}
+
+
+void level5() {
+  if (!setup) {
+    p = new player(12 * 25 - 6, 2 * 25 - 6, 1);
+    setup = true;
+    coinsCollected = 0;
+  } else {
+    background(0, 187, 255);
+
+    coin(10, 10, 2, 1);
+    coin(10, 12, 2, 2);
+
+    end(10, 20, 10, 10, allowd);
 
     p.movement();
     p.collision();
