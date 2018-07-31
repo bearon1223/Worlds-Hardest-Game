@@ -1,6 +1,9 @@
 int scene = 0;
 
 void Scene() {
+  if(scene == -1){
+    shop();
+  }
   if (scene == 0) {
     level1(true);
     sceneButton("Level Select", 200 - 15/2, 260, 1, 20);
@@ -25,6 +28,12 @@ void Scene() {
     if (floor(wins) >= 3) {
       sceneButton("Level 4", 10, 380, 5, 0);
     }
+    if (floor(wins) >= 4) {
+      sceneButton("Level 5", 10, 440, 6, 0);
+    }
+    if (floor(wins) >= 30) {
+      sceneButton("Trophy", 180 * 2 + 20, 440, 32, 0);
+    }
   } else if (scene == 2) {
     level1(false);
     level = 1;
@@ -37,5 +46,63 @@ void Scene() {
   } else if (scene == 5) {
     level4();
     level = 4;
+  } else if (scene == 6) {
+    level5();
+    level = 5;
+  } else if (scene == 7) {
+    level = scene - 1;
+  } else if (scene == 8) {
+    level = scene - 1;
+  } else if (scene == 9) {
+    level = scene - 1;
+  } else if (scene == 10) {
+    level = scene - 1;
+  } else if (scene == 11) {
+    level = scene - 1;
+  } else if (scene == 12) {
+    level = scene - 1;
+  } else if (scene == 13) {
+    level = scene - 1;
+  } else if (scene == 14) {
+    level = scene - 1;
+  } else if (scene == 15) {
+    level = scene - 1;
+  } else if (scene == 16) {
+    level = scene - 1;
+  } else if (scene == 17) {
+    level = scene - 1;
+  } else if (scene == 18) {
+    level = scene - 1;
+  } else if (scene == 19) {
+    level = scene - 1;
+  } else if (scene == 20) {
+    level = scene - 1;
+  } else if (scene == 21) {
+    level = scene - 1;
+  } else if (scene == 22) {
+    level = scene - 1;
+  } else if (scene == 23) {
+    level = scene - 1;
+  } else if (scene == 24) {
+    level = scene - 1;
+  } else if (scene == 25) {
+    level = scene - 1;
+  } else if (scene == 26) {
+    level = scene - 1;
+  } else if (scene == 27) {
+    level = scene - 1;
+  } else if (scene == 28) {
+    level = scene - 1;
+  } else if (scene == 29) {
+    level = scene - 1;
+  } else if (scene == 30) {
+    level = scene - 1;
+  } else if (scene == 31) {
+    level = scene - 1;
+    textSize(10);
+    fill(255);
+    text("if you beat this level press the up arrow to download a surprise", 10, 35);
+  } else if (scene == 32) {
+    trophy("30");
   }
 }
