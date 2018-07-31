@@ -179,6 +179,24 @@ void checkerboard1x2(float x, float y, boolean i) {
   } else {
     fill(255, 255, 255);
   }
+  rect(25 + (25 * offx), 25 + (25 * (offy + 1)), widths, widths);
+}
+
+void checkerboard2x1(float x, float y, boolean i) {
+  float offx = x;
+  float offy = y;
+  float widths = 25;
+  if (!i) {
+    fill(255, 255, 255);
+  } else {
+    fill(240, 240, 240);
+  }
+  rect(25 + (25 * offx), 25 + (25 * offy), widths, widths);
+  if (!i) {
+    fill(240, 240, 240);
+  } else {
+    fill(255, 255, 255);
+  }
   rect(25 + (25 * (offx + 1)), 25 + (25 * offy), widths, widths);
 }
 
