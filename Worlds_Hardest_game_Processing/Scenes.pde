@@ -2,17 +2,19 @@ int scene = 0;
 
 void Scene() {
   if(scene == -1){
+    background(0, 187, 255);
     shop();
   }
   if (scene == 0) {
     level1(true);
     sceneButton("Level Select", 200 - 15/2, 260, 1, 20);
     sceneButtonr("Play", 235, 200, 2, -70);
+    sceneButton("Shop", 235, 320, -1, -70);
     textSize(56);
     fill(255, 255, 255);
     textAlign(CENTER, CENTER);
     text("Worlds Hardest Game", 300, 108);
-    sceneButtone("Exit", 300 - 190 / 2, 320, 0);
+    sceneButtone("Exit", 300 - 190 / 2, 380, 0);
     level = 0;
   } else if (scene == 1) {
     background(0, 187, 255);

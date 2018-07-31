@@ -296,6 +296,7 @@ void level4rotationenemy() {
   translate(300, 300);
   rotate(rotatary_dude);
   fill(0, 0, 255);
+  noStroke();
   ellipse(0, 0, 15, 15);
   ellipse(0, -30, 15, 15);
   ellipse(0, 30, 15, 15);
@@ -434,13 +435,16 @@ void level4() {
     lineg(13, 21, 0, 2);
     lineg(11, 21, 0, 2);
 
-    coin(3, 11.5);
-
     level4rotationenemy();
 
+    coin(17, 11.5, 3, 1);
+    coin(11.5, 17.5, 3, 2);
+    coin(6, 11.5, 3, 3);
+    
     p.movement();
     p.collision();
     p.render();
+
   }
 }
 
@@ -451,15 +455,6 @@ void level5() {
     setup = true;
     coinsCollected = 0;
   } else {
-    background(0, 187, 255);
-
-    coin(10, 10, 2, 1);
-    coin(10, 12, 2, 2);
-
-    end(10, 20, 10, 10, allowd);
-
-    p.movement();
-    p.collision();
-    p.render();
+    
   }
 }

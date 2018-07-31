@@ -1,5 +1,5 @@
 class player {
-  float x, y, s, sx, sy, sxs, sys;
+  float x, y, s, sx, sy, sxs, sys, timer = 0;
   player(float x, float y, float s) {
     this.x = x;
     this.y = y;
@@ -23,6 +23,7 @@ class player {
     if (level > wins) {
       wins++;
     }
+    getMoney(5);
     allowd = false;
     allowed = false;
   }
@@ -35,16 +36,16 @@ class player {
     color a3 = get(int(this.x + 15), int(this.y + 15));
     color a4 = get(int(this.x), int(this.y + 15));
 
-    if (a1 == color(0, 0, 255) || a2 == color(0, 0, 255) || a3 == color(0, 0, 255) || a4 == color(0, 0, 255)) {
+    if ((a1 == color(0, 0, 255) || a2 == color(0, 0, 255) || a3 == color(0, 0, 255) || a4 == color(0, 0, 255))) {
       this.x = psx;
       this.y = psy;
       fail++;
+      
       if (coinAmountPublic < 1) {
         allowd = allowed;
-      } else if (coinAmountPublic > 1) {
-        coinsCollected = 0;
       }
     }
+    
     if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
       psx = this.x;
       psy = this.y;
