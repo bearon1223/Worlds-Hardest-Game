@@ -50,6 +50,7 @@ void Scene() {
     level = 4;
   } else if (scene == 6) {
     level5();
+    text("WIP", 300, 300);
     level = 5;
   } else if (scene == 7) {
     level = scene - 1;

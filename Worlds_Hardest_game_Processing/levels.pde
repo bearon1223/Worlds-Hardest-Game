@@ -454,7 +454,7 @@ void level4() {
     lineg(15, 19, 0, 2);
     lineg(13, 21, 0, 2);
     lineg(11, 21, 0, 2);
-    rotatingEnemy(12, 12, 6, 7, 30, true, 0);
+    rotatingEnemy(12, 12, 6, 6, 30, true, 0);
 
     coin(17, 11.5, 3, 1);
     coin(11.5, 17.5, 3, 2);
@@ -473,7 +473,8 @@ void level5() {
     setup = true;
     coinsCollected = 0;
   } else {
-    background(0, 187, 255);
+    //background(0, 187, 255);
+    background(0);
     checkpoint(4, 5, 1, 1);
     checkerboard2x1(4, 4, false);
     checkerboard2x1(6, 4, false);
@@ -504,7 +505,8 @@ void level5() {
     checkerboard1x2(4, 8, false);
     checkerboard1x2(4, 10, false);
     checkerboard1x2(4, 12, false);
-    checkpoint(4, 7, 1, 1);
+    checkerboard1x1(3, 6, false);
+    checkpoint(3, 7, 1, 1);
 
     checkerboard2x1(4, 6, false);
     checkerboard2x1(6, 6, false);
@@ -539,6 +541,45 @@ void level5() {
 
     rotatingEnemy(12, 10, 4, 20, 47, false, 1);
     rotatingEnemyi(12, 10, 1, 30, 47 / 2, false, 1);
+    
+    //lineg(4, 5, 16, 0);
+    //lineg(4, 6, 14, 0);
+    //lineg(4, 7, 13, 0);
+    //lineg(6, 8, 10, 0);
+    //lineg(7, 14, 10, 0);
+    //lineg(8, 13, 8, 0);
+    //lineg(7, 9, 8, 0);
+    //lineg(4, 8, 1, 0);
+    //lineg(14, 0, 1, 0);
+    //lineg(4, 5, 0, 1);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    //lineg(0, 0, 1, 0);
+    
+    coin(9, 11, 6, 1);
+    coin(10, 11, 6, 2);
+    coin(11, 11, 6, 3);
+    coin(12, 11, 6, 4);
+    coin(13, 11, 6, 5);
+    coin(14, 11, 6, 6);
 
     p.movement();
     p.collision();

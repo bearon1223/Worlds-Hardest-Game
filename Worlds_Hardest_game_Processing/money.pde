@@ -18,7 +18,6 @@ void shopButton(String t, float x, float y, float ys, float cost, int action) {
       scene = 0;
       if (action == 1) {
         wins++;
-        
       }
     }
   } 

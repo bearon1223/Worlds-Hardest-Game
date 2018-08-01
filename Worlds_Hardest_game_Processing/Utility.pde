@@ -72,6 +72,8 @@ void sceneButton(String t, float x, float y, int i, float ys) {
       scene = i;
       setup = false;
       allowd = false;
+      rotatary_dude = 0;
+      rotatary_dudei = 0;
     }
   } 
   strokeWeight(1);
@@ -116,7 +118,7 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
       setup = false;
       fail = 0;
       wins = 0;
-      coins = 50;
+      coins = 100;
       allowd = false;
     }
   } 

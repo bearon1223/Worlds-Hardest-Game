@@ -23,6 +23,8 @@ class player {
     if (level > wins) {
       wins++;
     }
+    rotatary_dude = 0;
+    rotatary_dudei = 0;
     getMoney(5);
     allowd = false;
     allowed = false;
