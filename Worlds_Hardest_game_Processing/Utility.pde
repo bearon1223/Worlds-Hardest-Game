@@ -31,11 +31,16 @@ void coin(float x, float y, float coinAmount, float currentCoin) {
   } else {
     currentCoinCollected = false;
   }
+  
+  if(currentCoin == coinsCollected + 1){
+    fill(255, 255, 0);
+  } else {
+    fill(255, 254, 0);
+  }
 
   if (!currentCoinCollected && !allowd) {
     stroke(1);
     strokeWeight(1);
-    fill(255, 255, 0);
     ellipse((x * 25) + (25 / 2), (y * 25) + (25 / 2), 15, 15);
   }
 

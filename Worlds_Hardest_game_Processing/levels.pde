@@ -473,8 +473,7 @@ void level5() {
     setup = true;
     coinsCollected = 0;
   } else {
-    //background(0, 187, 255);
-    background(0);
+    background(0, 187, 255);
     checkpoint(4, 5, 1, 1);
     checkerboard2x1(4, 4, false);
     checkerboard2x1(6, 4, false);
@@ -483,7 +482,8 @@ void level5() {
     checkerboard2x1(12, 4, false);
     checkerboard2x1(14, 4, false);
     checkerboard2x1(16, 4, false);
-    checkpoint(19, 5, 1, 1);
+    checkerboard1x1(18,4,false);
+    checkpoint(20, 5, 1, 1);
 
     //5
     checkerboard1x2(17, 5, false);
@@ -505,7 +505,7 @@ void level5() {
     checkerboard1x2(4, 8, false);
     checkerboard1x2(4, 10, false);
     checkerboard1x2(4, 12, false);
-    checkerboard1x1(3, 6, false);
+    checkerboard1x1(3, 6, true);
     checkpoint(3, 7, 1, 1);
 
     checkerboard2x1(4, 6, false);
@@ -532,7 +532,7 @@ void level5() {
     checkerboard2x1(7, 8, true);
     checkerboard2x1(9, 8, true);
     checkerboard2x1(11, 8, true);
-    end(14, 9, 1, 1, allowd);
+    end(14, 9, 1, 1, true);
 
     checkerboard2x1(10, 9, true);
     checkerboard2x1(10, 10, false);
@@ -542,37 +542,38 @@ void level5() {
     rotatingEnemy(12, 10, 4, 20, 47, false, 1);
     rotatingEnemyi(12, 10, 1, 30, 47 / 2, false, 1);
     
-    //lineg(4, 5, 16, 0);
-    //lineg(4, 6, 14, 0);
-    //lineg(4, 7, 13, 0);
-    //lineg(6, 8, 10, 0);
-    //lineg(7, 14, 10, 0);
-    //lineg(8, 13, 8, 0);
-    //lineg(7, 9, 8, 0);
-    //lineg(4, 8, 1, 0);
-    //lineg(14, 0, 1, 0);
-    //lineg(4, 5, 0, 1);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
-    //lineg(0, 0, 1, 0);
+    lineg(4, 5, 17, 0);
+    lineg(4, 6, 14, 0);
+    lineg(3, 7, 14, 0);
+    lineg(6, 8, 10, 0);
+    lineg(7, 14, 10, 0);
+    lineg(8, 13, 8, 0);
+    lineg(7, 9, 8, 0);
+    lineg(3, 8, 2, 0);
+    lineg(5, 16, 14, 0);
+    lineg(4, 5, 0, 1);
+    lineg(13, 11, 2, 0);
+    lineg(9, 11, 2, 0);
+    lineg(9, 12, 6, 0);
+    lineg(8, 10, 3, 0);
+    lineg(13, 10, 2, 0);
+    lineg(19, 6, 2, 0);
+    lineg(21, 5, 0, 1);
+    lineg(19, 6, 0, 10);
+    lineg(3, 7, 0, 1);
+    lineg(5, 8, 0, 8);
+    lineg(6, 8, 0, 7);
+    lineg(7, 9, 0, 5);
+    lineg(8, 10, 0, 3);
+    lineg(9, 11, 0, 1);
+    lineg(11, 10, 0, 1);
+    lineg(13, 10, 0, 1);
+    lineg(15, 11, 0, 1);
+    lineg(16, 8, 0, 5);
+    lineg(17, 7, 0, 7);
+    lineg(18, 6, 0, 9);
+    lineg(15, 9, 0, 1);
+    lineg(6, 15, 12, 0);
     
     coin(9, 11, 6, 1);
     coin(10, 11, 6, 2);
