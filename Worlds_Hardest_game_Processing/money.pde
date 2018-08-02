@@ -4,8 +4,6 @@ void getMoney(float amount) {
   coins += amount;
 }
 
-void skio() {
-}
 boolean tiles = false;
 void shopButton(String t, float x, float y, float ys, float cost, int action) {
   float w = 180 + ys;

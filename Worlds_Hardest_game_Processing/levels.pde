@@ -707,5 +707,58 @@ void level(float l) {
       p.collision();
       p.render();
     }
+  } 
+  
+  else if (l == 7) {
+    if (!setup) {
+      p = new player(3.5, 13, 1);
+      eu = new enemyu(6, 10, 16, false, 1);
+      eu2 = new enemyu(7, 16, 10, true, 1);
+      setup = true;
+    } else {
+      background(0, 187, 255);
+      checkpoint(2, 12, 3, 2);
+      checkerboard2x2(2, 6);
+      checkerboard2x2(3, 6);
+      checkerboard2x2(4, 6);
+      checkerboard2x2(5, 6);
+      checkerboard2x2(6, 6);
+      checkerboard2x2(7, 6);
+      checkerboard2x2(8, 6);
+
+      checkerboard2x2(2, 5);
+      checkerboard2x2(3, 5);
+      checkerboard2x2(4, 5);
+      checkerboard2x2(5, 5);
+      checkerboard2x2(6, 5);
+      checkerboard2x2(7, 5);
+      checkerboard2x2(8, 5);
+
+      checkerboard2x2(2, 4);
+      checkerboard2x2(3, 4);
+      checkerboard2x2(4, 4);
+      checkerboard2x2(5, 4);
+      checkerboard2x2(6, 4);
+      checkerboard2x2(7, 4);
+      checkerboard2x2(8, 4);
+
+      checkerboard2x2(2, 7);
+      checkerboard2x2(3, 7);
+      checkerboard2x2(4, 7);
+      checkerboard2x2(5, 7);
+      checkerboard2x2(6, 7);
+      checkerboard2x2(7, 7);
+      checkerboard2x2(8, 7);
+      end(19, 12, 3, 2, allowd);
+      
+      eu.move();
+      eu.render();
+      eu2.move();
+      eu2.render();
+
+      p.movement();
+      p.collision();
+      p.render();
+    }
   }
 }
