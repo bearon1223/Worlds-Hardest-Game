@@ -714,20 +714,21 @@ void level(float l) {
   else if (l == 7) {
     if (!setup) {
       p = new player(3.5, 13, 1);
-      eu = new enemyu(6, 10, 16, false, 1);
-      eu2 = new enemyu(7, 16, 10, true, 1);
-      eu3 = new enemyu(8, 10, 16, false, 1);
-      eu4 = new enemyu(9, 16, 10, true, 1);
-      eu5 = new enemyu(10, 10, 16, false, 1);
-      eu6 = new enemyu(11, 16, 10, true, 1);
-      eu7 = new enemyu(12, 10, 16, false, 1);
-      eu8 = new enemyu(13, 16, 10, true, 1);
-      eu9 = new enemyu(14, 10, 16, false, 1);
-      eu10 = new enemyu(15, 16, 10, true, 1);
-      eu11 = new enemyu(16, 10, 16, false, 1);
-      eu12 = new enemyu(17, 16, 10, true, 1);
-      eu13 = new enemyu(18, 10, 16, false, 1);
+      eu = new enemyu(6, 9.5, 16.5, false, 1);
+      eu2 = new enemyu(7, 16.5, 9.5, true, 1);
+      eu3 = new enemyu(8, 9.5, 16.5, false, 1);
+      eu4 = new enemyu(9, 16.5, 9.5, true, 1);
+      eu5 = new enemyu(10, 9.5, 16.5, false, 1);
+      eu6 = new enemyu(11, 16.5, 9.5, true, 1);
+      eu7 = new enemyu(12, 9.5, 16.5, false, 1);
+      eu8 = new enemyu(13, 16.5, 9.5, true, 1);
+      eu9 = new enemyu(14, 9.5, 16.5, false, 1);
+      eu10 = new enemyu(15, 16.5, 9.5, true, 1);
+      eu11 = new enemyu(16, 9.5, 16.5, false, 1);
+      eu12 = new enemyu(17, 16.5, 9.5, true, 1);
+      eu13 = new enemyu(18, 9.5, 16.5, false, 1);
       setup = true;
+      coinsCollected = 0;
     } else {
       background(0, 187, 255);
       checkpoint(2, 12, 3, 2);
@@ -763,6 +764,12 @@ void level(float l) {
       checkerboard2x2(7, 7);
       checkerboard2x2(8, 7);
       end(19, 12, 3, 2, allowd);
+      coin(5, 9, 4, 1);
+      coin(5, 16, 4, 2);
+      coin(18, 9, 4, 3);
+      coin(18, 16, 4, 4);
+      lineg(5, 9, 14, 0);
+      lineg(5, 17, 14, 0);
       
       eu.move();
       eu.render();
