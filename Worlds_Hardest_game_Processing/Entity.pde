@@ -23,8 +23,6 @@ class player {
     if (level > wins) {
       wins++;
     }
-    rotatary_dude = 0;
-    rotatary_dudei = 0;
     getMoney(5);
     allowd = false;
     allowed = false;
@@ -42,12 +40,12 @@ class player {
       this.x = psx;
       this.y = psy;
       fail++;
-      
+
       if (coinAmountPublic < 1) {
         allowd = allowed;
       }
     }
-    
+
     if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
       psx = this.x;
       psy = this.y;
@@ -256,44 +254,77 @@ class enemyp {
     ellipse(this.x, this.y, 15, 15);
   }
 }
-class enemypr {
-  float x1, x2, x3, x4, y1, y2, y3, y4, x, y, speed = 1, speedx = 1, speedy = 0;
 
-  enemypr(float px1, float py1, float px2, float py2, float px3, float py3, float px4, float py4, float sx, float sy) {
-    this.x1 = px1 * 25;
-    this.x2 = px2 * 25;
-    this.x3 = px3 * 25;
-    this.x4 = px4 * 25;
-    this.y1 = py1 * 25;
-    this.y2 = py2 * 25;
-    this.y3 = py3 * 25;
-    this.y4 = py4 * 25;
-    this.x = sx * 25;
-    this.y = sy * 25;
+class rotatingEnemys {
+  int x, y, amount, speed, spacing, isCenter;
+  boolean cross;
+
+  float rotatary_dude;
+  float rotatary_dudei;
+
+  rotatingEnemys(int xd, int yd, int amountd, int speedd, int spacingd, boolean crossd, int isCenterd) {
+    x = xd;
+    y = yd;
+    amount = amountd;
+    speed = speedd;
+    spacing = spacingd;
+    cross = crossd;
+    isCenter = isCenterd;
+    rotatary_dude = 0;
+    rotatary_dudei = 0;
   }
-
-
-  void movement() {
-    if (this.x >= this.x2 && this.y <= this.y2) {
-      speedx = 0;
-      speedy = speed;
-    } else if (this.x >= this.x3 && this.y >= this.y3) {
-      speedy = 0;
-      speedx = -speed;
-    } else if (this.x <= this.x4 && this.y >= this.y4) {
-      speedx = 0;
-      speedy = -speed;
-    } else if (this.x <= this.x1 && this.y <= this.y1) {
-      speedy = 0;
-      speedx = speed;
-    }
-    this.x += speedx;
-    this.y += speedy;
-  }
-
-  void render() {
-    fill(255);
+  
+  void normal() {
+    translate(x * 25, y * 25);
+    int p;
+    rotate(rotatary_dude);
+    fill(0, 0, 255);
     noStroke();
-    rect(this.x, this.y, 25, 25);
+    p = isCenter;
+
+    for (int i = p; i <= amount; i++) {
+      if (cross) {
+        ellipse(spacing * i, 0, 15, 15);
+        ellipse(-spacing * i, 0, 15, 15);
+        ellipse(0, spacing * i, 15, 15);
+        ellipse(0, -spacing * i, 15, 15);
+      } else {
+        ellipse(spacing * i, 0, 15, 15);
+        ellipse(-spacing * i, 0, 15, 15);
+      }
+    }
+    rotate(-rotatary_dude);
+    rotatary_dude += speed * 0.001;
+    if (rotatary_dude >= 360) {
+      rotatary_dude = 0;
+    }
+    translate(-(x * 25), -(y * 25));
+  }
+
+  void inverted() {
+    translate(x * 25, y * 25);
+    int p;
+    rotate(rotatary_dudei);
+    fill(0, 0, 255);
+    noStroke();
+    p = isCenter;
+
+    for (int i = p; i <= amount; i++) {
+      if (cross) {
+        ellipse(spacing * i, 0, 15, 15);
+        ellipse(-spacing * i, 0, 15, 15);
+        ellipse(0, spacing * i, 15, 15);
+        ellipse(0, -spacing * i, 15, 15);
+      } else {
+        ellipse(spacing * i, 0, 15, 15);
+        ellipse(-spacing * i, 0, 15, 15);
+      }
+    }
+    rotate(-rotatary_dudei);
+    rotatary_dudei -= speed * 0.001;
+    if (rotatary_dudei >= 360) {
+      rotatary_dudei = 0;
+    }
+    translate(-(x * 25), -(y * 25));
   }
 }

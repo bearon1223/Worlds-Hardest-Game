@@ -1,8 +1,5 @@
 boolean setup;
 boolean allowd = false;
-float rotatary_dude = 0;
-float rotatary_dudei = 0;
-
 player p = new player(91, 268, 1);
 
 enemys e = new enemys(7.5, 7.9, 16.5, false);
@@ -10,8 +7,6 @@ enemys e2 = new enemys(16.5, 9.1, 7.5, true);
 enemys e3 = new enemys(7.5, 10.2, 16.5, false);
 enemys e4 = new enemys(16.5, 11.3, 7.5, true);
 enemys e5 = new enemys(7.5, 12.4, 16.5, false);
-//enemys e6 = new enemys(414, 333, 186, true);
-//enemys e7 = new enemys(186, 363, 414, false);
 
 enemyu eu = new enemyu(0, 0, 0, false, 0);
 enemyu eu2 = new enemyu(0, 0, 0, false, 0);
@@ -25,19 +20,24 @@ enemyu eu9 = new enemyu(0, 0, 0, false, 0);
 enemyu eu10 = new enemyu(0, 0, 0, false, 0);
 enemyu eu11 = new enemyu(0, 0, 0, false, 0);
 
-enemypr epr = new enemypr(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep2 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep3 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep4 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep5 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep6 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep7 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep8 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep9 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep10 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+//enemyp ep11 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
-enemyp ep = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep2 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep3 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep4 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep5 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep6 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep7 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep8 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep9 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep10 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-enemyp ep11 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+rotatingEnemys r1 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
+rotatingEnemys r2 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
+rotatingEnemys r3 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
+rotatingEnemys r4 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
+rotatingEnemys r5 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
+rotatingEnemys r6 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 
 /*
  checkpoint(2, 11, 3, 2);
@@ -295,66 +295,12 @@ void level3() {
   }
 }
 
-void rotatingEnemy(int x, int y, int amount, int speed, int spacing, boolean cross, int isCenter) {
-  translate(x * 25, y * 25);
-  int p;
-  rotate(rotatary_dude);
-  fill(0, 0, 255);
-  noStroke();
-  p = isCenter;
-
-  for (int i = p; i <= amount; i++) {
-    if (cross) {
-      ellipse(spacing * i, 0, 15, 15);
-      ellipse(-spacing * i, 0, 15, 15);
-      ellipse(0, spacing * i, 15, 15);
-      ellipse(0, -spacing * i, 15, 15);
-    } else {
-      ellipse(spacing * i, 0, 15, 15);
-      ellipse(-spacing * i, 0, 15, 15);
-    }
-  }
-  rotate(-rotatary_dude);
-  rotatary_dude += speed * 0.001;
-  if (rotatary_dude >= 360) {
-    rotatary_dude = 0;
-  }
-  translate(-(x * 25), -(y * 25));
-}
-
-void rotatingEnemyi(int x, int y, int amount, int speed, int spacing, boolean cross, int isCenter) {
-  
-  translate(x * 25, y * 25);
-  int p;
-  rotate(rotatary_dudei);
-  fill(0, 0, 255);
-  noStroke();
-  p = isCenter;
-
-  for (int i = p; i <= amount; i++) {
-    if (cross) {
-      ellipse(spacing * i, 0, 15, 15);
-      ellipse(-spacing * i, 0, 15, 15);
-      ellipse(0, spacing * i, 15, 15);
-      ellipse(0, -spacing * i, 15, 15);
-    } else {
-      ellipse(spacing * i, 0, 15, 15);
-      ellipse(-spacing * i, 0, 15, 15);
-    }
-  }
-  rotate(-rotatary_dudei);
-  rotatary_dudei -= speed * 0.001;
-  if (rotatary_dudei >= 360) {
-    rotatary_dudei = 0;
-  }
-  translate(-(x * 25), -(y * 25));
-}
-
 void level4() {
   if (!setup) {
     p = new player(12 * 25 - 6, 2 * 25 - 6, 1);
     coinsCollected = 0;
     setup = true;
+    r1 = new rotatingEnemys(12, 12, 6, 6, 30, true, 0);
   } else {
     background(0, 187, 255);
     checkpoint(11, 1, 2, 2);
@@ -454,7 +400,7 @@ void level4() {
     lineg(15, 19, 0, 2);
     lineg(13, 21, 0, 2);
     lineg(11, 21, 0, 2);
-    rotatingEnemy(12, 12, 6, 6, 30, true, 0);
+    r1.normal();
 
     coin(17, 11.5, 3, 1);
     coin(11.5, 17.5, 3, 2);
@@ -472,6 +418,8 @@ void level5() {
     p = new player(4 * 25 + 4, 5 * 25 + 4, 1);
     setup = true;
     coinsCollected = 0;
+    r1 = new rotatingEnemys(12, 10, 4, 20, 47, false, 1);
+    r2 = new rotatingEnemys(12, 10, 1, 30, 47 / 2, false, 1);
   } else {
     background(0, 187, 255);
     checkpoint(4, 5, 1, 1);
@@ -539,8 +487,8 @@ void level5() {
     checkerboard2x1(8, 10, false);
     checkerboard2x1(12, 10, false);
 
-    rotatingEnemy(12, 10, 4, 20, 47, false, 1);
-    rotatingEnemyi(12, 10, 1, 30, 47 / 2, false, 1);
+    r1.normal();
+    r2.inverted();
     
     lineg(4, 5, 17, 0);
     lineg(4, 6, 14, 0);
@@ -582,6 +530,23 @@ void level5() {
     coin(13, 11, 6, 5);
     coin(14, 11, 6, 6);
 
+    p.movement();
+    p.collision();
+    p.render();
+  }
+}
+
+void level6(){
+  if(!setup){
+    setup = true;
+    p = new player(1, 1, 1);
+    r1 = new rotatingEnemys(10, 12, 2, 20, 30, false, 0);
+    r2 = new rotatingEnemys(15, 12, 2, 20, 30, false, 0);
+  } else if(setup){
+    background(0, 187, 255);
+    r1.normal();
+    r2.normal();
+    
     p.movement();
     p.collision();
     p.render();

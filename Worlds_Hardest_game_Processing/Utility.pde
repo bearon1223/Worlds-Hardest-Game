@@ -77,8 +77,6 @@ void sceneButton(String t, float x, float y, int i, float ys) {
       scene = i;
       setup = false;
       allowd = false;
-      rotatary_dude = 0;
-      rotatary_dudei = 0;
     }
   } 
   strokeWeight(1);
