@@ -1,8 +1,8 @@
 class player {
   float x, y, s, sx, sy, sxs, sys, timer = 0;
   player(float x, float y, float s) {
-    this.x = x;
-    this.y = y;
+    this.x = x * 25;
+    this.y = y * 25;
     this.s = s;
     this.sx = s;
     this.sy = s;

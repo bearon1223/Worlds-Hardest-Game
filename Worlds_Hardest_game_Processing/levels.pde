@@ -1,6 +1,6 @@
 boolean setup;
 boolean allowd = false;
-player p = new player(91, 268, 1);
+player p = new player(91 / 25, 268 / 25, 1);
 
 enemys e = new enemys(7.5, 7.9, 16.5, false);
 enemys e2 = new enemys(16.5, 9.1, 7.5, true);
@@ -65,7 +65,7 @@ rotatingEnemys r6 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 
 void level1(boolean display) {
   if (!setup) {
-    p = new player(91, 268, 1);
+    p = new player(91 / 25, 268 / 25, 1);
     e = new enemys(7.5, 7.9, 16.5, false);
     e2 = new enemys(16.5, 9.1, 7.5, true);
     e3 = new enemys(7.5, 10.2, 16.5, false);
@@ -148,7 +148,7 @@ void level1(boolean display) {
 void level2() {
   float s = 1.2;
   if (!setup) {
-    p = new player(86, 291, 1);
+    p = new player(86 / 25, 300 / 25, 1);
     eu = new enemyu(5.9, 9.8, 14.2, false, s);
     eu2 = new enemyu(7, 14.2, 9.8, true, s);
     eu3 = new enemyu(8, 9.8, 14.2, false, s);
@@ -229,7 +229,7 @@ void level2() {
 
 void level3() {
   if (!setup) {
-    p = new player(2.5*25, 11.5 * 25, 1);
+    p = new player(2.5, 11.5, 1);
     e = new enemys(6, 11.5, 18, false, 1);
     e2 = new enemys(6, 12.5, 18, false, 1);
     e3 = new enemys(18, 11.5, 6, true, 1);
@@ -297,7 +297,7 @@ void level3() {
 
 void level4() {
   if (!setup) {
-    p = new player(12 * 25 - 6, 2 * 25 - 6, 1);
+    p = new player(12, 2, 1);
     coinsCollected = 0;
     setup = true;
     r1 = new rotatingEnemys(12, 12, 6, 6, 30, true, 0);
@@ -415,7 +415,7 @@ void level4() {
 
 void level5() {
   if (!setup) {
-    p = new player(4 * 25 + 4, 5 * 25 + 4, 1);
+    p = new player(4.3, 5.3, 1);
     setup = true;
     coinsCollected = 0;
     r1 = new rotatingEnemys(12, 10, 4, 20, 47, false, 1);
@@ -430,7 +430,7 @@ void level5() {
     checkerboard2x1(12, 4, false);
     checkerboard2x1(14, 4, false);
     checkerboard2x1(16, 4, false);
-    checkerboard1x1(18,4,false);
+    checkerboard1x1(18, 4, false);
     checkpoint(20, 5, 1, 1);
 
     //5
@@ -489,7 +489,7 @@ void level5() {
 
     r1.normal();
     r2.inverted();
-    
+
     lineg(4, 5, 17, 0);
     lineg(4, 6, 14, 0);
     lineg(3, 7, 14, 0);
@@ -522,7 +522,7 @@ void level5() {
     lineg(18, 6, 0, 9);
     lineg(15, 9, 0, 1);
     lineg(6, 15, 12, 0);
-    
+
     coin(9, 11, 6, 1);
     coin(10, 11, 6, 2);
     coin(11, 11, 6, 3);
@@ -536,17 +536,115 @@ void level5() {
   }
 }
 
-void level6(){
-  if(!setup){
+void level6() {
+  if (!setup) {
     setup = true;
-    p = new player(1, 1, 1);
-    r1 = new rotatingEnemys(10, 12, 2, 20, 30, false, 0);
-    r2 = new rotatingEnemys(15, 12, 2, 20, 30, false, 0);
-  } else if(setup){
+    p = new player(1.5, 5.5, 1);
+    r1 = new rotatingEnemys(6, 6, 2, 10, 30, true, 0);
+    r2 = new rotatingEnemys(12, 6, 2, 10, 30, true, 0);
+    r3 = new rotatingEnemys(18, 6, 2, 10, 30, true, 0);
+    r4 = new rotatingEnemys(6, 15, 2, 10, 30, true, 0);
+    r5 = new rotatingEnemys(12, 15, 2, 10, 30, true, 0);
+    r6 = new rotatingEnemys(18, 15, 2, 10, 30, true, 0);
+  } else if (setup) {
     background(0, 187, 255);
+    checkpoint(1, 5, 2, 2);
+    checkerboard2x2(1, 2);
+    checkerboard2x2(2, 2);
+    checkerboard2x2(3, 2);
+    checkerboard2x2(4, 2);
+    checkerboard2x2(5, 2);
+    checkerboard2x2(6, 2);
+    checkerboard2x2(7, 2);
+    checkerboard2x2(8, 2);
+    checkerboard2x2(9, 2);
+    checkerboard2x2(10, 2);
+
+    checkerboard2x2(1, 1);
+    checkerboard2x2(2, 1);
+    checkerboard2x2(3, 1);
+    checkerboard2x2(4, 1);
+    checkerboard2x2(5, 1);
+    checkerboard2x2(6, 1);
+    checkerboard2x2(7, 1);
+    checkerboard2x2(8, 1);
+    checkerboard2x2(9, 1);
+    checkerboard2x2(10, 1);
+
+    checkerboard2x2(1, 3);
+    checkerboard2x2(2, 3);
+    checkerboard2x2(3, 3);
+    checkerboard2x2(4, 3);
+    checkerboard2x2(5, 3);
+    checkerboard2x2(6, 3);
+    checkerboard2x2(7, 3);
+    checkerboard2x2(8, 3);
+    checkerboard2x2(9, 3);
+    checkerboard2x2(10, 3);
+    
+    
+    checkerboard2x2(1, 7);
+    checkerboard2x2(2, 7);
+    checkerboard2x2(3, 7);
+    checkerboard2x2(4, 7);
+    checkerboard2x2(5, 7);
+    checkerboard2x2(6, 7);
+    checkerboard2x2(7, 7);
+    checkerboard2x2(8, 7);
+    checkerboard2x2(9, 7);
+    checkerboard2x2(10, 7);
+
+    checkerboard2x2(1, 6);
+    checkerboard2x2(2, 6);
+    checkerboard2x2(3, 6);
+    checkerboard2x2(4, 6);
+    checkerboard2x2(5, 6);
+    checkerboard2x2(6, 6);
+    checkerboard2x2(7, 6);
+    checkerboard2x2(8, 6);
+    checkerboard2x2(9, 6);
+    checkerboard2x2(10, 6);
+
+    checkerboard2x1(1 * 2, 8 * 2, false);
+    checkerboard2x1(2 * 2, 8 * 2, false);
+    checkerboard2x1(3 * 2, 8 * 2, false);
+    checkerboard2x1(4 * 2, 8 * 2, false);
+    checkerboard2x1(5 * 2, 8 * 2, false);
+    checkerboard2x1(6 * 2, 8 * 2, false);
+    checkerboard2x1(7 * 2, 8 * 2, false);
+    checkerboard2x1(8 * 2, 8 * 2, false);
+    checkerboard2x1(9 * 2, 8 * 2, false);
+    checkerboard2x1(10 * 2, 8 * 2, false);
+    
+    checkerboard2x1(1 * 2, 5.5 * 2, true);
+    checkerboard2x1(2 * 2, 5.5 * 2, true);
+    checkerboard2x1(3 * 2, 5.5 * 2, true);
+    checkerboard2x1(4 * 2, 5.5 * 2, true);
+    checkerboard2x1(5 * 2, 5.5 * 2, true);
+    checkerboard2x1(6 * 2, 5.5 * 2, true);
+    checkerboard2x1(7 * 2, 5.5 * 2, true);
+    checkerboard2x1(8 * 2, 5.5 * 2, true);
+    checkerboard2x1(9 * 2, 5.5 * 2, true);
+    checkerboard2x1(10 * 2, 5.5 * 2, true);
+    checkerboard2x1(20, 10, false);
+    checkerboard2x2(10, 4);
+    checkerboard2x1(18, 10, false);
+    checkerboard2x2(9, 4);
+    end(1, 14, 2, 2, allowd);
+    
+    coin(16, 13, 3, 1);
+    coin(10, 13, 3, 2);
+    coin(4, 13, 3, 3);
+
+
+
     r1.normal();
     r2.normal();
-    
+    r3.normal();
+    r4.inverted();
+    r5.inverted();
+    r6.inverted();
+
     p.movement();
     p.collision();
     p.render();
