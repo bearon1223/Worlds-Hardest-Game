@@ -1,4 +1,4 @@
-float fail = 0, wins = 0, level = 0;
+float fail = 0, wins = 0, levels = 0;
 float psx, psy;
 static final String CONFIG_FILE = "config.dat";
 
@@ -12,7 +12,7 @@ void setup() {
 
 void load() {
   String[] lines = loadStrings(CONFIG_FILE);
-  println(lines);
+  //println(lines);
   coins = int(lines[0]);
   wins = int(lines[1]);
   fail = int(lines[2]);
@@ -37,7 +37,7 @@ void draw() {
     textSize(20);
 
     text("Fails: " + floor(fail), 10, 20);
-    text("Level " + floor(level) + " / 30", 450, 20);
+    text("Level " + floor(levels) + " / 30", 450, 20);
     textAlign(CENTER, CORNER);
     text("Coins: " + floor(coins), 300, 20);
 

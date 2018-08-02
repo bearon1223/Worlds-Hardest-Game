@@ -20,7 +20,7 @@ class player {
   void win() {
     setup = false;
     scene++;
-    if (level > wins) {
+    if (levels > wins) {
       wins++;
     }
     getMoney(5);
