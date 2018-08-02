@@ -548,7 +548,7 @@ void level6() {
     r6 = new rotatingEnemys(18, 15, 2, 10, 30, true, 0);
   } else if (setup) {
     background(0, 187, 255);
-    checkpoint(1, 5, 2, 2);
+    checkpoint(1, 3, 2, 6);
     checkerboard2x2(1, 2);
     checkerboard2x2(2, 2);
     checkerboard2x2(3, 2);
@@ -630,13 +630,20 @@ void level6() {
     checkerboard2x2(10, 4);
     checkerboard2x1(18, 10, false);
     checkerboard2x2(9, 4);
-    end(1, 14, 2, 2, allowd);
+    end(1, 12, 2, 6, allowd);
     
     coin(16, 13, 3, 1);
     coin(10, 13, 3, 2);
     coin(4, 13, 3, 3);
 
-
+    lineg(1, 3, 22, 0);
+    lineg(1, 12, 18, 0);
+    lineg(1, 9, 18, 0);
+    lineg(1, 18, 22, 0);
+    lineg(1, 3, 0, 6);
+    lineg(23, 3, 0, 15);
+    lineg(1, 12, 0, 6);
+    lineg(19, 9, 0, 3);
 
     r1.normal();
     r2.normal();
