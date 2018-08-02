@@ -19,6 +19,8 @@ enemyu eu8 = new enemyu(0, 0, 0, false, 0);
 enemyu eu9 = new enemyu(0, 0, 0, false, 0);
 enemyu eu10 = new enemyu(0, 0, 0, false, 0);
 enemyu eu11 = new enemyu(0, 0, 0, false, 0);
+enemyu eu12 = new enemyu(0, 0, 0, false, 0);
+enemyu eu13 = new enemyu(0, 0, 0, false, 0);
 
 //enemyp ep = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 //enemyp ep2 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -714,6 +716,17 @@ void level(float l) {
       p = new player(3.5, 13, 1);
       eu = new enemyu(6, 10, 16, false, 1);
       eu2 = new enemyu(7, 16, 10, true, 1);
+      eu3 = new enemyu(8, 10, 16, false, 1);
+      eu4 = new enemyu(9, 16, 10, true, 1);
+      eu5 = new enemyu(10, 10, 16, false, 1);
+      eu6 = new enemyu(11, 16, 10, true, 1);
+      eu7 = new enemyu(12, 10, 16, false, 1);
+      eu8 = new enemyu(13, 16, 10, true, 1);
+      eu9 = new enemyu(14, 10, 16, false, 1);
+      eu10 = new enemyu(15, 16, 10, true, 1);
+      eu11 = new enemyu(16, 10, 16, false, 1);
+      eu12 = new enemyu(17, 16, 10, true, 1);
+      eu13 = new enemyu(18, 10, 16, false, 1);
       setup = true;
     } else {
       background(0, 187, 255);
@@ -755,6 +768,28 @@ void level(float l) {
       eu.render();
       eu2.move();
       eu2.render();
+      eu3.move();
+      eu3.render();
+      eu4.move();
+      eu4.render();
+      eu5.move();
+      eu5.render();
+      eu6.move();
+      eu6.render();
+      eu7.move();
+      eu7.render();
+      eu8.move();
+      eu8.render();
+      eu9.move();
+      eu9.render();
+      eu10.move();
+      eu10.render();
+      eu11.move();
+      eu11.render();
+      eu12.move();
+      eu12.render();
+      eu13.move();
+      eu13.render();
 
       p.movement();
       p.collision();
