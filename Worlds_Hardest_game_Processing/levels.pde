@@ -770,6 +770,16 @@ void level(float l) {
       coin(18, 16, 4, 4);
       lineg(5, 9, 14, 0);
       lineg(5, 17, 14, 0);
+      lineg(2, 12, 3, 0);
+      lineg(2, 14, 3, 0);
+      lineg(19, 12, 3, 0);
+      lineg(19, 14, 3, 0);
+      lineg(2, 12, 0, 2);
+      lineg(22, 12, 0, 2);
+      lineg(5, 9, 0, 3);
+      lineg(19, 9, 0, 3);
+      lineg(5, 14, 0, 3);
+      lineg(19, 14, 0, 3);
       
       eu.move();
       eu.render();
