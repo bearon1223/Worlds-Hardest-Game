@@ -18,9 +18,19 @@ void Scene() {
     levels = 0;
   } else if (scene == 1) {
     background(0, 187, 255);
-    for (int i = 0; i <= 29; i++) {
+    for (int i = 0; i <= 10; i++) {
       if (floor(wins) >= i) {
-        sceneButton("Level " + floor(i + 1), 10, 50 + (60 * i), i + 2, 0);
+        sceneButton("Level " + floor(i + 1), 10, 30 + (55 * i), i + 2, 0);
+      }
+    }
+    for (int i = 10; i <= 20; i++) {
+      if (floor(wins) >= i) {
+        sceneButton("Level " + floor(i + 1), 200, 30 + (55 * i), i + 2, 0);
+      }
+    }
+    for (int i = 20; i <= 30; i++) {
+      if (floor(wins) >= i) {
+        sceneButton("Level " + floor(i + 1), 370, 30 + (55 * i), i + 2, 0);
       }
     }
   } else if (scene < 31 && scene >= 2) {
