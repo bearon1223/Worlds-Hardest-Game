@@ -812,5 +812,9 @@ void level(float l) {
       p.collision();
       p.render();
     }
+  } else {
+    background(0);
+    fill(255);
+    text("ERROR 404: LEVEL NOT FOUND", 300, 300);
   }
 }
