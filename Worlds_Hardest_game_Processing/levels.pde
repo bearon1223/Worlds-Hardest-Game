@@ -196,9 +196,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  }
-
-  if (l == 2) {
+  } else if (l == 2) {
     float s = 1.2;
     if (!setup) {
       p = new player(86 / 25, 300 / 25, 1);
@@ -278,9 +276,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  }
-
-  if (l == 3) {
+  } else if (l == 3) {
     if (!setup) {
       p = new player(2.5, 11.5, 1);
       e = new enemys(6, 11.5, 18, false, 1);
@@ -346,9 +342,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  }
-
-  if (l == 4) {
+  } else  if (l == 4) {
     if (!setup) {
       p = new player(12, 2, 1);
       coinsCollected = 0;
@@ -463,10 +457,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  }
-
-
-  if (l == 5) {
+  } else if (l == 5) {
     if (!setup) {
       p = new player(4.3, 5.3, 1);
       setup = true;
@@ -587,9 +578,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  }
-
-  if (l == 6) {
+  } else if (l == 6) {
     if (!setup) {
       setup = true;
       p = new player(1.5, 5.5, 1);
@@ -709,9 +698,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  } 
-  
-  else if (l == 7) {
+  } else if (l == 7) {
     if (!setup) {
       p = new player(3.5, 13, 1);
       eu = new enemyu(6, 9.5, 16.5, false, 2);
@@ -780,7 +767,7 @@ void level(float l) {
       lineg(19, 9, 0, 3);
       lineg(5, 14, 0, 3);
       lineg(19, 14, 0, 3);
-      
+
       eu.move();
       eu.render();
       eu2.move();
