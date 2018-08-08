@@ -799,6 +799,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
+  } else if (l == 8) {
   } else {
     background(0);
     fill(255);
