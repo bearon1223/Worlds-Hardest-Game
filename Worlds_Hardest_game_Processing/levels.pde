@@ -22,17 +22,7 @@ enemyu eu11 = new enemyu(0, 0, 0, false, 0);
 enemyu eu12 = new enemyu(0, 0, 0, false, 0);
 enemyu eu13 = new enemyu(0, 0, 0, false, 0);
 
-//enemyp ep = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep2 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep3 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep4 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep5 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep6 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep7 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep8 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep9 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep10 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-//enemyp ep11 = new enemyp(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+enemyr er = new enemyr(1, 1, 5, 5, 1);
 
 rotatingEnemys r1 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 rotatingEnemys r2 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
@@ -800,6 +790,13 @@ void level(float l) {
       p.render();
     }
   } else if (l == 8) {
+    if (!setup) {
+      setup = true;
+    } else {
+      background(0, 187, 255);
+      er.normal();
+      er.render();
+    }
   } else {
     background(0);
     fill(255);

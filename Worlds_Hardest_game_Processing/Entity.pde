@@ -273,7 +273,7 @@ class rotatingEnemys {
     rotatary_dude = 0;
     rotatary_dudei = 0;
   }
-  
+
   void normal() {
     translate(x * 25, y * 25);
     int p;
@@ -326,5 +326,53 @@ class rotatingEnemys {
       rotatary_dudei = 0;
     }
     translate(-(x * 25), -(y * 25));
+  }
+}
+
+class enemyr {
+  float x, y, sx, sy, s, size, xspeed = 0, yspeed = 0, original_speed, startx, starty;
+  enemyr(float stx, float sty, float sizex, float sizey, float speed) {
+    x = stx * 25;
+    y = sty * 25;
+    startx = stx * 25;
+    starty = sty * 25;
+    sx = sizex * 25;
+    sy = sizey * 25;
+    s = speed;
+    size = 15;
+    xspeed = speed;
+    yspeed = 0;
+    original_speed = speed;
+  }
+
+  void normal() {
+    if (y <= starty  && x <= startx) {
+      xspeed = original_speed;
+      yspeed = 0;
+    }
+    if (x >= startx + sx && y >= starty) {
+      xspeed = 0;
+      yspeed = original_speed;
+    }
+    if (y >= starty + sy && x >= startx + sy) {
+      xspeed = -original_speed;
+      yspeed = 0;
+    }
+    if (x <= startx && y <= starty + sy) {
+      xspeed = 0;
+      yspeed = -original_speed;
+    }
+    x += xspeed;
+    y += yspeed;
+  }
+
+  void inverted() {
+  }
+
+  void render(){
+    fill(255);
+    rect(startx, starty, sx, sy);
+    fill(0, 0, 255);
+    ellipse(x, y, size, size);
   }
 }
