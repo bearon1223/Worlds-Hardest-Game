@@ -23,6 +23,18 @@ enemyu eu12 = new enemyu(0, 0, 0, false, 0);
 enemyu eu13 = new enemyu(0, 0, 0, false, 0);
 
 enemyr er = new enemyr(1, 1, 5, 5, 1);
+enemyr er2 = new enemyr(1, 1, 5, 5, 1);
+enemyr er3 = new enemyr(1, 1, 5, 5, 1);
+enemyr er4 = new enemyr(1, 1, 5, 5, 1);
+enemyr er5 = new enemyr(1, 1, 5, 5, 1);
+enemyr er6 = new enemyr(1, 1, 5, 5, 1);
+enemyr er7 = new enemyr(1, 1, 5, 5, 1);
+enemyr er8 = new enemyr(1, 1, 5, 5, 1);
+enemyr er9 = new enemyr(1, 1, 5, 5, 1);
+enemyr er10 = new enemyr(1, 1, 5, 5, 1);
+enemyr er11 = new enemyr(1, 1, 5, 5, 1);
+enemyr er12 =  new enemyr(1, 1, 5, 5, 1);
+enemyr er13 = new enemyr(1, 1, 5, 5, 1);
 
 rotatingEnemys r1 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 rotatingEnemys r2 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
@@ -792,10 +804,19 @@ void level(float l) {
   } else if (l == 8) {
     if (!setup) {
       setup = true;
+      p = new player(12, 12, 1);
+      er = new enemyr(1, 1, 3, 20, 1);
+      er2 = new enemyr(1, 3, 3, 20, 1);
     } else {
       background(0, 187, 255);
       er.normal();
+      er2.normal();
       er.render();
+      er2.render();
+      
+      p.movement();
+      p.collision();
+      p.render();
     }
   } else {
     background(0);

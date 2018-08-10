@@ -349,16 +349,13 @@ class enemyr {
     if (y <= starty  && x <= startx) {
       xspeed = original_speed;
       yspeed = 0;
-    }
-    if (x >= startx + sx && y >= starty) {
+    } else if (x >= (((startx / 25) + (sx / 25)) * 25) && y <= starty) {
       xspeed = 0;
       yspeed = original_speed;
-    }
-    if (y >= starty + sy && x >= startx + sy) {
+    } else if (y >= (((starty / 25) + (sy / 25)) * 25) && x >= (((startx / 25) + (sx / 25)) * 25)) {
       xspeed = -original_speed;
       yspeed = 0;
-    }
-    if (x <= startx && y <= starty + sy) {
+    } else if (x <= startx && y <= (((starty / 25) + (sy / 25)) * 25)) {
       xspeed = 0;
       yspeed = -original_speed;
     }
@@ -367,11 +364,24 @@ class enemyr {
   }
 
   void inverted() {
+    if (y <= starty && x <= startx) {
+      xspeed = 0;
+      yspeed = original_speed;
+    } else if (y >= (((starty / 25) + (sy / 25)) * 25) && x <= startx) {
+      yspeed = 0;
+      xspeed = original_speed;
+    } else if (y >= (((starty / 25) + (sy / 25)) * 25) && x >= (((startx / 25) + (sx / 25)) * 25)) {
+      xspeed = 0;
+      yspeed = -original_speed;
+    } else if (x >= (((startx / 25) + (sx / 25)) * 25) && y <= starty) {
+      xspeed = -original_speed;
+      yspeed = 0;
+    }
+    x += xspeed;
+    y += yspeed;
   }
 
-  void render(){
-    fill(255);
-    rect(startx, starty, sx, sy);
+  void render() {
     fill(0, 0, 255);
     ellipse(x, y, size, size);
   }
