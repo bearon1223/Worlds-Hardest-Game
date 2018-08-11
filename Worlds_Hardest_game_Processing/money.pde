@@ -1,10 +1,7 @@
-boolean noinvul = true;
-
 void getMoney(float amount) {
   coins += amount;
 }
 
-boolean tiles = false;
 void shopButton(String t, float x, float y, float ys, float cost, int action) {
   float w = 180 + ys;
   float h = 50;
