@@ -34,7 +34,7 @@ void draw() {
   Scene();
   save();
 
-  if (scene != 0 && scene != 32) {
+  if (scene != 0 && scene != 32 && scene != -102 && scene != -103) {
     fill(255);
     textAlign(CORNER, CORNER);
     textSize(20);

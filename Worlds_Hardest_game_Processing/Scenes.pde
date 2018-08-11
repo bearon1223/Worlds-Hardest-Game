@@ -10,6 +10,14 @@ void Scene() {
     }
   } else if (scene == -102) {
     l.creator();
+  } else if(scene == -103){
+    background(100, 255, 100);
+    //if(bt == 0){}
+    menuButton("Checkerboard2x2", 300, 100, 134, 0);
+    menuButton("Checkpoint", 300, 160, 16, 1);
+    menuButton("End", 300, 220, 0, 2);
+    menuButton("Player Start", 300, 280, 27, 3);
+    sceneButton("Return To Editor", 10, 540, -101, 123);
   }
   if (scene == -10) {
     background(0, 187, 255);

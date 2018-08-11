@@ -67,6 +67,37 @@ void end(float x, float y, float sx, float sy, boolean allow) {
   rect(x * 25, y * 25, sx * 25, sy * 25);
 };
 
+void menuButton(String t, float x, float y, float ys, float action) {
+  float w = 180 + ys;
+  float h = 50;
+  fill(96, 96, 96, 96);
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    fill(56, 56, 56, 146);
+    if (mousePressed) {
+      if(action == 0){
+        // 2x2
+        bt = 0;
+      } else if(action == 1){
+        // checkpoint
+        bt = 1;
+      }else if(action == 2){
+        // end
+        bt = 2;
+      }else if(action == 3){
+        // player
+        bt = 3;
+      }
+    }
+  } 
+  strokeWeight(1);
+  stroke(0);
+  rect(x - w / 2, y, w, h, 3);
+  textSize(35);
+  textAlign(CENTER, CENTER);
+  fill(0, 0, 0);
+  text(t, x , y + h / 2);
+}
+
 void sceneButton(String t, float x, float y, int i, float ys) {
   float w = 180 + ys;
   float h = 50;
