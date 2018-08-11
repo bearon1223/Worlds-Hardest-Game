@@ -147,6 +147,7 @@ void checkerboard2x2(float x, float y) {
   float offx = x * 2;
   float offy = y * 2;
   float widths = 25;
+  noStroke();
   fill(255, 255, 255);
   rect(25+(25*offx), 25+(25*offy), widths, widths);
   fill(240, 240, 240);
@@ -161,6 +162,7 @@ void checkerboard1x1(float x, float y, boolean i) {
   float offx = x;
   float offy = y;
   float widths = 25;
+  noStroke();
   if (i) {
     fill(240, 240, 240);
   } else {
@@ -173,6 +175,7 @@ void checkerboard1x2(float x, float y, boolean i) {
   float offx = x;
   float offy = y;
   float widths = 25;
+  noStroke();
   if (!i) {
     fill(255, 255, 255);
   } else {
@@ -191,6 +194,7 @@ void checkerboard2x1(float x, float y, boolean i) {
   float offx = x;
   float offy = y;
   float widths = 25;
+  noStroke();
   if (!i) {
     fill(255, 255, 255);
   } else {
