@@ -17,7 +17,8 @@ void Scene() {
     menuButton("Checkpoint", 300, 160, 16, 1);
     menuButton("End", 300, 220, 0, 2);
     menuButton("Player Start", 300, 280, 27, 3);
-    sceneButton("Play", 10, 340, -104, -104);
+    menuButton("Border", 300, 340, 0, 4);
+    //sceneButton("Play", 10, 340, -104, -104);
     sceneButton("Return To Editor", 10, 540, -101, 123);
   } else if(scene == -104){
     l.playLevel();
