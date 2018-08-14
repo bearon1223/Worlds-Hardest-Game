@@ -31,8 +31,8 @@ void coin(float x, float y, float coinAmount, float currentCoin) {
   } else {
     currentCoinCollected = false;
   }
-  
-  if(currentCoin == coinsCollected + 1){
+
+  if (currentCoin == coinsCollected + 1) {
     fill(255, 255, 0);
   } else {
     fill(255, 254, 0);
@@ -50,11 +50,33 @@ void coin(float x, float y, float coinAmount, float currentCoin) {
 
   coinAmountPublic = coinAmount;
 }
+int t = 0;
+int u = 0;
+void autoBorder() {
+  while (u <= height) {
+    color k = get(t, u);
+    if (k == color(255) || k == color(240) || k == color(0, 255, 119) || k == color(0, 254, 119)) {
+      fill(0);
+      stroke(0);
+      ellipse(0, 0, 10, 10);
+    }
+    if (t >= width) {
+      t = 0;
+      u++;
+    }
+    t++;
+  }
+}
 
 void checkpoint(float x, float y, float  sx, float sy) {
   fill(0, 255, 119);
   noStroke();
   rect(x * 25, y * 25, sx * 25, sy * 25);
+};
+void checkpoint2(float x, float y, float  sx, float sy) {
+  fill(0, 255, 119);
+  noStroke();
+  rect(x * 25, y * 25, (x - sx) * 25, (y - sy) * 25);
 };
 
 void end(float x, float y, float sx, float sy, boolean allow) {
@@ -71,22 +93,10 @@ void menuButton(String t, float x, float y, float ys, float action) {
   float w = 180 + ys;
   float h = 50;
   fill(96, 96, 96, 96);
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+  if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
     if (mousePressed) {
-      if(action == 0){
-        // 2x2
-        bt = 0;
-      } else if(action == 1){
-        // checkpoint
-        bt = 1;
-      }else if(action == 2){
-        // end
-        bt = 2;
-      }else if(action == 3){
-        // player
-        bt = 3;
-      }
+      bt = action;
     }
   } 
   strokeWeight(1);
@@ -95,7 +105,7 @@ void menuButton(String t, float x, float y, float ys, float action) {
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
-  text(t, x , y + h / 2);
+  text(t, x, y + h / 2);
 }
 
 void sceneButton(String t, float x, float y, int i, float ys) {
@@ -104,6 +114,7 @@ void sceneButton(String t, float x, float y, int i, float ys) {
   fill(96, 96, 96, 96);
   if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
+    l.pressed = true;
     if (mousePressed) {
       scene = i;
       setup = false;

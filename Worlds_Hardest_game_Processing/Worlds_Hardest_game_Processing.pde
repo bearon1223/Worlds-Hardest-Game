@@ -9,19 +9,7 @@ void setup() {
   size(600, 600);
   surface.setTitle("The Worlds Hardest Game");
   load();
-  loadLevel();
-}
-
-void loadLevel() {
-  String[] lines = loadStrings(LEVEL_EDITOR_SAVE_FILE);
-  println(lines);
-  //coins = int(lines[0]);
-  //wins = int(lines[1]);
-  //fail = int(lines[2]);
-  for(int i = 0; i <= checkerboardLx.length - 1; i++){
-    checkerboardLx[i] = int(lines[i]);
-  }
-  println(checkerboardLx);
+  //loadLevel();
 }
 
 void load() {
