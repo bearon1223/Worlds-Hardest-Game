@@ -4,7 +4,7 @@ String btt = "Checkpoint2x2";
 void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   println(e);
-  if (bt <= 3) {
+  if (bt <= 4) {
     bt += constrain(e, min, max);
   } else {
     bt = 0;
@@ -19,12 +19,14 @@ void mouseWheel(MouseEvent event) {
     btt = "Player Start";
   } else if (bt == 4) {
     btt = "Border";
+  } else if (bt == 5){
+    btt = "Checkerboard1x1";
   }
 }
 
 public float bt;
 int checkclick = 0;
-int cclicked = 0, cclicked2 = 0, cclicked3 = 0;
+int cclicked = 0, cclicked2 = 0, cclicked3 = 0, cclicked4 = 0;
 
 class levelEdit {
   boolean setup2 = false;
@@ -58,6 +60,10 @@ class levelEdit {
     for (int i = 0; i <= cclicked3; i++) {
       lineg(linegx[i], linegy[i], linegsx[i], linegsy[i]);
     }
+    
+    for (int i = 0; i <= cclicked4; i++) {
+        checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
+      }
     p.render();
 
     fill(255);
@@ -164,6 +170,26 @@ class levelEdit {
       } else if (!mousePressed && pressed) {
         pressed = false;
       }
+    } else if (bt == 5) {
+      checkerboard1x1(mouseX / 25, mouseY / 25, false);
+
+      if (mousePressed && !pressed && mouseButton == LEFT) {
+        cclicked4++;      
+        
+        checkerboardx[clicked] = mouseX / 25;
+        checkerboardy[clicked] = mouseY / 25;
+        
+        pressed = true;
+      } else if (pressed && !mousePressed) {
+        pressed = false;
+      }
+
+      if (mousePressed && !pressed && mouseButton == RIGHT) {
+        cclicked4--;
+        pressed = true;
+      } else if (pressed && !mousePressed) {
+        pressed = false;
+      }
     }
   }
 
@@ -187,6 +213,10 @@ class levelEdit {
 
       for (int i = 0; i <= cclicked3; i++) {
         lineg(linegx[i], linegy[i], linegsx[i], linegsy[i]);
+      }
+      
+      for (int i = 0; i <= cclicked4; i++) {
+        checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
       }
       allowd = true;
       //autoBorder();
