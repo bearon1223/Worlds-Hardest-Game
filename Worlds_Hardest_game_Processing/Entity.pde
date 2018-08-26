@@ -40,7 +40,7 @@ class player {
       this.x = psx;
       this.y = psy;
       fail++;
-
+      coinsCollected = coinsCollectedC;
       if (coinAmountPublic < 1) {
         allowd = allowed;
       }
@@ -49,6 +49,7 @@ class player {
     if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
       psx = this.x;
       psy = this.y;
+      coinsCollectedC = coinsCollected;
       if (allowd) {
         allowed = true;
       }

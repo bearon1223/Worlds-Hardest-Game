@@ -1,5 +1,6 @@
 float coinAmountPublic = 0;
 float coinsCollected = 0;
+float coinsCollectedC = 0;
 boolean allowedcoin = false;
 
 void pixel(float x, float y, color c) {
@@ -44,7 +45,7 @@ void coin(float x, float y, float coinAmount, float currentCoin) {
     ellipse((x * 25) + (25 / 2), (y * 25) + (25 / 2), 15, 15);
   }
 
-  if (coinsCollected >= coinAmount) {
+  if (coinsCollectedC >= coinAmount) {
     allowd = true;
   }
 
