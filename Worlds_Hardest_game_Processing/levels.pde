@@ -574,7 +574,7 @@ void level(float l) {
       coin(14, 11, 6, 6);
 
       r1.normal();
-      r2.inverted();
+      //r2.inverted();
 
       p.movement();
       p.collision();
@@ -692,9 +692,9 @@ void level(float l) {
       r1.normal();
       r2.normal();
       r3.normal();
-      r4.inverted();
-      r5.inverted();
-      r6.inverted();
+      r4.normal();
+      r5.normal();
+      r6.normal();
 
       p.movement();
       p.collision();
@@ -703,7 +703,7 @@ void level(float l) {
   } else if (l == 7) {
     if (!setup) {
       p = new player(3.5, 13, 1);
-      eu = new enemyu(6, 9.5, 16.5, false, 2);
+      eu = new enemyu(5.9, 9.5, 16.5, false, 2);
       eu2 = new enemyu(7, 16.5, 9.5, true, 2);
       eu3 = new enemyu(8, 9.5, 16.5, false, 2);
       eu4 = new enemyu(9, 16.5, 9.5, true, 2);
@@ -715,7 +715,7 @@ void level(float l) {
       eu10 = new enemyu(15, 16.5, 9.5, true, 2);
       eu11 = new enemyu(16, 9.5, 16.5, false, 2);
       eu12 = new enemyu(17, 16.5, 9.5, true, 2);
-      eu13 = new enemyu(18, 9.5, 16.5, false, 2);
+      eu13 = new enemyu(18.1, 9.5, 16.5, false, 2);
       setup = true;
       coinsCollected = 0;
     } else {

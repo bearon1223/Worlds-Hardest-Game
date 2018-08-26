@@ -1,10 +1,30 @@
+float min = -1, max = 1, btp = 0;
+String btt = "Checkpoint2x2";
+
+void mouseWheel(MouseEvent event) {
+  float e = event.getCount();
+  println(e);
+  if (bt <= 3) {
+    bt += constrain(e, min, max);
+  } else {
+    bt = 0;
+  }
+  if (bt == 0) {
+    btt = "Checkerboard2x2";
+  } else if (bt == 1) {
+    btt = "Checkpoint";
+  } else if (bt == 2) {
+    btt = "End";
+  } else if (bt == 3) {
+    btt = "Player Start";
+  } else if (bt == 4) {
+    btt = "Border";
+  }
+}
+
 public float bt;
-//int[] checkerboardLx = new int[96];
-//int[] checkerboardLy = new int[96];
 int checkclick = 0;
 int cclicked = 0, cclicked2 = 0, cclicked3 = 0;
-
-
 
 class levelEdit {
   boolean setup2 = false;
@@ -19,6 +39,9 @@ class levelEdit {
   }
 
   void creator() {
+    if (keyCode == UP && keyPressed) {
+      scene = -104;
+    }
     background(0, 187, 255);
     for (int i = 0; i <= clicked; i++) {
       checkerboard2x2(checkerboardLx[i], checkerboardLy[i]);
@@ -31,24 +54,26 @@ class levelEdit {
     for (int i = 0; i <= cclicked; i++) {
       checkpoint(checkpointx[i], checkpointy[i], checkpointsx[i], checkpointsy[i]);
     }
-    
+
     for (int i = 0; i <= cclicked3; i++) {
       lineg(linegx[i], linegy[i], linegsx[i], linegsy[i]);
     }
     p.render();
 
-    if (keyCode == UP && keyPressed) {
-      scene = -103;
-    }
+    fill(255);
+    textAlign(CORNER, CORNER);
+    textSize(15);
+    text("Block Type: " + btt, 10, 10);
+
     if (bt == 0) {
       checkerboard2x2(mouseX / 50, mouseY / 50);
 
-      checkerboardLx[clicked] = mouseX / 50;
-      checkerboardLy[clicked] = mouseY / 50;
-
-
       if (mousePressed && !pressed && mouseButton == LEFT) {
-        clicked++;
+        clicked++;      
+        
+        checkerboardLx[clicked] = mouseX / 50;
+        checkerboardLy[clicked] = mouseY / 50;
+        
         pressed = true;
       } else if (pressed && !mousePressed) {
         pressed = false;
@@ -96,9 +121,7 @@ class levelEdit {
         pressed = false;
       }
     } else if (bt == 2) {
-      if (checkclick == 0) {
-        end(mouseX / 25, mouseY / 25, 1, 1, false);
-      }
+      end(mouseX / 25, mouseY / 25, 1, 1, false);
       if (checkclick == 1) {
         end(endx[cclicked2], endy[cclicked2], (mouseX / 25 - endx[cclicked2]) + 1, (mouseY / 25 - endy[cclicked2] + 1), false);
       }
@@ -153,9 +176,19 @@ class levelEdit {
       for (int i = 0; i <= clicked; i++) {
         checkerboard2x2(checkerboardLx[i], checkerboardLy[i]);
       }
-      for (int i = 0; i <= cclicked; i++) {
-        checkpoint(checkpointx[i], checkpointx[i], checkpointsx[i], checkpointsy[i]);
+
+      for (int i = 0; i <= cclicked2; i++) {
+        end(endx[i], endy[i], endsx[i], endsy[i], allowd);
       }
+
+      for (int i = 0; i <= cclicked; i++) {
+        checkpoint(checkpointx[i], checkpointy[i], checkpointsx[i], checkpointsy[i]);
+      }
+
+      for (int i = 0; i <= cclicked3; i++) {
+        lineg(linegx[i], linegy[i], linegsx[i], linegsy[i]);
+      }
+      allowd = true;
       //autoBorder();
       p.movement();
       p.collision();

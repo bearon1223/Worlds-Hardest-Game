@@ -1,19 +1,21 @@
 void getMoney(float amount) {
   coins += amount;
 }
-
+boolean mp = false;
 void shopButton(String t, float x, float y, float ys, float cost, int action) {
   float w = 180 + ys;
   float h = 50;
   fill(96, 96, 96, 96);
   if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && coins >= cost) {
     fill(56, 56, 56, 146);
-    if (mousePressed) {
+    if (mousePressed && !mp) {
+      mp = true;
       coins -= cost;
-      scene = 0;
       if (action == 1) {
         wins++;
       }
+    } else if(mp && !mousePressed){
+      mp = false;
     }
   } 
   if (coins >= cost) {

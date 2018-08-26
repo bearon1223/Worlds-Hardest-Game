@@ -1,4 +1,5 @@
 int scene = 0;
+int timer = 0;
 levelEdit l = new levelEdit();
 
 void Scene() {
@@ -10,18 +11,19 @@ void Scene() {
     }
   } else if (scene == -102) {
     l.creator();
-  } else if(scene == -103){
-    background(100, 255, 100);
-    //if(bt == 0){}
-    menuButton("Checkerboard2x2", 300, 100, 134, 0);
-    menuButton("Checkpoint", 300, 160, 16, 1);
-    menuButton("End", 300, 220, 0, 2);
-    menuButton("Player Start", 300, 280, 27, 3);
-    menuButton("Border", 300, 340, 0, 4);
-    //sceneButton("Play", 10, 340, -104, -104);
-    sceneButton("Return To Editor", 10, 540, -101, 123);
-  } else if(scene == -104){
+    timer = 0;
+  } else if (scene == -104) {
     l.playLevel();
+    timer = 0;
+  } else if (scene == -103) {
+    textSize(30);
+    fill(0);
+    textAlign(CENTER, CENTER);
+    text("YOU WIN", 300, 300);
+    timer++;
+    if (timer == 500) {
+      scene = 0;
+    }
   }
   if (scene == -10) {
     background(0, 187, 255);
@@ -47,7 +49,9 @@ void Scene() {
     level1(true);
     sceneButton("Level Select", 200 - 15/2, 260, -10, 20);
     sceneButtonr("Play", 235, 200, 2, -70);
-    sceneButton("Level Creator", (300 - 240 / 2), 380, -101, 50);
+    if (wins > 4) {
+      sceneButton("Level Creator", (300 - 240 / 2), 380, -101, 50);
+    }
     sceneButton("Shop", 235, 320, -1, -70);
     textSize(56);
     fill(255, 255, 255);
