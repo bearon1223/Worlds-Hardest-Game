@@ -63,7 +63,7 @@ class levelEdit {
     fill(255);
     textAlign(CORNER, CORNER);
     textSize(15);
-    text("Block Type: " + btt, 10, 10);
+    text("Block Type: " + btt, 10, 15);
 
     if (bt == 0) {
       checkerboard2x2(mouseX / 50, mouseY / 50);
