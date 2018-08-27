@@ -676,9 +676,9 @@ void level(float l) {
       checkerboard2x2(9, 4);
       end(1, 12, 2, 6, allowd);
 
-      coin(16, 13, 3, 1);
+      coin(16, 13, 3, 3);
       coin(10, 13, 3, 2);
-      coin(4, 13, 3, 3);
+      coin(4, 13, 3, 1);
 
       lineg(1, 3, 22, 0);
       lineg(1, 12, 18, 0);
