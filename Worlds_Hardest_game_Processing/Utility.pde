@@ -8,6 +8,10 @@ void pixel(float x, float y, color c) {
   rect(x * 25, y * 25, 25, 25);
 }
 
+void pointg(float x, float y){
+  point(x * 25, y * 25);
+}  
+
 void lineg(float x, float y, float sx, float sy) {
   fill(0, 0, 0);
   stroke(0, 0, 0);

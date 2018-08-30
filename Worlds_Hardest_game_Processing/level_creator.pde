@@ -1,10 +1,10 @@
-float min = -1, max = 1, btp = 0;
+float min = -1, max = 1, btp = 0, emnpc = 0;
 String btt = "Checkpoint2x2";
 
 void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   println(e);
-  if (bt <= 4) {
+  if (bt <= 7) {
     bt += constrain(e, min, max);
   } else {
     bt = 0;
@@ -19,14 +19,20 @@ void mouseWheel(MouseEvent event) {
     btt = "Player Start";
   } else if (bt == 4) {
     btt = "Border";
-  } else if (bt == 5){
+  } else if (bt == 5) {
     btt = "Checkerboard1x1";
+  } else if (bt == 6) {
+    btt = "Side to Side Enemy to the right";
+  } else if (bt == 7) {
+    btt = "Side to Side Enemy to the left";
+  } else if (bt == 8) {
+    btt = "Checkerboard1x1 Inverted";
   }
 }
 
 public float bt;
 int checkclick = 0;
-int cclicked = 0, cclicked2 = 0, cclicked3 = 0, cclicked4 = 0;
+int cclicked = 0, cclicked2 = 0, cclicked3 = 0, cclicked4 = 0, cclicked5 = 0;
 
 class levelEdit {
   boolean setup2 = false;
@@ -60,10 +66,19 @@ class levelEdit {
     for (int i = 0; i <= cclicked3; i++) {
       lineg(linegx[i], linegy[i], linegsx[i], linegsy[i]);
     }
-    
+
     for (int i = 0; i <= cclicked4; i++) {
-        checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
-      }
+      checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
+    }
+
+    for (int i = 0; i <= cclicked5; i++) {
+      noStroke();
+      fill(0, 0, 255);
+      ellipse(enemyStartx[i] * 25, enemyStarty[i] * 25, 15, 15);
+      strokeWeight(2);
+      stroke(0);
+      pointg(enemyEndx[i], enemyStarty[i]);
+    }
     p.render();
 
     fill(255);
@@ -76,10 +91,10 @@ class levelEdit {
 
       if (mousePressed && !pressed && mouseButton == LEFT) {
         clicked++;      
-        
+
         checkerboardLx[clicked] = mouseX / 50;
         checkerboardLy[clicked] = mouseY / 50;
-        
+
         pressed = true;
       } else if (pressed && !mousePressed) {
         pressed = false;
@@ -175,10 +190,10 @@ class levelEdit {
 
       if (mousePressed && !pressed && mouseButton == LEFT) {
         cclicked4++;      
-        
+
         checkerboardx[clicked] = mouseX / 25;
         checkerboardy[clicked] = mouseY / 25;
-        
+
         pressed = true;
       } else if (pressed && !mousePressed) {
         pressed = false;
@@ -190,15 +205,62 @@ class levelEdit {
       } else if (pressed && !mousePressed) {
         pressed = false;
       }
+    } else if (bt == 6) {
+      if (emnpc == 0) {
+        strokeWeight(2);
+        pointg(mouseX / 25, mouseY / 25);
+      } else if (emnpc == 1) {
+        noStroke();
+        fill(0, 0, 255);
+        ellipse(enemyStartx[cclicked5] * 25, enemyStarty[cclicked5] * 25, 15, 15);
+        strokeWeight(2);
+        stroke(0);
+        pointg(mouseX / 25, enemyStarty[cclicked5]);
+      }
+
+      if (emnpc == 0 && !pressed && mousePressed) {
+        cclicked5++;
+
+        enemyStartx[cclicked5] = mouseX / 25;
+        enemyStarty[cclicked5] = mouseY / 25;
+        pressed = true;
+        emnpc = 1;
+      } else if (emnpc == 1 && !pressed && mousePressed) {
+        enemyEndx[cclicked5] = mouseX / 25;
+        pressed = true;
+        emnpc = 0;
+      } else if (pressed && !mousePressed) {
+        pressed = false;
+      }
     }
   }
 
   void playLevel() {
     if (!setup2) {
       p = new player(px, py, 1);
+      e = new enemys(enemyStartx[0], enemyStarty[0], enemyEndx[0], false);
+      e2 = new enemys(enemyStartx[1], enemyStarty[1], enemyEndx[1], false);
+      e3 = new enemys(enemyStartx[2], enemyStarty[2], enemyEndx[2], false);
+      e4 = new enemys(enemyStartx[3], enemyStarty[3], enemyEndx[3], false);
+      e5 = new enemys(enemyStartx[4], enemyStarty[4], enemyEndx[4], false);
+      e6 = new enemys(enemyStartx[5], enemyStarty[5], enemyEndx[5], false);
+      e7 = new enemys(enemyStartx[6], enemyStarty[6], enemyEndx[6], false);
+      e8 = new enemys(enemyStartx[7], enemyStarty[7], enemyEndx[7], false);
+      e9 = new enemys(enemyStartx[8], enemyStarty[8], enemyEndx[8], false);
+      e10 = new enemys(enemyStartx[9], enemyStarty[9], enemyEndx[9], false);
+      e11 = new enemys(enemyStartx[10], enemyStarty[10], enemyEndx[10], false);
+      e12 = new enemys(enemyStartx[11], enemyStarty[11], enemyEndx[11], false);
+      e13 = new enemys(enemyStartx[12], enemyStarty[12], enemyEndx[12], false);
+      e14 = new enemys(enemyStartx[13], enemyStarty[13], enemyEndx[13], false);
+      e15 = new enemys(enemyStartx[14], enemyStarty[14], enemyEndx[14], false);
+      e16 = new enemys(enemyStartx[15], enemyStarty[15], enemyEndx[15], false);
+      e17 = new enemys(enemyStartx[16], enemyStarty[16], enemyEndx[16], false);
+      e18 = new enemys(enemyStartx[17], enemyStarty[17], enemyEndx[17], false);
+      e19 = new enemys(enemyStartx[18], enemyStarty[18], enemyEndx[18], false);
+      e20 = new enemys(enemyStartx[19], enemyStarty[19], enemyEndx[19], false);
       setup2 = true;
     } else {
-      background(bg[0], bg[1], bg[2]);
+      background(0, 187, 255);
       for (int i = 0; i <= clicked; i++) {
         checkerboard2x2(checkerboardLx[i], checkerboardLy[i]);
       }
@@ -214,10 +276,50 @@ class levelEdit {
       for (int i = 0; i <= cclicked3; i++) {
         lineg(linegx[i], linegy[i], linegsx[i], linegsy[i]);
       }
-      
+
       for (int i = 0; i <= cclicked4; i++) {
         checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
       }
+
+      e.move();
+      e.render();
+      e2.move();
+      e2.render();
+      e3.move();
+      e3.render();
+      e4.move();
+      e4.render();
+      e5.move();
+      e5.render();
+      e6.move();
+      e6.render();
+      e7.move();
+      e7.render();
+      e8.move();
+      e8.render();
+      e9.move();
+      e9.render();
+      e10.move();
+      e10.render();
+      e11.move();
+      e11.render();
+      e12.move();
+      e12.render();
+      e13.move();
+      e13.render();
+      e14.move();
+      e14.render();
+      e15.move();
+      e15.render();
+      e16.move();
+      e16.render();
+      e17.move();
+      e17.render();
+      e18.move();
+      e18.render();
+      e19.move();
+      e19.render();
+
       allowd = true;
       //autoBorder();
       p.movement();
