@@ -47,6 +47,7 @@ class levelEdit {
   }
 
   void creator() {
+    setup2 = false;
     if (keyCode == UP && keyPressed) {
       scene = -104;
     }
