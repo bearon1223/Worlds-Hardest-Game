@@ -3,18 +3,16 @@ float psx, psy;
 static final String CONFIG_FILE = "config.dat";
 static final String LEVEL_EDITOR_SAVE_FILE = "level editor.dat";
 
-int coins = 500, wincount;
+int coins = 100, wincount;
 
 void setup() {
   size(600, 600);
   surface.setTitle("The Worlds Hardest Game");
   load();
-  //loadLevel();
 }
 
 void load() {
   String[] lines = loadStrings(CONFIG_FILE);
-  //println(lines);
   coins = int(lines[0]);
   wins = int(lines[1]);
   fail = int(lines[2]);
@@ -24,8 +22,6 @@ void save() {
   String[] lines = { 
     str(coins), str(wins), str(fail)
   };
-  //println(lines);
-
   saveStrings(dataFile(CONFIG_FILE), lines);
 }
 
