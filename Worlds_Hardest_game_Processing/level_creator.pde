@@ -32,7 +32,7 @@ void mouseWheel(MouseEvent event) {
 
 public float bt;
 int checkclick = 0;
-int cclicked = 0, cclicked2 = 0, cclicked3 = 0, cclicked4 = 0, cclicked5 = 0;
+int cclicked = 0, cclicked2 = 0, cclicked3 = 0, cclicked4 = 0, cclicked5 = 0, cclicked6 = 0;
 
 class levelEdit {
   boolean setup2 = false;
@@ -79,6 +79,15 @@ class levelEdit {
       strokeWeight(2);
       stroke(0);
       pointg(enemyEndx[i], enemyStarty[i]);
+    }
+    
+    for (int i = 0; i <= cclicked6; i++) {
+      noStroke();
+      fill(0, 0, 255);
+      ellipse(enemyStartx2[i] * 25, enemyStarty2[i] * 25, 15, 15);
+      strokeWeight(2);
+      stroke(0);
+      pointg(enemyEndx2[i], enemyStarty2[i]);
     }
     p.render();
 
@@ -233,6 +242,33 @@ class levelEdit {
       } else if (pressed && !mousePressed) {
         pressed = false;
       }
+    } else if (bt == 7) {
+      if (emnpc == 0) {
+        strokeWeight(2);
+        pointg(mouseX / 25, mouseY / 25);
+      } else if (emnpc == 1) {
+        noStroke();
+        fill(0, 0, 255);
+        ellipse(enemyStartx2[cclicked6] * 25, enemyStarty2[cclicked6] * 25, 15, 15);
+        strokeWeight(2);
+        stroke(0);
+        pointg(mouseX / 25, enemyStarty2[cclicked6]);
+      }
+
+      if (emnpc == 0 && !pressed && mousePressed) {
+        cclicked6++;
+
+        enemyStartx2[cclicked6] = mouseX / 25;
+        enemyStarty2[cclicked6] = mouseY / 25;
+        pressed = true;
+        emnpc = 1;
+      } else if (emnpc == 1 && !pressed && mousePressed) {
+        enemyEndx2[cclicked6] = mouseX / 25;
+        pressed = true;
+        emnpc = 0;
+      } else if (pressed && !mousePressed) {
+        pressed = false;
+      }
     }
   }
 
@@ -259,6 +295,27 @@ class levelEdit {
       e18 = new enemys(enemyStartx[17], enemyStarty[17], enemyEndx[17], false);
       e19 = new enemys(enemyStartx[18], enemyStarty[18], enemyEndx[18], false);
       e20 = new enemys(enemyStartx[19], enemyStarty[19], enemyEndx[19], false);
+
+      ei= new enemys(enemyStartx2[0], enemyStarty2[0], enemyEndx2[0], true);
+      ei2 = new enemys(enemyStartx2[1], enemyStarty2[1], enemyEndx2[1], true);
+      ei3 = new enemys(enemyStartx2[2], enemyStarty2[2], enemyEndx2[2], true);
+      ei4 = new enemys(enemyStartx2[3], enemyStarty2[3], enemyEndx2[3], true);
+      ei5 = new enemys(enemyStartx2[4], enemyStarty2[4], enemyEndx2[4], true);
+      ei6 = new enemys(enemyStartx2[5], enemyStarty2[5], enemyEndx2[5], true);
+      ei7 = new enemys(enemyStartx2[6], enemyStarty2[6], enemyEndx2[6], true);
+      ei8 = new enemys(enemyStartx2[7], enemyStarty2[7], enemyEndx2[7], true);
+      ei9 = new enemys(enemyStartx2[8], enemyStarty2[8], enemyEndx2[8], true);
+      ei10 = new enemys(enemyStartx2[9], enemyStarty2[9], enemyEndx2[9], true);
+      ei11 = new enemys(enemyStartx2[10], enemyStarty2[10], enemyEndx2[10], true);
+      ei12 = new enemys(enemyStartx2[11], enemyStarty2[11], enemyEndx2[11], true);
+      ei13 = new enemys(enemyStartx2[12], enemyStarty2[12], enemyEndx2[12], true);
+      ei14 = new enemys(enemyStartx2[13], enemyStarty2[13], enemyEndx2[13], true);
+      ei15 = new enemys(enemyStartx2[14], enemyStarty2[14], enemyEndx2[14], true);
+      ei16 = new enemys(enemyStartx2[15], enemyStarty2[15], enemyEndx2[15], true);
+      ei17 = new enemys(enemyStartx2[16], enemyStarty2[16], enemyEndx2[16], true);
+      ei18 = new enemys(enemyStartx2[17], enemyStarty2[17], enemyEndx2[17], true);
+      ei19 = new enemys(enemyStartx2[18], enemyStarty2[18], enemyEndx2[18], true);
+      ei20 = new enemys(enemyStartx2[19], enemyStarty2[19], enemyEndx2[19], true);
       setup2 = true;
     } else {
       background(0, 187, 255);
@@ -320,6 +377,50 @@ class levelEdit {
       e18.render();
       e19.move();
       e19.render();
+
+
+
+
+      ei.move();
+      ei.render();
+      ei2.move();
+      ei2.render();
+      ei3.move();
+      ei3.render();
+      ei4.move();
+      ei4.render();
+      ei5.move();
+      ei5.render();
+      ei6.move();
+      ei6.render();
+      ei7.move();
+      ei7.render();
+      ei8.move();
+      ei8.render();
+      ei9.move();
+      ei9.render();
+      ei10.move();
+      ei10.render();
+      ei11.move();
+      ei11.render();
+      ei12.move();
+      ei12.render();
+      ei13.move();
+      ei13.render();
+      ei14.move();
+      ei14.render();
+      ei15.move();
+      ei15.render();
+      ei16.move();
+      ei16.render();
+      ei17.move();
+      ei17.render();
+      ei18.move();
+      ei18.render();
+      ei19.move();
+      ei19.render();
+      ei20.move();
+      ei20.render();
 
       allowd = true;
       //autoBorder();
