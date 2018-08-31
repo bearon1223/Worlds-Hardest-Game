@@ -3,11 +3,12 @@ String btt = "Checkpoint2x2";
 
 void mouseWheel(MouseEvent event) {
   float e = event.getCount();
-  println(e);
   if (bt <= 7) {
     bt += constrain(e, min, max);
-  } else {
+  } else if(bt > 7) {
     bt = 0;
+  } else if(bt < 0){
+    bt = 8;
   }
   if (bt == 0) {
     btt = "Checkerboard2x2";
