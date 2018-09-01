@@ -852,6 +852,12 @@ void level(float l) {
       er11.render();
       
       coin(10, 9);
+      lineg(10, 9, 1, 0);
+      lineg(11, 9, 0, 1);
+      lineg(11, 10, 3, 0);
+      lineg(10, 9, 0, 5);
+      lineg(14, 10, 0, 4);
+      lineg(10, 14, 4, 0);
       
       p.movement();
       p.collision();
