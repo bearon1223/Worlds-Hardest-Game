@@ -346,6 +346,31 @@ class enemyr {
     original_speed = speed;
   }
 
+  enemyr(float stx, float sty, float sizex, float sizey, float speed, float startingx, float startingy, boolean down, boolean bottom, boolean up) {
+    x = startingx * 25;
+    y = startingy * 25;
+    startx = stx * 25;
+    starty = sty * 25;
+    sx = sizex * 25;
+    sy = sizey * 25;
+    s = speed;
+    size = 15;
+    original_speed = speed;
+    if (down) {
+      xspeed = 0;
+      yspeed = speed;
+    } else if (bottom) {
+      xspeed = -speed;
+      yspeed = 0;
+    } else if (up) {
+      xspeed = 0;
+      yspeed = -speed;
+    } else {
+      xspeed = speed;
+      yspeed = 0;
+    }
+  }
+
   void normal() {
     if (y <= starty  && x <= startx) {
       xspeed = original_speed;

@@ -94,6 +94,18 @@ void end(float x, float y, float sx, float sy, boolean allow) {
   rect(x * 25, y * 25, sx * 25, sy * 25);
 };
 
+void end(float x, float y, float sx, float sy, boolean allow, boolean checkpoint) {
+  if (allow) {
+    fill(0, 254, 119);
+  } else if(checkpoint){
+    fill(0, 255, 119);
+  } else {
+    fill(0, 253, 119);
+  }
+  noStroke();
+  rect(x * 25, y * 25, sx * 25, sy * 25);
+};
+
 void menuButton(String t, float x, float y, float ys, float action) {
   float w = 180 + ys;
   float h = 50;

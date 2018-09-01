@@ -799,10 +799,24 @@ void level(float l) {
     if (!setup) {
       setup = true;
       p = new player(12, 12, 1);
+      psx = 12 * 25;
+      psy = 12 * 25;
+      er = new enemyr(10.5, 10.5, 3, 3, 1);
+      er2 = new enemyr(10.5, 10.5, 3, 3, 1, 11.5, 10.5, false, false, false);
+      er3 = new enemyr(10.5, 10.5, 3, 3, 1, 12.5, 10.5, false, false, false);
+      er4 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 10.5, false, false, false);
+      er5 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 11.5, true, false, false);
+      er6 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 12.5, true, false, false);
+      er7 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 13.5, true, false, false);
+      er8 = new enemyr(10.5, 10.5, 3, 3, 1, 10.5, 13.5, false, true, false);
+      er9 = new enemyr(10.5, 10.5, 3, 3, 1, 11.5, 13.5, false, true, false);
+      er10 = new enemyr(10.5, 10.5, 3, 3, 1, 12.5, 13.5, false, true, false);
+      er11 = new enemyr(10.5, 10.5, 3, 3, 1, 10.5, 12.5, false, false, true);
     } else {
       background(0, 187, 255);
       
-      checkpoint(11, 11, 2, 2);
+      end(11, 11, 2, 2, allowd, false);
+      
       checkerboard2x1(10, 9, true);
       checkerboard2x1(10, 12, false);
       checkerboard1x2(9, 10, true);
@@ -812,6 +826,32 @@ void level(float l) {
       checkerboard1x1(9, 12, true);
       checkerboard1x1(12, 12, false);
       checkerboard1x1(12, 9, true);
+      
+      er.normal();
+      er2.normal();
+      er3.normal();
+      er4.normal();
+      er5.normal();
+      er6.normal();
+      er7.normal();
+      er8.normal();
+      er9.normal();
+      er10.normal();
+      er11.normal();
+      
+      er.render();
+      er2.render();
+      er3.render();
+      er4.render();
+      er5.render();
+      er6.render();
+      er7.render();
+      er8.render();
+      er9.render();
+      er10.render();
+      er11.render();
+      
+      coin(10, 9);
       
       p.movement();
       p.collision();
