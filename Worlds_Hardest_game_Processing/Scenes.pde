@@ -43,22 +43,34 @@ void Scene() {
     shop();
   }
   
+  if(scene == 178435){
+    scene = 0;
+  }
+  
+  if(scene == -343){
+    background(0, 187, 255);
+    menuButton("English", 10, 100, 0, 0);
+    menuButton("français", 10, 160, 0, 1);
+    menuButton("Pirates Speak", 10, 220, 50, 2);
+  }
+  
   if (scene == 0) {
     level1(true);
-    sceneButton(lsb, 200 - 15/2, 260, -10, 20);
-    sceneButtonr(startbutton, 235, 200, 2, -70);
+    sceneButtonc(lsb, 300, 260, -10, lsbs);
+    sceneButtonr(startbutton, 300, 200, 2, startbuttons);
+    sceneButtonc(menu, 300, 380 + 60, -343, menus);
     
     if (wins > 4) {
-      sceneButton(leveleb, (300 - 240 / 2), 380, -101, 50);
+      sceneButtonc(leveleb, 300, 380, -101, levelebs);
     }
     
-    sceneButton(shopb, 235, 320, -1, -70);
+    sceneButtonc(shopb, 300, 320, -1, shopbs);
     textSize(56);
     fill(255, 255, 255);
     textAlign(CENTER, CENTER);
     text(titletext, 300, 108);
     
-    sceneButtone(exitb, 300 - 190 / 2, 380 + 60, 0);
+    sceneButtone(exitb, 300, 380 + 120, exitbs);
     levels = 0;
   } else if (scene == 1) {
     background(0, 187, 255);

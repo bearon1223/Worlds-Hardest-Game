@@ -584,6 +584,7 @@ void level(float l) {
       r4 = new rotatingEnemys(6, 15, 2, 10, 30, true, 0);
       r5 = new rotatingEnemys(12, 15, 2, 10, 30, true, 0);
       r6 = new rotatingEnemys(18, 15, 2, 10, 30, true, 0);
+      allowd = false;
     } else if (setup) {
       background(0, 187, 255);
       checkpoint(1, 3, 2, 6);
@@ -798,20 +799,21 @@ void level(float l) {
   } else if (l == 8) {
     if (!setup) {
       setup = true;
-      p = new player(12, 12, 1);
+      p = new player(12, 12, 0.8);
       psx = 12 * 25;
       psy = 12 * 25;
+      float speeed = 1;
       er = new enemyr(10.5, 10.5, 3, 3, 1);
-      er2 = new enemyr(10.5, 10.5, 3, 3, 1, 11.5, 10.5, false, false, false);
-      er3 = new enemyr(10.5, 10.5, 3, 3, 1, 12.5, 10.5, false, false, false);
-      er4 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 10.5, false, false, false);
-      er5 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 11.5, true, false, false);
-      er6 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 12.5, true, false, false);
-      er7 = new enemyr(10.5, 10.5, 3, 3, 1, 13.5, 13.5, true, false, false);
-      er8 = new enemyr(10.5, 10.5, 3, 3, 1, 10.5, 13.5, false, true, false);
-      er9 = new enemyr(10.5, 10.5, 3, 3, 1, 11.5, 13.5, false, true, false);
-      er10 = new enemyr(10.5, 10.5, 3, 3, 1, 12.5, 13.5, false, true, false);
-      er11 = new enemyr(10.5, 10.5, 3, 3, 1, 10.5, 12.5, false, false, true);
+      er2 = new enemyr(10.5, 10.5, 3, 3, speeed, 11.5, 10.5, false, false, false);
+      er3 = new enemyr(10.5, 10.5, 3, 3, speeed, 12.5, 10.5, false, false, false);
+      er4 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 10.5, false, false, false);
+      er5 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 11.5, true, false, false);
+      er6 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 12.5, true, false, false);
+      er7 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 13.5, true, false, false);
+      er8 = new enemyr(10.5, 10.5, 3, 3, speeed, 10.5, 13.5, false, true, false);
+      er9 = new enemyr(10.5, 10.5, 3, 3, speeed, 11.5, 13.5, false, true, false);
+      er10 = new enemyr(10.5, 10.5, 3, 3, speeed, 12.5, 13.5, false, true, false);
+      er11 = new enemyr(10.5, 10.5, 3, 3, speeed, 10.5, 12.5, false, false, true);
     } else {
       background(0, 187, 255);
       

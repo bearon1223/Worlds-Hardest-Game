@@ -30,5 +30,5 @@ void shopButton(String t, float x, float y, float ys, float cost, int action) {
 }
 
 void shop() {
-  shopButton("Skip Next Level", 10, 100, 100, 50, 1);
+  shopButton(sknb, 10, 100, sknbs, 50, 1);
 }

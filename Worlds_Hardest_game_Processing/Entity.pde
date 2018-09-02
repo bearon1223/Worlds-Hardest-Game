@@ -23,6 +23,9 @@ class player {
     if (levels > wins) {
       wins++;
     }
+    coinsCollectedC = 0;
+    coinAmountPublic = 0;
+    coinsCollected = 0;
     getMoney(5);
     allowd = false;
     allowed = false;

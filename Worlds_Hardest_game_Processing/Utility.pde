@@ -1,6 +1,7 @@
 float coinAmountPublic = 0;
 float coinsCollected = 0;
 float coinsCollectedC = 0;
+float langtype = 0;
 boolean allowedcoin = false;
 
 void pixel(float x, float y, color c) {
@@ -110,19 +111,19 @@ void menuButton(String t, float x, float y, float ys, float action) {
   float w = 180 + ys;
   float h = 50;
   fill(96, 96, 96, 96);
-  if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h) {
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
     if (mousePressed) {
-      bt = action;
+      langtype = action;
     }
   } 
   strokeWeight(1);
   stroke(0);
-  rect(x - w / 2, y, w, h, 3);
+  rect(x, y, w, h, 3);
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
-  text(t, x, y + h / 2);
+  text(t, x + w / 2, y + h / 2);
 }
 
 void sceneButton(String t, float x, float y, int i, float ys) {
@@ -147,11 +148,33 @@ void sceneButton(String t, float x, float y, int i, float ys) {
   text(t, x + w / 2, y + h / 2);
 }
 
+void sceneButtonc(String t, float x, float y, int i, float ys) {
+  float w = 180 + ys;
+  float h = 50;
+  fill(96, 96, 96, 96);
+  if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h) {
+    fill(56, 56, 56, 146);
+    l.pressed = true;
+    if (mousePressed) {
+      scene = i;
+      setup = false;
+      allowd = false;
+    }
+  } 
+  strokeWeight(1);
+  stroke(0);
+  rect(x - w / 2, y, w, h, 3);
+  textSize(35);
+  textAlign(CENTER, CENTER);
+  fill(0, 0, 0);
+  text(t, x, y + h / 2);
+}
+
 void sceneButtone(String t, float x, float y, float ys) {
   float w = 180 + ys;
   float h = 50;
   fill(96, 96, 96, 96);
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+  if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
     if (mousePressed) {
       save();
@@ -160,11 +183,11 @@ void sceneButtone(String t, float x, float y, float ys) {
   } 
   strokeWeight(1);
   stroke(0);
-  rect(x, y, w, h, 3);
+  rect(x - w / 2, y, w, h, 3);
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
-  text(t, x + w / 2, y + h / 2);
+  text(t, x, y + h / 2);
 }
 
 void sceneButtonr(String t, float x, float y, int i, float ys) {
@@ -173,7 +196,7 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
   float mx = mouseX;
   float my = mouseY;
   fill(96, 96, 96, 96);
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+  if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
     if (mousePressed) {
       scene = i;
@@ -186,19 +209,19 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
   } 
   strokeWeight(1);
   stroke(0);
-  rect(x, y, w, h, 3);
+  rect(x - w / 2, y, w, h, 3);
   textSize(35);
   textAlign(CENTER, CENTER);
   fill(0, 0, 0);
-  text(t, x + w / 2, y + h / 2);
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && (floor(fail) > 0 || floor(wins) > 0)) {
+  text(t, x, y + h / 2);
+  if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h && (floor(fail) > 0 || floor(wins) > 0)) {
     stroke(0);
     fill(255);
     rect(mx + 10, my, 150, 20, 5);
     fill(0);
     textSize(10);
     textAlign(CENTER, CENTER);
-    text("WARNING will reset progress", mx+((150 / 2) + 10), my + 10);
+    text(wrn, mx+((150 / 2) + 10), my + 10);
   }
 }
 
