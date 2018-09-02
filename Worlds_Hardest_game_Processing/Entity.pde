@@ -296,7 +296,7 @@ class rotatingEnemys {
     }
     rotate(-rotatary_dude);
     rotatary_dude += speed * 0.001;
-    if (rotatary_dude >= 360) {
+    if (rotatary_dude >= TWO_PI) {
       rotatary_dude = 0;
     }
     translate(-(x * 25), -(y * 25));
@@ -323,7 +323,7 @@ class rotatingEnemys {
     }
     rotate(-rotatary_dudei);
     rotatary_dudei -= speed * 0.001;
-    if (rotatary_dudei >= 360) {
+    if (rotatary_dudei >= TWO_PI) {
       rotatary_dudei = 0;
     }
     translate(-(x * 25), -(y * 25));

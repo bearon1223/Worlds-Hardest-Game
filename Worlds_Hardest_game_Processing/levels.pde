@@ -849,7 +849,7 @@ void level(float l) {
       er8.render();
       er9.render();
       er10.render();
-      er11.render();
+      //er11.render();
       
       coin(10, 9);
       lineg(10, 9, 1, 0);

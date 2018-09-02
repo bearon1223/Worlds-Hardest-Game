@@ -1,7 +1,9 @@
 float fail = 0, wins = 0, levels = 0;
 float psx, psy;
+String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct;
 static final String CONFIG_FILE = "config.dat";
-static final String LEVEL_EDITOR_SAVE_FILE = "level editor.dat";
+static final String US_LANGUAGE_FILE = "us.lang";
+static final String JAPANESE_LANGUAGE_FILE = "japanese.lang";
 
 int coins = 100, wincount;
 
@@ -9,6 +11,7 @@ void setup() {
   size(600, 600);
   surface.setTitle("The Worlds Hardest Game");
   load();
+  loadlanguage();
 }
 
 void load() {
@@ -16,6 +19,20 @@ void load() {
   coins = int(lines[0]);
   wins = int(lines[1]);
   fail = int(lines[2]);
+}
+
+void loadlanguage(){
+  String[] lines = loadStrings(US_LANGUAGE_FILE);
+  titletext = lines[0];
+  startbutton = lines[1];
+  leveleb = lines[2];
+  exitb = lines[3];
+  lsb = lines[4];
+  shopb = lines[5];
+  lt = lines[6];
+  ft = lines[7];
+  let = lines[8];
+  ct = lines[9];
 }
 
 void save() {
@@ -34,10 +51,10 @@ void draw() {
     textAlign(CORNER, CORNER);
     textSize(20);
 
-    text("Fails: " + floor(fail), 10, 20);
-    text("Level " + floor(levels) + " / 30", 450, 20);
+    text(ft + floor(fail), 10, 20);
+    text(let + floor(levels) + " / 30", 450, 20);
     textAlign(CENTER, CORNER);
-    text("Coins: " + floor(coins), 300, 20);
+    text(ct + floor(coins), 300, 20);
 
     sceneButton("Title Screen", 600 - 210, 600 - 60, 0, 20);
   }
