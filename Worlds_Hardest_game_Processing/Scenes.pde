@@ -65,7 +65,7 @@ void Scene() {
     }
     
     sceneButtonc(shopb, 300, 320, -1, shopbs);
-    textSize(56);
+    textSize(55);
     fill(255, 255, 255);
     textAlign(CENTER, CENTER);
     text(titletext, 300, 108);
