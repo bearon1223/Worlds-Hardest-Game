@@ -275,10 +275,10 @@ void level(float l) {
   } else if (l == 3) {
     if (!setup) {
       p = new player(2.5, 11.5, 1);
-      e = new enemys(6, 11.5, 18, false, 1);
-      e2 = new enemys(6, 12.5, 18, false, 1);
-      e3 = new enemys(18, 11.5, 6, true, 1);
-      e4 = new enemys(18, 12.5, 6, true, 1);
+      e = new enemys(6, 11.5, 18, false, 1.1);
+      e2 = new enemys(6, 12.5, 18, false, 1.1);
+      e3 = new enemys(18, 11.5, 6, true, 1.1);
+      e4 = new enemys(18, 12.5, 6, true, 1.1);
       coinsCollected = 0;
       //e = new enemys(170 / 25, 290 / 25, 297.5 / 25, false, 1.5);
       //e2 = new enemys(170 / 25, 310 / 25, 297.5 / 25, false, 1.5);
