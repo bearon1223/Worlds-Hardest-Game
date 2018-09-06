@@ -343,7 +343,7 @@ void level(float l) {
       p = new player(12, 2, 1);
       coinsCollected = 0;
       setup = true;
-      r1 = new rotatingEnemys(12, 12, 6, 6, 32, true, 0);
+      r1 = new rotatingEnemys(12, 12, 6, 6, 31, true, 0);
     } else {
       background(0, 187, 255);
       checkpoint(11, 1, 2, 2);
