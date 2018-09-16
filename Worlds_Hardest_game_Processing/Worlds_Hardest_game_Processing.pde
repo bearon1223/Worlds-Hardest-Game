@@ -1,7 +1,8 @@
 float fail = 0, wins = 0, levels = 0;
 float psx, psy;
-String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu;
-float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns;
+String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu, gridboolt, est, lbt, returnt;
+float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns;
+boolean gb = false, es = false, ch = true;
 static final String CONFIG_FILE = "config.dat";
 static final String US_LANGUAGE_FILE = "us.lang";
 static final String FR_LANGUAGE_FILE = "fr.lang";
@@ -21,9 +22,11 @@ void load() {
   coins = int(lines[0]);
   wins = int(lines[1]);
   fail = int(lines[2]);
+  gb = boolean(lines[3]);
+  es = boolean(lines[4]);
 }
 
-void loadlanguage(String Used){
+void loadlanguage(String Used) {
   String[] lines = loadStrings(Used);
   titletext = lines[0];
   startbutton = lines[2];
@@ -46,11 +49,19 @@ void loadlanguage(String Used){
   wrns = int(lines[21]);
   menu = lines[22];
   menus = int(lines[23]);
+  gridboolt = lines[24];
+  gridbools = int(lines[25]);
+  est = lines[26];
+  ess = int(lines[27]);
+  lbt = lines[28];
+  lbs = int(lines[29]);
+  returnt = lines[30];
+  returns = int(lines[31]);
 }
 
 void save() {
-  String[] lines = { 
-    str(coins), str(wins), str(fail)
+  String[] lines = {
+    str(coins), str(wins), str(fail), str(gb), str(es)
   };
   saveStrings(dataFile(CONFIG_FILE), lines);
 }
@@ -58,15 +69,15 @@ void save() {
 void draw() {
   Scene();
   save();
-  if(langtype == 0){
-  loadlanguage(US_LANGUAGE_FILE);
-  } else if(langtype == 1){
+  if (langtype == 0) {
+    loadlanguage(US_LANGUAGE_FILE);
+  } else if (langtype == 1) {
     loadlanguage(FR_LANGUAGE_FILE);
-  } else if(langtype == 2){
+  } else if (langtype == 2) {
     loadlanguage(PS_LANGUAGE_FILE);
   }
 
-  if (scene != 0 && scene != 32 && scene != -102 && scene != -103) {
+  if (scene != 0 && scene != 32 && scene != -102 && scene != -103 && scene != -342) {
     fill(255);
     textAlign(CORNER, CORNER);
     textSize(20);
