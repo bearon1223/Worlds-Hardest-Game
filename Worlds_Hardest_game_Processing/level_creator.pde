@@ -297,7 +297,7 @@ class levelEdit {
       e19 = new enemys(enemyStartx[18], enemyStarty[18], enemyEndx[18], false);
       e20 = new enemys(enemyStartx[19], enemyStarty[19], enemyEndx[19], false);
 
-      ei= new enemys(enemyStartx2[0], enemyStarty2[0], enemyEndx2[0], true);
+      ei = new enemys(enemyStartx2[0], enemyStarty2[0], enemyEndx2[0], true);
       ei2 = new enemys(enemyStartx2[1], enemyStarty2[1], enemyEndx2[1], true);
       ei3 = new enemys(enemyStartx2[2], enemyStarty2[2], enemyEndx2[2], true);
       ei4 = new enemys(enemyStartx2[3], enemyStarty2[3], enemyEndx2[3], true);
@@ -424,7 +424,6 @@ class levelEdit {
       ei20.render();
 
       allowd = true;
-      //autoBorder();
       p.movement();
       p.collision();
       p.render();

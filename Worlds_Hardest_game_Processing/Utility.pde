@@ -9,7 +9,7 @@ void pixel(float x, float y, color c) {
   rect(x * 25, y * 25, 25, 25);
 }
 
-void pointg(float x, float y){
+void pointg(float x, float y) {
   point(x * 25, y * 25);
 }  
 
@@ -48,6 +48,12 @@ void coin(float x, float y, float coinAmount, float currentCoin) {
     stroke(1);
     strokeWeight(1);
     ellipse((x * 25) + (25 / 2), (y * 25) + (25 / 2), 15, 15);
+    textAlign(CENTER, CENTER);
+    textSize(10);
+    fill(1);
+    if (es) {
+      text(floor(currentCoin), (x * 25) + (25 / 2), (y * 25) + (25 / 2) - 1);
+    }
   }
 
   if (coinsCollectedC >= coinAmount) {
@@ -56,6 +62,7 @@ void coin(float x, float y, float coinAmount, float currentCoin) {
 
   coinAmountPublic = coinAmount;
 }
+
 int t = 0;
 int u = 0;
 void autoBorder() {
@@ -98,7 +105,7 @@ void end(float x, float y, float sx, float sy, boolean allow) {
 void end(float x, float y, float sx, float sy, boolean allow, boolean checkpoint) {
   if (allow) {
     fill(0, 254, 119);
-  } else if(checkpoint){
+  } else if (checkpoint) {
     fill(0, 255, 119);
   } else {
     fill(0, 253, 119);
@@ -133,10 +140,99 @@ void sceneButton(String t, float x, float y, int i, float ys) {
   if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
     l.pressed = true;
-    if (mousePressed) {
-      scene = i;
+    if (mousePressed && !presssed) {
       setup = false;
       allowd = false;
+      presssed = true;
+    } else if(presssed && !mousePressed){
+      scene = i;
+      presssed = false;
+    }
+  } 
+  strokeWeight(1);
+  stroke(0);
+  rect(x, y, w, h, 3);
+  textSize(35);
+  textAlign(CENTER, CENTER);
+  fill(0, 0, 0);
+  text(t, x + w / 2, y + h / 2);
+}
+
+boolean presssed = false;
+
+void gButton(String t, float x, float y, float ys) {
+  float w = 180 + ys;
+  float h = 50;
+  fill(96, 96, 96, 96);
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    fill(56, 56, 56, 146);
+    l.pressed = true;
+    if (mousePressed) {
+      if (gb && !presssed) {
+        gb = false;
+        presssed = true;
+      } else if (!gb && !presssed) {
+        gb = true;
+        presssed = true;
+      }
+    } else if (!mousePressed && presssed) {
+      presssed = false;
+    }
+  } 
+  strokeWeight(1);
+  stroke(0);
+  rect(x, y, w, h, 3);
+  textSize(35);
+  textAlign(CENTER, CENTER);
+  fill(0, 0, 0);
+  text(t, x + w / 2, y + h / 2);
+}
+
+void gButton2(String t, float x, float y, float ys) {
+  float w = 180 + ys;
+  float h = 50;
+  fill(96, 96, 96, 96);
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    fill(56, 56, 56, 146);
+    l.pressed = true;
+    if (mousePressed) {
+      if (es && !presssed) {
+        es = false;
+        presssed = true;
+      } else if (!es && !presssed) {
+        es = true;
+        presssed = true;
+      }
+    } else if (!mousePressed && presssed) {
+      presssed = false;
+    }
+  } 
+  strokeWeight(1);
+  stroke(0);
+  rect(x, y, w, h, 3);
+  textSize(35);
+  textAlign(CENTER, CENTER);
+  fill(0, 0, 0);
+  text(t, x + w / 2, y + h / 2);
+}
+
+void gButton3(String t, float x, float y, float ys) {
+  float w = 180 + ys;
+  float h = 50;
+  fill(96, 96, 96, 96);
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
+    fill(56, 56, 56, 146);
+    l.pressed = true;
+    if (mousePressed) {
+      if (ch && !presssed) {
+        ch = false;
+        presssed = true;
+      } else if (!ch && !presssed) {
+        ch = true;
+        presssed = true;
+      }
+    } else if (!mousePressed && presssed) {
+      presssed = false;
     }
   } 
   strokeWeight(1);
@@ -217,17 +313,32 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
   if (mouseX >= x - (w / 2) && mouseX <= x + (w / 2) && mouseY >= y && mouseY <= y + h && (floor(fail) > 0 || floor(wins) > 0)) {
     stroke(0);
     fill(255);
-    rect(mx + 10, my, 150, 20, 5);
+    rect(mx + 10, my, 150 + wrns, 20, 5);
     fill(0);
     textSize(10);
     textAlign(CENTER, CENTER);
-    text(wrn, mx+((150 / 2) + 10), my + 10);
+    text(wrn, mx+(((150 + wrns) / 2) + 10), my + 10);
   }
 }
 
-void checkerboard2x2(float x, float y) {
+void checkerboard2x2old(float x, float y) {
   float offx = x * 2;
   float offy = y * 2;
+  float widths = 25;
+  noStroke();
+  fill(255, 255, 255);
+  rect(25+(25*offx), 25+(25*offy), widths, widths);
+  fill(240, 240, 240);
+  rect(25+(25*offx), 25+(25*(offy+1)), widths, widths);
+  fill(255, 255, 255);
+  rect(25+(25*(offx+1)), 25+(25*(offy+1)), widths, widths);
+  fill(240, 240, 240);
+  rect(25+(25*(offx+1)), 25+(25*offy), widths, widths);
+}
+
+void checkerboard2x2(float x, float y) {
+  float offx = x;
+  float offy = y;
   float widths = 25;
   noStroke();
   fill(255, 255, 255);

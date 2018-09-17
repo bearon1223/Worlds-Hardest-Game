@@ -1,3 +1,4 @@
+
 class player {
   float x, y, s, sx, sy, sxs, sys, timer = 0;
   player(float x, float y, float s) {
@@ -52,6 +53,12 @@ class player {
     if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
       psx = this.x;
       psy = this.y;
+      coinsCollectedC = coinsCollected;
+      if (allowd) {
+        allowed = true;
+      }
+    }
+    if (a3 == color(0, 253, 119) || a2 == color(0, 253, 119)) {
       coinsCollectedC = coinsCollected;
       if (allowd) {
         allowed = true;
@@ -411,6 +418,7 @@ class enemyr {
   }
 
   void render() {
+    noStroke();
     fill(0, 0, 255);
     ellipse(x, y, size, size);
   }

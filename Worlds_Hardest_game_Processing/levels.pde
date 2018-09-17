@@ -39,24 +39,24 @@ rotatingEnemys r6 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 
 /*
  checkpoint(2, 11, 3, 2);
- checkerboard2x2(2, 5);
- checkerboard2x2(3, 5);
- checkerboard2x2(4, 5);
- checkerboard2x2(5, 5);
- checkerboard2x2(6, 5);
- checkerboard2x2(7, 5);
- checkerboard2x2(2, 4);
- checkerboard2x2(3, 4);
- checkerboard2x2(4, 4);
- checkerboard2x2(5, 4);
- checkerboard2x2(6, 4);
- checkerboard2x2(7, 4);
- checkerboard2x2(2, 6);
- checkerboard2x2(3, 6);
- checkerboard2x2(4, 6);
- checkerboard2x2(5, 6);
- checkerboard2x2(6, 6);
- checkerboard2x2(7, 6);
+ checkerboard2x2old(2, 5);
+ checkerboard2x2old(3, 5);
+ checkerboard2x2old(4, 5);
+ checkerboard2x2old(5, 5);
+ checkerboard2x2old(6, 5);
+ checkerboard2x2old(7, 5);
+ checkerboard2x2old(2, 4);
+ checkerboard2x2old(3, 4);
+ checkerboard2x2old(4, 4);
+ checkerboard2x2old(5, 4);
+ checkerboard2x2old(6, 4);
+ checkerboard2x2old(7, 4);
+ checkerboard2x2old(2, 6);
+ checkerboard2x2old(3, 6);
+ checkerboard2x2old(4, 6);
+ checkerboard2x2old(5, 6);
+ checkerboard2x2old(6, 6);
+ checkerboard2x2old(7, 6);
  end(17, 11, 3, 2, allowd);
  */
 
@@ -75,21 +75,21 @@ void level1(boolean display) {
     background(0, 187, 255);
     checkpoint(2, 6, 4, 8);
     checkerboard2x1(5, 12, true);
-    checkerboard2x2(3, 5);
-    checkerboard2x2(4, 5);
-    checkerboard2x2(5, 5);
-    checkerboard2x2(6, 5);
-    checkerboard2x2(7, 5);
-    checkerboard2x2(3, 4);
-    checkerboard2x2(4, 4);
-    checkerboard2x2(5, 4);
-    checkerboard2x2(6, 4);
-    checkerboard2x2(7, 4);
-    checkerboard2x2(3, 3);
-    checkerboard2x2(4, 3);
-    checkerboard2x2(5, 3);
-    checkerboard2x2(6, 3);
-    checkerboard2x2(7, 3);
+    checkerboard2x2old(3, 5);
+    checkerboard2x2old(4, 5);
+    checkerboard2x2old(5, 5);
+    checkerboard2x2old(6, 5);
+    checkerboard2x2old(7, 5);
+    checkerboard2x2old(3, 4);
+    checkerboard2x2old(4, 4);
+    checkerboard2x2old(5, 4);
+    checkerboard2x2old(6, 4);
+    checkerboard2x2old(7, 4);
+    checkerboard2x2old(3, 3);
+    checkerboard2x2old(4, 3);
+    checkerboard2x2old(5, 3);
+    checkerboard2x2old(6, 3);
+    checkerboard2x2old(7, 3);
     checkerboard2x1(15, 5, false);
     end(18, 6, 4, 8, true);
     // start
@@ -142,21 +142,21 @@ void level(float l) {
       background(0, 187, 255);
       checkpoint(2, 6, 4, 8);
       checkerboard2x1(5, 12, true);
-      checkerboard2x2(3, 5);
-      checkerboard2x2(4, 5);
-      checkerboard2x2(5, 5);
-      checkerboard2x2(6, 5);
-      checkerboard2x2(7, 5);
-      checkerboard2x2(3, 4);
-      checkerboard2x2(4, 4);
-      checkerboard2x2(5, 4);
-      checkerboard2x2(6, 4);
-      checkerboard2x2(7, 4);
-      checkerboard2x2(3, 3);
-      checkerboard2x2(4, 3);
-      checkerboard2x2(5, 3);
-      checkerboard2x2(6, 3);
-      checkerboard2x2(7, 3);
+      checkerboard2x2old(3, 5);
+      checkerboard2x2old(4, 5);
+      checkerboard2x2old(5, 5);
+      checkerboard2x2old(6, 5);
+      checkerboard2x2old(7, 5);
+      checkerboard2x2old(3, 4);
+      checkerboard2x2old(4, 4);
+      checkerboard2x2old(5, 4);
+      checkerboard2x2old(6, 4);
+      checkerboard2x2old(7, 4);
+      checkerboard2x2old(3, 3);
+      checkerboard2x2old(4, 3);
+      checkerboard2x2old(5, 3);
+      checkerboard2x2old(6, 3);
+      checkerboard2x2old(7, 3);
       checkerboard2x1(15, 5, false);
       end(18, 6, 4, 8, true);
       // start
@@ -212,24 +212,24 @@ void level(float l) {
     } else {
       background(0, 187, 255);
       checkpoint(2, 11, 3, 2);
-      checkerboard2x2(2, 5);
-      checkerboard2x2(3, 5);
-      checkerboard2x2(4, 5);
-      checkerboard2x2(5, 5);
-      checkerboard2x2(6, 5);
-      checkerboard2x2(7, 5);
-      checkerboard2x2(2, 4);
-      checkerboard2x2(3, 4);
-      checkerboard2x2(4, 4);
-      checkerboard2x2(5, 4);
-      checkerboard2x2(6, 4);
-      checkerboard2x2(7, 4);
-      checkerboard2x2(2, 6);
-      checkerboard2x2(3, 6);
-      checkerboard2x2(4, 6);
-      checkerboard2x2(5, 6);
-      checkerboard2x2(6, 6);
-      checkerboard2x2(7, 6);
+      checkerboard2x2old(2, 5);
+      checkerboard2x2old(3, 5);
+      checkerboard2x2old(4, 5);
+      checkerboard2x2old(5, 5);
+      checkerboard2x2old(6, 5);
+      checkerboard2x2old(7, 5);
+      checkerboard2x2old(2, 4);
+      checkerboard2x2old(3, 4);
+      checkerboard2x2old(4, 4);
+      checkerboard2x2old(5, 4);
+      checkerboard2x2old(6, 4);
+      checkerboard2x2old(7, 4);
+      checkerboard2x2old(2, 6);
+      checkerboard2x2old(3, 6);
+      checkerboard2x2old(4, 6);
+      checkerboard2x2old(5, 6);
+      checkerboard2x2old(6, 6);
+      checkerboard2x2old(7, 6);
       end(17, 11, 3, 2, allowd);
       lineg(2, 11, 3, 0);
       lineg(17, 11, 3, 0);
@@ -272,29 +272,25 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  } else if (l == 3) {
+  } else if (l == -3) {
     if (!setup) {
       p = new player(2.5, 11.5, 1);
-      e = new enemys(6, 11.5, 18, false, 1.1);
-      e2 = new enemys(6, 12.5, 18, false, 1.1);
-      e3 = new enemys(18, 11.5, 6, true, 1.1);
-      e4 = new enemys(18, 12.5, 6, true, 1.1);
+      e = new enemys(6, 11.5, 18, false, 1.3);
+      e2 = new enemys(6, 12.5, 18, false, 1.3);
+      e3 = new enemys(18, 11.5, 6, true, 1.3);
+      e4 = new enemys(18, 12.5, 6, true, 1.3);
       coinsCollected = 0;
-      //e = new enemys(170 / 25, 290 / 25, 297.5 / 25, false, 1.5);
-      //e2 = new enemys(170 / 25, 310 / 25, 297.5 / 25, false, 1.5);
-      //e3 = new enemys(425 / 25, 290 / 25, 297.5 / 25, true, 1.5);
-      //e4 = new enemys(425 / 25, 310 / 25, 297.5 / 25, true, 1.5);
       setup = true;
     } else {
       background(0, 187, 255);
       checkpoint(2, 11, 3, 2);
-      checkerboard2x2(2, 5);
-      checkerboard2x2(3, 5);
-      checkerboard2x2(4, 5);
-      checkerboard2x2(5, 5);
-      checkerboard2x2(6, 5);
-      checkerboard2x2(7, 5);
-      checkerboard2x2(8, 5);
+      checkerboard2x2old(2, 5);
+      checkerboard2x2old(3, 5);
+      checkerboard2x2old(4, 5);
+      checkerboard2x2old(5, 5);
+      checkerboard2x2old(6, 5);
+      checkerboard2x2old(7, 5);
+      checkerboard2x2old(8, 5);
       checkpoint(7, 9, 1, 1);
       checkpoint(10, 14, 1, 1);
       checkpoint(13, 9, 1, 1);
@@ -348,64 +344,64 @@ void level(float l) {
       background(0, 187, 255);
       checkpoint(11, 1, 2, 2);
       end(11, 21, 2, 2, allowd);
-      checkerboard2x2(5, 2);
-      checkerboard2x2(4, 2);
-      checkerboard2x2(4, 1);
-      checkerboard2x2(5, 8);
-      checkerboard2x2(4, 8);
-      checkerboard2x2(5, 1);
-      checkerboard2x2(5, 7);
-      checkerboard2x2(4, 7);
-      checkerboard2x2(4, 6);
-      checkerboard2x2(5, 6);
-      checkerboard2x2(4, 8);
-      checkerboard2x2(5, 3);
-      checkerboard2x2(5, 4);
-      checkerboard2x2(4, 5);
-      checkerboard2x2(4, 4);
-      checkerboard2x2(5, 5);
-      checkerboard2x2(4, 3);
-      checkerboard2x2(6, 8);
-      checkerboard2x2(6, 1);
-      checkerboard2x2(6, 4);
-      checkerboard2x2(6, 3);
-      checkerboard2x2(6, 2);
-      checkerboard2x2(6, 7);
-      checkerboard2x2(6, 6);
-      checkerboard2x2(6, 9);
-      checkerboard2x2(5, 9);
-      checkerboard2x2(4, 9);
-      checkerboard2x2(6, 5);
-      checkerboard2x2(7, 5);
-      checkerboard2x2(8, 5);
-      checkerboard2x2(9, 5);
-      checkerboard2x2(1, 5);
-      checkerboard2x2(2, 5);
-      checkerboard2x2(3, 5);
-      checkerboard2x2(3, 4);
-      checkerboard2x2(3, 6);
-      checkerboard2x2(7, 4);
-      checkerboard2x2(7, 6);
-      checkerboard2x2(7, 7);
-      checkerboard2x2(7, 3);
-      checkerboard2x2(3, 3);
-      checkerboard2x2(3, 7);
-      checkerboard2x2(2, 4);
-      checkerboard2x2(2, 6);
-      checkerboard2x2(8, 4);
-      checkerboard2x2(8, 6);
-      checkerboard2x2(1, 6);
-      checkerboard2x2(1, 4);
-      checkerboard2x2(9, 4);
-      checkerboard2x2(9, 6);
-      checkerboard2x2(2, 7);
-      checkerboard2x2(2, 3);
-      checkerboard2x2(3, 2);
-      checkerboard2x2(3, 8);
-      checkerboard2x2(8, 7);
-      checkerboard2x2(7, 8);
-      checkerboard2x2(8, 3);
-      checkerboard2x2(7, 2);
+      checkerboard2x2old(5, 2);
+      checkerboard2x2old(4, 2);
+      checkerboard2x2old(4, 1);
+      checkerboard2x2old(5, 8);
+      checkerboard2x2old(4, 8);
+      checkerboard2x2old(5, 1);
+      checkerboard2x2old(5, 7);
+      checkerboard2x2old(4, 7);
+      checkerboard2x2old(4, 6);
+      checkerboard2x2old(5, 6);
+      checkerboard2x2old(4, 8);
+      checkerboard2x2old(5, 3);
+      checkerboard2x2old(5, 4);
+      checkerboard2x2old(4, 5);
+      checkerboard2x2old(4, 4);
+      checkerboard2x2old(5, 5);
+      checkerboard2x2old(4, 3);
+      checkerboard2x2old(6, 8);
+      checkerboard2x2old(6, 1);
+      checkerboard2x2old(6, 4);
+      checkerboard2x2old(6, 3);
+      checkerboard2x2old(6, 2);
+      checkerboard2x2old(6, 7);
+      checkerboard2x2old(6, 6);
+      checkerboard2x2old(6, 9);
+      checkerboard2x2old(5, 9);
+      checkerboard2x2old(4, 9);
+      checkerboard2x2old(6, 5);
+      checkerboard2x2old(7, 5);
+      checkerboard2x2old(8, 5);
+      checkerboard2x2old(9, 5);
+      checkerboard2x2old(1, 5);
+      checkerboard2x2old(2, 5);
+      checkerboard2x2old(3, 5);
+      checkerboard2x2old(3, 4);
+      checkerboard2x2old(3, 6);
+      checkerboard2x2old(7, 4);
+      checkerboard2x2old(7, 6);
+      checkerboard2x2old(7, 7);
+      checkerboard2x2old(7, 3);
+      checkerboard2x2old(3, 3);
+      checkerboard2x2old(3, 7);
+      checkerboard2x2old(2, 4);
+      checkerboard2x2old(2, 6);
+      checkerboard2x2old(8, 4);
+      checkerboard2x2old(8, 6);
+      checkerboard2x2old(1, 6);
+      checkerboard2x2old(1, 4);
+      checkerboard2x2old(9, 4);
+      checkerboard2x2old(9, 6);
+      checkerboard2x2old(2, 7);
+      checkerboard2x2old(2, 3);
+      checkerboard2x2old(3, 2);
+      checkerboard2x2old(3, 8);
+      checkerboard2x2old(8, 7);
+      checkerboard2x2old(7, 8);
+      checkerboard2x2old(8, 3);
+      checkerboard2x2old(7, 2);
 
       lineg(9, 3, 2, 0);
       lineg(11, 1, 2, 0);
@@ -588,61 +584,61 @@ void level(float l) {
     } else if (setup) {
       background(0, 187, 255);
       checkpoint(1, 3, 2, 6);
-      checkerboard2x2(1, 2);
-      checkerboard2x2(2, 2);
-      checkerboard2x2(3, 2);
-      checkerboard2x2(4, 2);
-      checkerboard2x2(5, 2);
-      checkerboard2x2(6, 2);
-      checkerboard2x2(7, 2);
-      checkerboard2x2(8, 2);
-      checkerboard2x2(9, 2);
-      checkerboard2x2(10, 2);
+      checkerboard2x2old(1, 2);
+      checkerboard2x2old(2, 2);
+      checkerboard2x2old(3, 2);
+      checkerboard2x2old(4, 2);
+      checkerboard2x2old(5, 2);
+      checkerboard2x2old(6, 2);
+      checkerboard2x2old(7, 2);
+      checkerboard2x2old(8, 2);
+      checkerboard2x2old(9, 2);
+      checkerboard2x2old(10, 2);
 
-      checkerboard2x2(1, 1);
-      checkerboard2x2(2, 1);
-      checkerboard2x2(3, 1);
-      checkerboard2x2(4, 1);
-      checkerboard2x2(5, 1);
-      checkerboard2x2(6, 1);
-      checkerboard2x2(7, 1);
-      checkerboard2x2(8, 1);
-      checkerboard2x2(9, 1);
-      checkerboard2x2(10, 1);
+      checkerboard2x2old(1, 1);
+      checkerboard2x2old(2, 1);
+      checkerboard2x2old(3, 1);
+      checkerboard2x2old(4, 1);
+      checkerboard2x2old(5, 1);
+      checkerboard2x2old(6, 1);
+      checkerboard2x2old(7, 1);
+      checkerboard2x2old(8, 1);
+      checkerboard2x2old(9, 1);
+      checkerboard2x2old(10, 1);
 
-      checkerboard2x2(1, 3);
-      checkerboard2x2(2, 3);
-      checkerboard2x2(3, 3);
-      checkerboard2x2(4, 3);
-      checkerboard2x2(5, 3);
-      checkerboard2x2(6, 3);
-      checkerboard2x2(7, 3);
-      checkerboard2x2(8, 3);
-      checkerboard2x2(9, 3);
-      checkerboard2x2(10, 3);
+      checkerboard2x2old(1, 3);
+      checkerboard2x2old(2, 3);
+      checkerboard2x2old(3, 3);
+      checkerboard2x2old(4, 3);
+      checkerboard2x2old(5, 3);
+      checkerboard2x2old(6, 3);
+      checkerboard2x2old(7, 3);
+      checkerboard2x2old(8, 3);
+      checkerboard2x2old(9, 3);
+      checkerboard2x2old(10, 3);
 
 
-      checkerboard2x2(1, 7);
-      checkerboard2x2(2, 7);
-      checkerboard2x2(3, 7);
-      checkerboard2x2(4, 7);
-      checkerboard2x2(5, 7);
-      checkerboard2x2(6, 7);
-      checkerboard2x2(7, 7);
-      checkerboard2x2(8, 7);
-      checkerboard2x2(9, 7);
-      checkerboard2x2(10, 7);
+      checkerboard2x2old(1, 7);
+      checkerboard2x2old(2, 7);
+      checkerboard2x2old(3, 7);
+      checkerboard2x2old(4, 7);
+      checkerboard2x2old(5, 7);
+      checkerboard2x2old(6, 7);
+      checkerboard2x2old(7, 7);
+      checkerboard2x2old(8, 7);
+      checkerboard2x2old(9, 7);
+      checkerboard2x2old(10, 7);
 
-      checkerboard2x2(1, 6);
-      checkerboard2x2(2, 6);
-      checkerboard2x2(3, 6);
-      checkerboard2x2(4, 6);
-      checkerboard2x2(5, 6);
-      checkerboard2x2(6, 6);
-      checkerboard2x2(7, 6);
-      checkerboard2x2(8, 6);
-      checkerboard2x2(9, 6);
-      checkerboard2x2(10, 6);
+      checkerboard2x2old(1, 6);
+      checkerboard2x2old(2, 6);
+      checkerboard2x2old(3, 6);
+      checkerboard2x2old(4, 6);
+      checkerboard2x2old(5, 6);
+      checkerboard2x2old(6, 6);
+      checkerboard2x2old(7, 6);
+      checkerboard2x2old(8, 6);
+      checkerboard2x2old(9, 6);
+      checkerboard2x2old(10, 6);
 
       checkerboard2x1(1 * 2, 8 * 2, false);
       checkerboard2x1(2 * 2, 8 * 2, false);
@@ -666,9 +662,9 @@ void level(float l) {
       checkerboard2x1(9 * 2, 5.5 * 2, true);
       checkerboard2x1(10 * 2, 5.5 * 2, true);
       checkerboard2x1(20, 10, false);
-      checkerboard2x2(10, 4);
+      checkerboard2x2old(10, 4);
       checkerboard2x1(18, 10, false);
-      checkerboard2x2(9, 4);
+      checkerboard2x2old(9, 4);
       end(1, 12, 2, 6, allowd);
 
       coin(16, 13, 3, 3);
@@ -716,37 +712,37 @@ void level(float l) {
     } else {
       background(0, 187, 255);
       checkpoint(2, 12, 3, 2);
-      checkerboard2x2(2, 6);
-      checkerboard2x2(3, 6);
-      checkerboard2x2(4, 6);
-      checkerboard2x2(5, 6);
-      checkerboard2x2(6, 6);
-      checkerboard2x2(7, 6);
-      checkerboard2x2(8, 6);
+      checkerboard2x2old(2, 6);
+      checkerboard2x2old(3, 6);
+      checkerboard2x2old(4, 6);
+      checkerboard2x2old(5, 6);
+      checkerboard2x2old(6, 6);
+      checkerboard2x2old(7, 6);
+      checkerboard2x2old(8, 6);
 
-      checkerboard2x2(2, 5);
-      checkerboard2x2(3, 5);
-      checkerboard2x2(4, 5);
-      checkerboard2x2(5, 5);
-      checkerboard2x2(6, 5);
-      checkerboard2x2(7, 5);
-      checkerboard2x2(8, 5);
+      checkerboard2x2old(2, 5);
+      checkerboard2x2old(3, 5);
+      checkerboard2x2old(4, 5);
+      checkerboard2x2old(5, 5);
+      checkerboard2x2old(6, 5);
+      checkerboard2x2old(7, 5);
+      checkerboard2x2old(8, 5);
 
-      checkerboard2x2(2, 4);
-      checkerboard2x2(3, 4);
-      checkerboard2x2(4, 4);
-      checkerboard2x2(5, 4);
-      checkerboard2x2(6, 4);
-      checkerboard2x2(7, 4);
-      checkerboard2x2(8, 4);
+      checkerboard2x2old(2, 4);
+      checkerboard2x2old(3, 4);
+      checkerboard2x2old(4, 4);
+      checkerboard2x2old(5, 4);
+      checkerboard2x2old(6, 4);
+      checkerboard2x2old(7, 4);
+      checkerboard2x2old(8, 4);
 
-      checkerboard2x2(2, 7);
-      checkerboard2x2(3, 7);
-      checkerboard2x2(4, 7);
-      checkerboard2x2(5, 7);
-      checkerboard2x2(6, 7);
-      checkerboard2x2(7, 7);
-      checkerboard2x2(8, 7);
+      checkerboard2x2old(2, 7);
+      checkerboard2x2old(3, 7);
+      checkerboard2x2old(4, 7);
+      checkerboard2x2old(5, 7);
+      checkerboard2x2old(6, 7);
+      checkerboard2x2old(7, 7);
+      checkerboard2x2old(8, 7);
       end(19, 12, 3, 2, allowd);
       coin(5, 9, 4, 1);
       coin(5, 16, 4, 2);
@@ -796,7 +792,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  } else if (l == 8) {
+  } else if (l == 3) {
     if (!setup) {
       setup = true;
       p = new player(12, 12, 0.8);
@@ -816,9 +812,9 @@ void level(float l) {
       er11 = new enemyr(10.5, 10.5, 3, 3, speeed, 10.5, 12.5, false, false, true);
     } else {
       background(0, 187, 255);
-      
+
       end(11, 11, 2, 2, allowd, false);
-      
+
       checkerboard2x1(10, 9, true);
       checkerboard2x1(10, 12, false);
       checkerboard1x2(9, 10, true);
@@ -828,7 +824,7 @@ void level(float l) {
       checkerboard1x1(9, 12, true);
       checkerboard1x1(12, 12, false);
       checkerboard1x1(12, 9, true);
-      
+
       er.normal();
       er2.normal();
       er3.normal();
@@ -840,7 +836,7 @@ void level(float l) {
       er9.normal();
       er10.normal();
       er11.normal();
-      
+
       er.render();
       er2.render();
       er3.render();
@@ -852,7 +848,7 @@ void level(float l) {
       er9.render();
       er10.render();
       //er11.render();
-      
+
       coin(10, 9);
       lineg(10, 9, 1, 0);
       lineg(11, 9, 0, 1);
@@ -860,10 +856,139 @@ void level(float l) {
       lineg(10, 9, 0, 5);
       lineg(14, 10, 0, 4);
       lineg(10, 14, 4, 0);
-      
+
       p.movement();
       p.collision();
       p.render();
+    }
+  } else if (l == 8) {
+    if (!setup) {
+      p = new player(8.2, 7.2, 1);
+      er = new enemyr(7.5, 6.5, 3, 3, 1, 7.5, 6.5, false, false, false);
+      er2 = new enemyr(7.5, 9.5, 3, 3, 1, 7.5, 9.5, false, false, false);
+      er3 = new enemyr(7.5, 12.5, 3, 2, 1, 7.5, 12.5, false, false, false);
+      er4 = new enemyr(10.5, 7.5, 3, 6, 1, 10.5, 7.5, false, false, false);
+      er5 = new enemyr(13.5, 6.5, 3, 2, 1, 13.5, 6.5, false, false, false);
+      er6 = new enemyr(13.5, 8.5, 3, 6, 1, 13.5, 8.5, false, false, false);
+      er7 = new enemyr(13.5, 8.5, 3, 6, 1, 16.5, 14.5, false, false, true);
+      psx = 8.2 * 25;
+      psy = 7.2 * 25;
+      setup = true;
+    } else if (setup) {
+      background(0, 187, 255);
+      checkerboard2x2(6, 5);
+      end(8, 7, 1, 1, allowd, false);
+      checkerboard2x1(8, 5, false);
+      checkerboard1x2(9, 6, false);
+      checkerboard1x2(9, 8, false);
+      checkerboard1x2(9, 10, false);
+      checkerboard1x2(9, 12, false);
+      checkerboard2x1(7, 13, true);
+      checkerboard1x2(6, 6, true);
+      checkerboard1x2(6, 8, true);
+      checkerboard1x2(6, 10, true);
+      checkerboard1x2(6, 12, true);
+      checkerboard2x1(7, 11, true);
+      checkerboard2x1(7, 8, false);
+      checkerboard2x1(10, 6, true);
+      checkerboard2x1(12, 5, false);
+      checkerboard1x2(12, 6, true);
+      checkerboard1x2(12, 8, true);
+      checkerboard1x2(12, 10, true);
+      checkerboard1x2(12, 12, true);
+      checkerboard2x1(10, 12, true);
+      checkerboard1x2(15, 6, false);
+      checkerboard1x2(15, 8, false);
+      checkerboard1x2(15, 10, false);
+      checkerboard1x2(15, 12, false);
+      checkerboard2x1(14, 5, false);
+      checkerboard2x1(13, 13, false);
+      checkerboard2x1(13, 7, true);
+      checkerboard1x1(14, 11, false);
+      checkerboard1x1(11, 8, false);
+
+      coin(7, 9, 10, 1);
+      coin(10, 7, 10, 2);
+      coin(13, 7, 10, 3);
+      coin(12, 9, 10, 4);
+      coin(7, 12, 10, 5);
+      coin(10, 12, 10, 6);
+      coin(13, 13, 10, 7);
+      coin(16, 14, 10, 8);
+      coin(15, 12, 10, 9);
+      coin(16, 7, 10, 10);
+
+      lineg(7, 6, 0, 9);
+      lineg(7, 6, 4, 0);
+      lineg(13, 6, 4, 0);
+      lineg(17, 6, 0, 9);
+      lineg(7, 15, 4, 0);
+      lineg(13, 15, 4, 0);
+      lineg(11, 6, 0, 1);
+      lineg(11, 8, 0, 5);
+      lineg(14, 9, 0, 5);
+      lineg(11, 14, 0, 1);
+      lineg(13, 14, 0, 1);
+      lineg(11, 14, 2, 0);
+      lineg(11, 8, 2, 0);
+      lineg(11, 7, 2, 0);
+      lineg(14, 8, 2, 0);
+      lineg(14, 9, 2, 0);
+      lineg(14, 14, 2, 0);
+      lineg(8, 14, 2, 0);
+      lineg(8, 13, 2, 0);
+      lineg(8, 12, 2, 0);
+      lineg(8, 10, 2, 0);
+      lineg(8, 9, 2, 0);
+      lineg(8, 8, 1, 0);
+      lineg(9, 7, 0, 1);
+      lineg(10, 7, 0, 2);
+      lineg(9, 7, 1, 0);
+      lineg(8, 8, 0, 1);
+      lineg(8, 10, 0, 2);
+      lineg(8, 13, 0, 1);
+      lineg(10, 10, 0, 2);
+      lineg(10, 13, 0, 1);
+      lineg(13, 6, 0, 1);
+      lineg(11, 13, 2, 0);
+      lineg(13, 10, 0, 3);
+      lineg(13, 8, 0, 1);
+      lineg(12, 9, 0, 1);
+      lineg(12, 9, 1, 0);
+      lineg(12, 10, 1, 0);
+      lineg(15, 12, 0, 1);
+      lineg(15, 12, 1, 0);
+      lineg(15, 13, 1, 0);
+      lineg(16, 9, 0, 3);
+      lineg(16, 13, 0, 1);
+      lineg(16, 7, 0, 1);
+      lineg(14, 7, 0, 1);
+      lineg(14, 7, 2, 0);
+
+      er.render();
+      er.normal();
+      er2.render();
+      er2.normal();
+      er3.render();
+      er3.normal();
+      er4.render();
+      er4.normal();
+      er5.render();
+      er5.normal();
+      er6.render();
+      er6.normal();
+      er7.render();
+      er7.inverted();
+
+      p.movement();
+      p.collision();
+      p.render();
+    }
+  } else if (l == 9) {
+    if (!setup) {
+      setup = true;
+    } else {
+      background(0, 187, 255);
     }
   } else {
     background(0);
