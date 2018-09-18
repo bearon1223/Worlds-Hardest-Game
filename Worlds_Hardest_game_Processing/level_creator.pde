@@ -219,25 +219,25 @@ class levelEdit {
     } else if (bt == 6) {
       if (emnpc == 0) {
         strokeWeight(2);
-        pointg(mouseX / 25, mouseY / 25);
+        pointg(mouseX / 25 + 0.5, mouseY / 25 + 0.5);
       } else if (emnpc == 1) {
         noStroke();
         fill(0, 0, 255);
         ellipse(enemyStartx[cclicked5] * 25, enemyStarty[cclicked5] * 25, 15, 15);
         strokeWeight(2);
         stroke(0);
-        pointg(mouseX / 25, enemyStarty[cclicked5]);
+        pointg(mouseX / 25 + 0.5, enemyStarty[cclicked5]);
       }
 
       if (emnpc == 0 && !pressed && mousePressed) {
         cclicked5++;
 
-        enemyStartx[cclicked5] = mouseX / 25;
-        enemyStarty[cclicked5] = mouseY / 25;
+        enemyStartx[cclicked5] = mouseX / 25 + 0.5;
+        enemyStarty[cclicked5] = mouseY / 25 + 0.5;
         pressed = true;
         emnpc = 1;
       } else if (emnpc == 1 && !pressed && mousePressed) {
-        enemyEndx[cclicked5] = mouseX / 25;
+        enemyEndx[cclicked5] = mouseX / 25 + 0.5;
         pressed = true;
         emnpc = 0;
       } else if (pressed && !mousePressed) {
@@ -246,25 +246,25 @@ class levelEdit {
     } else if (bt == 7) {
       if (emnpc == 0) {
         strokeWeight(2);
-        pointg(mouseX / 25, mouseY / 25);
+        pointg(mouseX / 25 + 0.5, mouseY / 25 + 0.5);
       } else if (emnpc == 1) {
         noStroke();
         fill(0, 0, 255);
         ellipse(enemyStartx2[cclicked6] * 25, enemyStarty2[cclicked6] * 25, 15, 15);
         strokeWeight(2);
         stroke(0);
-        pointg(mouseX / 25, enemyStarty2[cclicked6]);
+        pointg(mouseX / 25 + 0.5, enemyStarty2[cclicked6]);
       }
 
       if (emnpc == 0 && !pressed && mousePressed) {
         cclicked6++;
 
-        enemyStartx2[cclicked6] = mouseX / 25;
-        enemyStarty2[cclicked6] = mouseY / 25;
+        enemyStartx2[cclicked6] = mouseX / 25 + 0.5;
+        enemyStarty2[cclicked6] = mouseY / 25 + 0.5;
         pressed = true;
         emnpc = 1;
       } else if (emnpc == 1 && !pressed && mousePressed) {
-        enemyEndx2[cclicked6] = mouseX / 25;
+        enemyEndx2[cclicked6] = mouseX / 25 + 0.5;
         pressed = true;
         emnpc = 0;
       } else if (pressed && !mousePressed) {
