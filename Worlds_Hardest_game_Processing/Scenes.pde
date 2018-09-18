@@ -28,21 +28,10 @@ void Scene() {
       scene = 0;
     }
   }
-  if (scene == -10) {
-    background(0, 187, 255);
-    text("Loading...", 300, 300);
-    if (!mousePressed) {
-      scene = 1;
-    }
-  }
 
   if (scene == -1) {
     background(0, 187, 255);
     shop();
-  }
-
-  if (scene == 178435) {
-    scene = 0;
   }
 
   if (scene == -343) {
@@ -61,15 +50,19 @@ void Scene() {
 
   if (scene == -342) {
     background(0, 187, 255);
+    textFont(times);
     menuButton("English", 10, 30, 0, 0);
     menuButton("français", 10, 90, 0, 1);
     menuButton("Pirates Speak", 10, 150, 50, 2);
+    textFont(SL);
+    menuButton("日本国", 10, 210, 50, 3);
+    menuButton("中文", 10, 270, 50, 4);
     sceneButton(returnt, 600 - 210, 600 - 60, -343, returns);
   }
 
   if (scene == 0) {
     level1(true);
-    sceneButtonc(lsb, 300, 260, -10, lsbs);
+    sceneButtonc(lsb, 300, 260, 1, lsbs);
     sceneButtonr(startbutton, 300, 200, 2, startbuttons);
     sceneButtonc(menu, 300, 380 + 60, -343, menus);
 

@@ -1,15 +1,15 @@
 World’s Hardest Game
 
 Play
--70
+-80
 Level Editor
 35
 Exit
 0
 Level Select
-20
+15
 Shop
--70
+-80
 Level 
 
 Fail Count: 
@@ -21,12 +21,12 @@ Skip Next Level
 Warning: Will Reset Progress
 0
 Settings
-20
+0
 Show Grid
-25
+0
 Show Coin’s number
-190
+130
 Languages
-25
+0
 Return
 20

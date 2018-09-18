@@ -5,11 +5,11 @@ Jouer
 Éditeur de niveau
 120
 Sortie
--50
+-60
 Niveau Select
-45
+30
 Boutique
--20
+-25
 Niveau 
 
 Échouer: 
@@ -17,16 +17,16 @@ Niveau
 Pièces de monnaie: 
 
 Passer le niveau suivant
-250
+160
 Attention: réinitialisera la progression
-40
+10
 Paramètres
-20
+0
 Afficher la grille
-120
+70
 Facile
 -70
 Langues
--30
+-20
 Revenir
 -30

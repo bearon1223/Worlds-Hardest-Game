@@ -1,12 +1,20 @@
+import processing.sound.*;
+SoundFile music;
+
 float fail = 0, wins = 0, levels = 0;
 float psx, psy;
+PFont times;
+PFont SL;
+
 String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu, gridboolt, est, lbt, returnt;
 float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns;
-boolean gb = false, es = false, ch = true;
+boolean gb = false, es = false, ch = true, mute = true;
 static final String CONFIG_FILE = "config.dat";
 static final String US_LANGUAGE_FILE = "us.lang";
 static final String FR_LANGUAGE_FILE = "fr.lang";
 static final String PS_LANGUAGE_FILE = "pirates_speek.lang";
+static final String JP_LANGUAGE_FILE = "jp.lang";
+static final String CH_LANGUAGE_FILE = "ch.lang";
 
 int coins = 100, wincount;
 
@@ -15,6 +23,10 @@ void setup() {
   surface.setTitle("The Worlds Hardest Game");
   load();
   loadlanguage(US_LANGUAGE_FILE);
+  //music = new SoundFile(this, "music.mp3");
+  //music.play();
+  times = createFont("times", 15);
+  SL = createFont("AlBayan-48", 15);
 }
 
 void load() {
@@ -24,6 +36,8 @@ void load() {
   fail = int(lines[2]);
   gb = boolean(lines[3]);
   es = boolean(lines[4]);
+  ch = boolean(lines[5]);
+  mute = boolean(lines[6]);
 }
 
 void loadlanguage(String Used) {
@@ -61,7 +75,7 @@ void loadlanguage(String Used) {
 
 void save() {
   String[] lines = {
-    str(coins), str(wins), str(fail), str(gb), str(es)
+    str(coins), str(wins), str(fail), str(gb), str(es), str(ch), str(mute)
   };
   saveStrings(dataFile(CONFIG_FILE), lines);
 }
@@ -70,12 +84,23 @@ void draw() {
   Scene();
   save();
   if (langtype == 0) {
+    textFont(times);
     loadlanguage(US_LANGUAGE_FILE);
   } else if (langtype == 1) {
+    textFont(times);
     loadlanguage(FR_LANGUAGE_FILE);
   } else if (langtype == 2) {
+    textFont(times);
     loadlanguage(PS_LANGUAGE_FILE);
+  } else if (langtype == 3) {
+    textFont(SL);
+    loadlanguage(JP_LANGUAGE_FILE);
+  } else if (langtype == 4) {
+    textFont(SL);
+    loadlanguage(CH_LANGUAGE_FILE);
   }
+  //textFont(test);
+  //text("だ", 10, 10);
 
   if (scene != 0 && scene != 32 && scene != -102 && scene != -103 && scene != -342) {
     fill(255);
