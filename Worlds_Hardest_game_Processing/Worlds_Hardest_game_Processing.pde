@@ -25,7 +25,7 @@ void setup() {
   loadlanguage(US_LANGUAGE_FILE);
   //music = new SoundFile(this, "music.mp3");
   //music.play();
-  times = createFont("times", 15);
+  times = createFont("TimesNewRomanPSMT-48", 15);
   SL = createFont("AlBayan-48", 15);
 }
 
