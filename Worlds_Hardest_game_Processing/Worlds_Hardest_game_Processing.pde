@@ -7,7 +7,7 @@ PFont times;
 PFont SL;
 
 String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu, gridboolt, est, lbt, returnt;
-float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns;
+float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns, titletexts;
 boolean gb = false, es = false, ch = true, mute = true;
 static final String CONFIG_FILE = "config.dat";
 static final String US_LANGUAGE_FILE = "us.lang";
@@ -43,6 +43,7 @@ void load() {
 void loadlanguage(String Used) {
   String[] lines = loadStrings(Used);
   titletext = lines[0];
+  titletexts = int(lines[1]);
   startbutton = lines[2];
   startbuttons = int(lines[3]);
   leveleb = lines[4];
