@@ -8,7 +8,7 @@ PFont SL;
 
 String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu, gridboolt, est, lbt, returnt;
 float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns, titletexts;
-boolean gb = false, es = false, ch = true, mute = true;
+boolean gb = false, es = false, ch = true, mute = true, isLevelEdit = false;
 static final String CONFIG_FILE = "config.dat";
 static final String US_LANGUAGE_FILE = "us.lang";
 static final String FR_LANGUAGE_FILE = "fr.lang";
@@ -20,13 +20,28 @@ int coins = 100, wincount;
 
 void setup() {
   size(600, 600);
+  times = createFont("Times-Roman-48", 15);
+  SL = createFont("AlBayan-48", 15);
   surface.setTitle("The Worlds Hardest Game");
   load();
-  loadlanguage(US_LANGUAGE_FILE);
+  if (langtype == 0) {
+    textFont(times);
+    loadlanguage(US_LANGUAGE_FILE);
+  } else if (langtype == 1) {
+    textFont(times);
+    loadlanguage(FR_LANGUAGE_FILE);
+  } else if (langtype == 2) {
+    textFont(times);
+    loadlanguage(PS_LANGUAGE_FILE);
+  } else if (langtype == 3) {
+    textFont(SL);
+    loadlanguage(JP_LANGUAGE_FILE);
+  } else if (langtype == 4) {
+    textFont(SL);
+    loadlanguage(CH_LANGUAGE_FILE);
+  }
   //music = new SoundFile(this, "music.mp3");
-  //music.play();
-  times = createFont("TimesNewRomanPSMT-48", 15);
-  SL = createFont("AlBayan-48", 15);
+  //music.play(); 
 }
 
 void load() {
@@ -38,6 +53,8 @@ void load() {
   es = boolean(lines[4]);
   ch = boolean(lines[5]);
   mute = boolean(lines[6]);
+  langtype = int(lines[7]);
+  isLevelEdit = boolean(lines[8]);
 }
 
 void loadlanguage(String Used) {
@@ -76,7 +93,7 @@ void loadlanguage(String Used) {
 
 void save() {
   String[] lines = {
-    str(coins), str(wins), str(fail), str(gb), str(es), str(ch), str(mute)
+    str(coins), str(wins), str(fail), str(gb), str(es), str(ch), str(mute), str(langtype), str(isLevelEdit)
   };
   saveStrings(dataFile(CONFIG_FILE), lines);
 }
@@ -113,6 +130,6 @@ void draw() {
     textAlign(CENTER, CORNER);
     text(ct + floor(coins), 300, 20);
 
-    sceneButton("Title Screen", 600 - 210, 600 - 60, 0, 20);
+    sceneButton(returnt, 600 - (190 + returns), 600 - 60, 0, returns);
   }
 }

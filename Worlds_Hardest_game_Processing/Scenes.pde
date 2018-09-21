@@ -57,7 +57,18 @@ void Scene() {
     textFont(SL);
     menuButton("日本国", 10, 210, 50, 3);
     menuButton("中文", 10, 270, 50, 4);
-    sceneButton(returnt, 600 - 210, 600 - 60, -343, returns);
+    if (langtype == 0) {
+    textFont(times);
+  } else if (langtype == 1) {
+    textFont(times);
+  } else if (langtype == 2) {
+    textFont(times);
+  } else if (langtype == 3) {
+    textFont(SL);
+  } else if (langtype == 4) {
+    textFont(SL);
+  }
+    sceneButton(returnt, 600 - (190 + returns), 600 - 60, -343, returns);
   }
 
   if (scene == 0) {
@@ -66,7 +77,7 @@ void Scene() {
     sceneButtonr(startbutton, 300, 200, 2, startbuttons);
     sceneButtonc(menu, 300, 380 + 60, -343, menus);
 
-    if (wins > 10) {
+    if (isLevelEdit) {
       sceneButtonc(leveleb, 300, 380, -101, levelebs);
     }
 

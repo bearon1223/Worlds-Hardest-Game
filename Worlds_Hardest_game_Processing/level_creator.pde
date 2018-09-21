@@ -5,9 +5,9 @@ void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   if (bt <= 7) {
     bt += constrain(e, min, max);
-  } else if(bt > 7) {
+  } else if (bt > 7) {
     bt = 0;
-  } else if(bt < 0){
+  } else if (bt < 0) {
     bt = 8;
   }
   if (bt == 0) {
@@ -81,7 +81,7 @@ class levelEdit {
       stroke(0);
       pointg(enemyEndx[i], enemyStarty[i]);
     }
-    
+
     for (int i = 0; i <= cclicked6; i++) {
       noStroke();
       fill(0, 0, 255);
@@ -98,13 +98,13 @@ class levelEdit {
     text("Block Type: " + btt, 10, 15);
 
     if (bt == 0) {
-      checkerboard2x2(mouseX / 50, mouseY / 50);
+      checkerboard2x2((mouseX / 25) - 1, (mouseY / 25) - 1);
 
       if (mousePressed && !pressed && mouseButton == LEFT) {
         clicked++;      
 
-        checkerboardLx[clicked] = mouseX / 50;
-        checkerboardLy[clicked] = mouseY / 50;
+        checkerboardLx[clicked] = (mouseX / 25) - 1;
+        checkerboardLy[clicked] = (mouseY / 25) - 1;
 
         pressed = true;
       } else if (pressed && !mousePressed) {
@@ -197,13 +197,13 @@ class levelEdit {
         pressed = false;
       }
     } else if (bt == 5) {
-      checkerboard1x1(mouseX / 25, mouseY / 25, false);
+      checkerboard1x1((mouseX / 25) - 1, (mouseY / 25) - 1, false);
 
       if (mousePressed && !pressed && mouseButton == LEFT) {
         cclicked4++;      
 
-        checkerboardx[clicked] = mouseX / 25;
-        checkerboardy[clicked] = mouseY / 25;
+        checkerboardx[clicked] = (mouseX / 25) - 1;
+        checkerboardy[clicked] = (mouseY / 25) - 1;
 
         pressed = true;
       } else if (pressed && !mousePressed) {

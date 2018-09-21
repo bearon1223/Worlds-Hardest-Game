@@ -573,17 +573,19 @@ void level(float l) {
   } else if (l == 6) {
     if (!setup) {
       setup = true;
-      p = new player(1.5, 5.5, 1);
-      r1 = new rotatingEnemys(6, 6, 2, 10, 30, true, 0);
-      r2 = new rotatingEnemys(12, 6, 2, 10, 30, true, 0);
-      r3 = new rotatingEnemys(18, 6, 2, 10, 30, true, 0);
-      r4 = new rotatingEnemys(6, 15, 2, 10, 30, true, 0);
-      r5 = new rotatingEnemys(12, 15, 2, 10, 30, true, 0);
-      r6 = new rotatingEnemys(18, 15, 2, 10, 30, true, 0);
+      p = new player(2.2, 7.2, 1);
+      
+      r1 = new rotatingEnemys(6, 6, 2, 15, 30, true, 0);
+      r2 = new rotatingEnemys(12, 6, 2, 15, 30, true, 0);
+      r3 = new rotatingEnemys(18, 6, 2, 15, 30, true, 0);
+      r4 = new rotatingEnemys(6, 15, 2, 15, 30, true, 0);
+      r5 = new rotatingEnemys(12, 15, 2, 15, 30, true, 0);
+      r6 = new rotatingEnemys(18, 15, 2, 15, 30, true, 0);
+      
       allowd = false;
     } else if (setup) {
       background(0, 187, 255);
-      checkpoint(1, 3, 2, 6);
+      checkpoint(1, 6, 2, 3);
       checkerboard2x2old(1, 2);
       checkerboard2x2old(2, 2);
       checkerboard2x2old(3, 2);
@@ -665,27 +667,47 @@ void level(float l) {
       checkerboard2x2old(10, 4);
       checkerboard2x1(18, 10, false);
       checkerboard2x2old(9, 4);
-      end(1, 12, 2, 6, allowd);
+      end(1, 12, 2, 3, allowd);
 
-      coin(16, 13, 3, 3);
-      coin(10, 13, 3, 2);
-      coin(4, 13, 3, 1);
+      checkerboard1x1(15, 10, true);
+      checkerboard1x1(9, 10, true);
+      checkerboard1x1(3, 10, true);
 
-      lineg(1, 3, 22, 0);
-      lineg(1, 12, 18, 0);
+      coin(16, 11, 3, 3);
+      coin(10, 11, 3, 2);
+      coin(4, 11, 3, 1);
+
+      lineg(3, 3, 20, 0);
+      lineg(1, 12, 3, 0);
+      lineg(5, 12, 5, 0);
+      lineg(11, 12, 5, 0);
+      lineg(17, 12, 2, 0);
+      lineg(4, 11, 1, 0);
+      lineg(10, 11, 1, 0);
+      lineg(16, 11, 1, 0);
+      lineg(4, 11, 0, 1);
+      lineg(10, 11, 0, 1);
+      lineg(16, 11, 0, 1);
+      lineg(5, 11, 0, 1);
+      lineg(11, 11, 0, 1);
+      lineg(17, 11, 0, 1);
       lineg(1, 9, 18, 0);
-      lineg(1, 18, 22, 0);
-      lineg(1, 3, 0, 6);
+      lineg(3, 18, 20, 0);
+      lineg(1, 6, 0, 3);
       lineg(23, 3, 0, 15);
-      lineg(1, 12, 0, 6);
+      lineg(1, 12, 0, 3);
       lineg(19, 9, 0, 3);
+      lineg(1, 15, 2, 0);
+      lineg(3, 15, 0, 3);
+      lineg(1, 6, 2, 0);
+      lineg(3, 3, 0, 3);
 
       r1.normal();
-      r2.normal();
+      r2.inverted();
       r3.normal();
-      r4.normal();
+      r4.inverted();
       r5.normal();
-      r6.normal();
+      r6.inverted();
 
       p.movement();
       p.collision();

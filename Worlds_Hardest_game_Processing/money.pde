@@ -6,13 +6,15 @@ void shopButton(String t, float x, float y, float ys, float cost, int action) {
   float w = 180 + ys;
   float h = 50;
   fill(96, 96, 96, 96);
-  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && coins >= cost) {
+  if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h && coins >= cost && (action == 2 && !isLevelEdit)) {
     fill(56, 56, 56, 146);
     if (mousePressed && !mp) {
       mp = true;
       coins -= cost;
       if (action == 1) {
         wins++;
+      } else if(action == 2){
+        isLevelEdit = true;
       }
     } else if(mp && !mousePressed){
       mp = false;
@@ -31,4 +33,5 @@ void shopButton(String t, float x, float y, float ys, float cost, int action) {
 
 void shop() {
   shopButton(sknb, 10, 100, sknbs, 50, 1);
+  shopButton(leveleb, 10, 160, levelebs, 150, 2);
 }
