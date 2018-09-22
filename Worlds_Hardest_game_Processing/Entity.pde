@@ -293,41 +293,41 @@ class rotatingEnemys {
 
 class enemyr {
   float x, y, sx, sy, s, size, xspeed = 0, yspeed = 0, original_speed, startx, starty;
-  enemyr(float stx, float sty, float sizex, float sizey, float speed) {
+  enemyr(float stx, float sty, float sizex, float sizey) {
     x = stx * 25;
     y = sty * 25;
     startx = stx * 25;
     starty = sty * 25;
     sx = sizex * 25;
     sy = sizey * 25;
-    s = speed;
+    s = 1;
     size = 15;
-    xspeed = speed;
+    xspeed = 1;
     yspeed = 0;
-    original_speed = speed;
+    original_speed = 1;
   }
 
-  enemyr(float stx, float sty, float sizex, float sizey, float speed, float startingx, float startingy, boolean down, boolean bottom, boolean up) {
+  enemyr(float stx, float sty, float sizex, float sizey, float startingx, float startingy, boolean down, boolean bottom, boolean up) {
     x = startingx * 25;
     y = startingy * 25;
     startx = stx * 25;
     starty = sty * 25;
     sx = sizex * 25;
     sy = sizey * 25;
-    s = speed;
+    s = 1;
     size = 15;
-    original_speed = speed;
+    original_speed = 1;
     if (down) {
       xspeed = 0;
-      yspeed = speed;
+      yspeed = 1;
     } else if (bottom) {
-      xspeed = -speed;
+      xspeed = -1;
       yspeed = 0;
     } else if (up) {
       xspeed = 0;
-      yspeed = -speed;
+      yspeed = -1;
     } else {
-      xspeed = speed;
+      xspeed = 1;
       yspeed = 0;
     }
   }

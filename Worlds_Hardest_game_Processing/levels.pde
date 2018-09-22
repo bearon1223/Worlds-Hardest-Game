@@ -16,20 +16,6 @@ enemyu eu11 = new enemyu(0, 0, 0, false, 0);
 enemyu eu12 = new enemyu(0, 0, 0, false, 0);
 enemyu eu13 = new enemyu(0, 0, 0, false, 0);
 
-enemyr er = new enemyr(1, 1, 5, 5, 1);
-enemyr er2 = new enemyr(1, 1, 5, 5, 1);
-enemyr er3 = new enemyr(1, 1, 5, 5, 1);
-enemyr er4 = new enemyr(1, 1, 5, 5, 1);
-enemyr er5 = new enemyr(1, 1, 5, 5, 1);
-enemyr er6 = new enemyr(1, 1, 5, 5, 1);
-enemyr er7 = new enemyr(1, 1, 5, 5, 1);
-enemyr er8 = new enemyr(1, 1, 5, 5, 1);
-enemyr er9 = new enemyr(1, 1, 5, 5, 1);
-enemyr er10 = new enemyr(1, 1, 5, 5, 1);
-enemyr er11 = new enemyr(1, 1, 5, 5, 1);
-enemyr er12 =  new enemyr(1, 1, 5, 5, 1);
-enemyr er13 = new enemyr(1, 1, 5, 5, 1);
-
 rotatingEnemys r1 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 rotatingEnemys r2 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 rotatingEnemys r3 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
@@ -820,18 +806,17 @@ void level(float l) {
       p = new player(12, 12, 0.8);
       psx = 12 * 25;
       psy = 12 * 25;
-      float speeed = 1;
-      er = new enemyr(10.5, 10.5, 3, 3, 1);
-      er2 = new enemyr(10.5, 10.5, 3, 3, speeed, 11.5, 10.5, false, false, false);
-      er3 = new enemyr(10.5, 10.5, 3, 3, speeed, 12.5, 10.5, false, false, false);
-      er4 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 10.5, false, false, false);
-      er5 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 11.5, true, false, false);
-      er6 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 12.5, true, false, false);
-      er7 = new enemyr(10.5, 10.5, 3, 3, speeed, 13.5, 13.5, true, false, false);
-      er8 = new enemyr(10.5, 10.5, 3, 3, speeed, 10.5, 13.5, false, true, false);
-      er9 = new enemyr(10.5, 10.5, 3, 3, speeed, 11.5, 13.5, false, true, false);
-      er10 = new enemyr(10.5, 10.5, 3, 3, speeed, 12.5, 13.5, false, true, false);
-      er11 = new enemyr(10.5, 10.5, 3, 3, speeed, 10.5, 12.5, false, false, true);
+      er = new enemyr(10.5, 10.5, 3, 3);
+      er2 = new enemyr(10.5, 10.5, 3, 3, 11.5, 10.5, false, false, false);
+      er3 = new enemyr(10.5, 10.5, 3, 3, 12.5, 10.5, false, false, false);
+      er4 = new enemyr(10.5, 10.5, 3, 3, 13.5, 10.5, false, false, false);
+      er5 = new enemyr(10.5, 10.5, 3, 3, 13.5, 11.5, true, false, false);
+      er6 = new enemyr(10.5, 10.5, 3, 3, 13.5, 12.5, true, false, false);
+      er7 = new enemyr(10.5, 10.5, 3, 3, 13.5, 13.5, true, false, false);
+      er8 = new enemyr(10.5, 10.5, 3, 3, 10.5, 13.5, false, true, false);
+      er9 = new enemyr(10.5, 10.5, 3, 3, 11.5, 13.5, false, true, false);
+      er10 = new enemyr(10.5, 10.5, 3, 3, 12.5, 13.5, false, true, false);
+      er11 = new enemyr(10.5, 10.5, 3, 3, 10.5, 12.5, false, false, true);
     } else {
       background(0, 187, 255);
 
@@ -886,13 +871,13 @@ void level(float l) {
   } else if (l == 8) {
     if (!setup) {
       p = new player(8.2, 7.2, 1);
-      er = new enemyr(7.5, 6.5, 3, 3, 1, 7.5, 6.5, false, false, false);
-      er2 = new enemyr(7.5, 9.5, 3, 3, 1, 7.5, 9.5, false, false, false);
-      er3 = new enemyr(7.5, 12.5, 3, 2, 1, 7.5, 12.5, false, false, false);
-      er4 = new enemyr(10.5, 7.5, 3, 6, 1, 10.5, 7.5, false, false, false);
-      er5 = new enemyr(13.5, 6.5, 3, 2, 1, 13.5, 6.5, false, false, false);
-      er6 = new enemyr(13.5, 8.5, 3, 6, 1, 13.5, 8.5, false, false, false);
-      er7 = new enemyr(13.5, 8.5, 3, 6, 1, 16.5, 14.5, false, false, true);
+      er = new enemyr(7.5, 6.5, 3, 3, 7.5, 6.5, false, false, false);
+      er2 = new enemyr(7.5, 9.5, 3, 3, 7.5, 9.5, false, false, false);
+      er3 = new enemyr(7.5, 12.5, 3, 2, 7.5, 12.5, false, false, false);
+      er4 = new enemyr(10.5, 7.5, 3, 6, 10.5, 7.5, false, false, false);
+      er5 = new enemyr(13.5, 6.5, 3, 2, 13.5, 6.5, false, false, false);
+      er6 = new enemyr(13.5, 8.5, 3, 6, 13.5, 8.5, false, false, false);
+      er7 = new enemyr(13.5, 8.5, 3, 6, 16.5, 14.5, false, false, true);
       psx = 8.2 * 25;
       psy = 7.2 * 25;
       setup = true;
@@ -1008,9 +993,104 @@ void level(float l) {
     }
   } else if (l == 9) {
     if (!setup) {
+      p = new player(11, 11, 0.9);
+      er = new enemyr(8.5, 8.5, 7, 6);
+      er2 = new enemyr(8.5, 8.5, 7, 6, 9.5, 8.5, false, false, false);
+      er3 = new enemyr(8.5, 8.5, 7, 6, 10.5, 8.5, false, false, false);
+      er4 = new enemyr(8.5, 8.5, 7, 6, 11.5, 8.5, false, false, false);
+      er5 = new enemyr(8.5, 8.5, 7, 6, 12.5, 8.5, false, false, false);
+      er6 = new enemyr(8.5, 8.5, 7, 6, 13.5, 8.5, false, false, false);
+      er7 = new enemyr(8.5, 8.5, 7, 6, 14.5, 8.5, false, false, false);
+      er8 = new enemyr(8.5, 8.5, 7, 6, 15.5, 8.5, false, false, false);
+      er9 = new enemyr(8.5, 8.5, 7, 6, 8.5, 9.5, false, false, true);
+      er10 = new enemyr(8.5, 8.5, 7, 6, 15.5, 9.5, true, false, false);
+      er17 = new enemyr(8.5, 8.5, 7, 6, 8.5, 13.5, false, false, true);
+      er18 = new enemyr(8.5, 8.5, 7, 6, 15.5, 13.5, true, false, false);
+      
+      er11 = new enemyr(8.5, 8.5, 7, 6, 10.5, 14.5, false, true, true);
+      er12 = new enemyr(8.5, 8.5, 7, 6, 11.5, 14.5, false, true, false);
+      er13 = new enemyr(8.5, 8.5, 7, 6, 12.5, 14.5, false, true, false);
+      er14 = new enemyr(8.5, 8.5, 7, 6, 13.5, 14.5, false, true, false);
+      er15 = new enemyr(8.5, 8.5, 7, 6, 14.5, 14.5, false, true, false);
+      er16 = new enemyr(8.5, 8.5, 7, 6, 15.5, 14.5, false, true, false);
+      
+      er19 = new enemyr(8.5, 8.5, 7, 6, 8.5, 14.5, false, false, true);
+      er20 = new enemyr(8.5, 8.5, 7, 6, 9.5, 14.5, false, true, false);
       setup = true;
     } else {
       background(0, 187, 255);
+      end(10, 10, 4, 3, allowd);
+      checkerboard2x1(7, 10, false);
+      checkerboard2x1(13, 10, false);
+      checkerboard2x1(7, 7, true);
+      checkerboard2x1(9, 7, true);
+      checkerboard2x1(11, 7, true);
+      checkerboard2x1(13, 7, true);
+      
+      checkerboard2x1(7, 13, true);
+      checkerboard2x1(9, 13, true);
+      checkerboard2x1(11, 13, true);
+      checkerboard2x1(13, 13, true);
+      
+      checkerboard1x2(7, 8, false);
+      checkerboard1x2(7, 11, true);
+      checkerboard1x2(14, 8, true);
+      checkerboard1x2(14, 11, false);
+      
+      er.normal();
+      er.render();
+      er2.normal();
+      er2.render();
+      er3.normal();
+      er3.render();
+      er4.normal();
+      er4.render();
+      er5.normal();
+      er5.render();
+      er6.normal();
+      er6.render();
+      er7.normal();
+      er7.render();
+      er8.normal();
+      er8.render();
+      er9.normal();
+      er9.render();
+      er10.normal();
+      er10.render();
+      er11.normal();
+      er11.render();
+      er12.normal();
+      er12.render();
+      er13.normal();
+      er13.render();
+      er14.normal();
+      er14.render();
+      er15.normal();
+      er15.render();
+      er16.normal();
+      er16.render();
+      er17.normal();
+      er17.render();
+      er18.normal();
+      er18.render();
+      er19.normal();
+      er19.render();
+      er20.normal();
+      er20.render();
+      
+      checkerboard1x1(15, 7, true);
+      checkerboard1x1(9, 6, false);
+      checkerboard1x1(12, 14, true);
+      checkerboard1x1(6, 13, false);
+      
+      coin(16, 8, 4, 2);
+      coin(10, 7, 4, 1);
+      coin(13, 15, 4, 3);
+      coin(7, 14, 4, 4);
+      
+      p.collision();
+      p.movement();
+      p.render();
     }
   } else {
     background(0);

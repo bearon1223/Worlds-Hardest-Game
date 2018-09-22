@@ -4,6 +4,14 @@ float coinsCollectedC = 0;
 float langtype = 0;
 boolean allowedcoin = false;
 
+boolean mouseInside(float x, float y, float w, float h){
+  if(mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 void pixel(float x, float y, color c) {
   fill(c);
   rect(x * 25, y * 25, 25, 25);
