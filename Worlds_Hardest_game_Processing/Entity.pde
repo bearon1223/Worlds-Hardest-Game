@@ -1,4 +1,3 @@
-
 class player {
   float x, y, s, sx, sy, sxs, sys, timer = 0;
   player(float x, float y, float s) {

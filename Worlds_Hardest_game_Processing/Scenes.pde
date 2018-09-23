@@ -12,6 +12,14 @@ void Scene() {
     }
   } else if (scene == -102) {
     l.creator();
+    if (gb) {
+      for (int i = 0; i <= width; i+= 25) {
+        stroke(1);
+        strokeWeight(1);
+        line(0, i, width, i);
+        line(i, 0, i, height);
+      }
+    }
     timer = 0;
   } else if (scene == -104) {
     l.playLevel();

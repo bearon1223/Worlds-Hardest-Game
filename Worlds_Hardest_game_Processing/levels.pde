@@ -1088,8 +1088,42 @@ void level(float l) {
       coin(13, 15, 4, 3);
       coin(7, 14, 4, 4);
       
-      p.collision();
+      lineg(8, 8, 0, 6);
+      lineg(8, 8, 2, 0);
+      lineg(11, 8, 6, 0);
+      lineg(10, 7, 1, 0);
+      lineg(10, 7, 0, 1);
+      lineg(17, 8, 0, 1);
+      lineg(11, 7, 0, 1);
+      lineg(16, 9, 0, 6);
+      lineg(16, 9, 1, 0);
+      lineg(14, 15, 2, 0);
+      lineg(14, 15, 0, 1);
+      lineg(13, 16, 1, 0);
+      lineg(7, 15, 6, 0);
+      lineg(13, 15, 0, 1);
+      lineg(7, 14, 0, 1);
+      lineg(7, 14, 1, 0);
+      lineg(9, 9, 6, 0);
+      lineg(9, 14, 6, 0);
+      lineg(9, 9, 0, 2);
+      lineg(9, 12, 0, 2);
+      lineg(15, 9, 0, 2);
+      lineg(15, 12, 0, 2);
+      lineg(9, 12, 1, 0);
+      lineg(9, 11, 1, 0);
+      lineg(14, 12, 1, 0);
+      lineg(14, 11, 1, 0);
+      lineg(10, 10, 4, 0);
+      lineg(10, 13, 4, 0);
+      
+      lineg(10, 10, 0, 1);
+      lineg(10, 12, 0, 1);
+      lineg(14, 10, 0, 1);
+      lineg(14, 12, 0, 1);
+      
       p.movement();
+      p.collision();
       p.render();
     }
   } else {
