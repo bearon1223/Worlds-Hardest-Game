@@ -8,6 +8,7 @@ PFont SL;
 
 String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu, gridboolt, est, lbt, returnt;
 float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns, titletexts;
+
 boolean gb = false, es = false, ch = true, mute = true, isLevelEdit = false;
 static final String CONFIG_FILE = "config.dat";
 static final String US_LANGUAGE_FILE = "us.lang";
@@ -100,7 +101,6 @@ void save() {
 
 void draw() {
   Scene();
-  //surface.setTitle(str(millis() / 1000));
   if (second() == 1 || second() == 30 || second() == 15 || second() == 30 + 15) {
     save();
   }
@@ -120,8 +120,6 @@ void draw() {
     textFont(SL);
     loadlanguage(CH_LANGUAGE_FILE);
   }
-  //textFont(test);
-  //text("だ", 10, 10);
 
   if (scene != 0 && scene != 32 && scene != -102 && scene != -103 && scene != -342) {
     fill(255);

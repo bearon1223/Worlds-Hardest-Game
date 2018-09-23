@@ -309,6 +309,7 @@ void sceneButtonr(String t, float x, float y, int i, float ys) {
       wins = 0;
       coins = 100;
       allowd = false;
+      
     }
   } 
   strokeWeight(1);
