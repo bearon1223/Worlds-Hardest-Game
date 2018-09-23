@@ -339,6 +339,7 @@ class levelEdit {
       for (int i = 0; i <= cclicked4; i++) {
         checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
       }
+      //autoBorder();
 
       e.move();
       e.render();

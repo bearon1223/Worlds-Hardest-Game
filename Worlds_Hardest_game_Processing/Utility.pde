@@ -71,7 +71,7 @@ void autoBorder() {
     if (k == color(255) || k == color(240) || k == color(0, 255, 119) || k == color(0, 254, 119)) {
       fill(0);
       stroke(0);
-      ellipse(0, 0, 10, 10);
+      ellipse(t, u, 1, 1);
     }
     if (t >= width) {
       t = 0;
@@ -79,6 +79,7 @@ void autoBorder() {
     }
     t++;
   }
+  u = 0;
 }
 
 void checkpoint(float x, float y, float  sx, float sy) {
