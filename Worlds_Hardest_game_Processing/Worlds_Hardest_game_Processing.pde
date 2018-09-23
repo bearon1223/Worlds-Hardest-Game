@@ -41,7 +41,7 @@ void setup() {
     loadlanguage(CH_LANGUAGE_FILE);
   }
   //music = new SoundFile(this, "music.mp3");
-  //music.play(); 
+  //music.play();
 }
 
 void load() {
@@ -100,7 +100,10 @@ void save() {
 
 void draw() {
   Scene();
-  save();
+  //surface.setTitle(str(millis() / 1000));
+  if (second() == 1 || second() == 30 || second() == 15 || second() == 30 + 15) {
+    save();
+  }
   if (langtype == 0) {
     textFont(times);
     loadlanguage(US_LANGUAGE_FILE);
