@@ -221,11 +221,11 @@ class enemyu {
 }
 
 class rotatingEnemys {
-  int x, y, amount, speed, spacing, isCenter;
+  private int x, y, amount, speed, spacing, isCenter;
   boolean cross;
 
-  float rotatary_dude;
-  float rotatary_dudei;
+  private float rotatary_dude;
+  private float rotatary_dudei;
 
   rotatingEnemys(int xd, int yd, int amountd, int speedd, int spacingd, boolean crossd, int isCenterd) {
     x = xd;
