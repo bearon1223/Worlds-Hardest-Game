@@ -38,8 +38,12 @@ class player {
     color a2 = get(int(this.x + 15), int(this.y));
     color a3 = get(int(this.x + 15), int(this.y + 15));
     color a4 = get(int(this.x), int(this.y + 15));
+    color a5 = get(int(this.x + (15 / 2)), int(this.y));
+    color a6 = get(int(this.x + 15), int(this.y + (15 / 2)));
+    color a7 = get(int(this.x + (15 / 2)), int(this.y + 15));
+    color a8 = get(int(this.x), int(this.y  + (15 / 2)));
 
-    if ((a1 == color(0, 0, 255) || a2 == color(0, 0, 255) || a3 == color(0, 0, 255) || a4 == color(0, 0, 255))) {
+    if ((a1 == color(0, 0, 255) || a2 == color(0, 0, 255) || a3 == color(0, 0, 255) || a4 == color(0, 0, 255)) || (a5 == color(0, 0, 255) || a6 == color(0, 0, 255) || a7 == color(0, 0, 255) || a8 == color(0, 0, 255))) {
       this.x = psx;
       this.y = psy;
       fail++;
@@ -49,7 +53,7 @@ class player {
       }
     }
 
-    if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119)) {
+    if (a3 == color(0, 255, 119) || a2 == color(0, 255, 119) || a4 == color(0, 255, 119) || a1 == color(0, 255, 119)) {
       psx = this.x;
       psy = this.y;
       coinsCollectedC = coinsCollected;
@@ -57,7 +61,7 @@ class player {
         allowed = true;
       }
     }
-    if (a3 == color(0, 253, 119) || a2 == color(0, 253, 119)) {
+    if (a3 == color(0, 253, 119) || a2 == color(0, 253, 119) || a1 == color(0, 253, 119) || a4 == color(0, 253, 119)) {
       coinsCollectedC = coinsCollected;
       if (allowd) {
         allowed = true;

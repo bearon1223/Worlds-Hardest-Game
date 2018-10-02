@@ -23,29 +23,6 @@ rotatingEnemys r4 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 rotatingEnemys r5 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 rotatingEnemys r6 = new rotatingEnemys(0, 0, 0, 0, 0, false, 0);
 
-/*
- checkpoint(2, 11, 3, 2);
- checkerboard2x2old(2, 5);
- checkerboard2x2old(3, 5);
- checkerboard2x2old(4, 5);
- checkerboard2x2old(5, 5);
- checkerboard2x2old(6, 5);
- checkerboard2x2old(7, 5);
- checkerboard2x2old(2, 4);
- checkerboard2x2old(3, 4);
- checkerboard2x2old(4, 4);
- checkerboard2x2old(5, 4);
- checkerboard2x2old(6, 4);
- checkerboard2x2old(7, 4);
- checkerboard2x2old(2, 6);
- checkerboard2x2old(3, 6);
- checkerboard2x2old(4, 6);
- checkerboard2x2old(5, 6);
- checkerboard2x2old(6, 6);
- checkerboard2x2old(7, 6);
- end(17, 11, 3, 2, allowd);
- */
-
 
 void level1(boolean display) {
   if (!setup) {
@@ -320,7 +297,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  } else  if (l == 4) {
+  } else  if (l == -4) {
     if (!setup) {
       p = new player(12, 2, 1);
       coinsCollected = 0;
@@ -991,7 +968,7 @@ void level(float l) {
       p.collision();
       p.render();
     }
-  } else if (l == 9) {
+  } else if (l == 4) {
     if (!setup) {
       p = new player(11, 11, 0.9);
       er = new enemyr(8.5, 8.5, 7, 6);
