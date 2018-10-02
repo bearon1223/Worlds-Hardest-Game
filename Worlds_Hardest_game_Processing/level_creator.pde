@@ -324,16 +324,15 @@ class levelEdit {
         checkerboard2x2(checkerboardLx[i], checkerboardLy[i]);
       }
 
-      for (int i = 0; i <= cclicked2; i++) {
-        end(endx[i], endy[i], endsx[i], endsy[i], allowd);
-      }
-
       for (int i = 0; i <= cclicked; i++) {
         checkpoint(checkpointx[i], checkpointy[i], checkpointsx[i], checkpointsy[i]);
       }
 
       for (int i = 0; i <= cclicked4; i++) {
         checkerboard1x1(checkerboardx[i], checkerboardy[i], false);
+      }
+       for (int i = 0; i <= cclicked2; i++) {
+        end(endx[i], endy[i], endsx[i], endsy[i], allowd);
       }
       
       for (int i = 0; i <= cclicked3; i++) {
