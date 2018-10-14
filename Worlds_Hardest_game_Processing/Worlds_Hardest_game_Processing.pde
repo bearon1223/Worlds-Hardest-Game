@@ -9,7 +9,7 @@ PFont SL;
 String titletext, startbutton, leveleb, exitb, lsb, shopb, lt, ft, let, ct, sknb, wrn, menu, gridboolt, est, lbt, returnt;
 float startbuttons, levelebs, exitbs, lsbs, shopbs, sknbs, menus, wrns, gridbools, ess, lbs, returns, titletexts;
 
-boolean gb = false, es = false, ch = true, mute = true, isLevelEdit = false;
+boolean gb = false, es = false, ch = true, mute = true, isLevelEdit = false, langpressed = false;
 static final String CONFIG_FILE = "config.dat";
 static final String US_LANGUAGE_FILE = "us.lang";
 static final String FR_LANGUAGE_FILE = "fr.lang";
@@ -119,6 +119,9 @@ void draw() {
   } else if (langtype == 4) {
     textFont(SL);
     loadlanguage(CH_LANGUAGE_FILE);
+  }
+  if(langpressed){
+  surface.setTitle(titletext);
   }
 
   if (scene != 0 && scene != 32 && scene != -102 && scene != -103 && scene != -342) {

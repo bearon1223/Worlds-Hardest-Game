@@ -129,8 +129,11 @@ void menuButton(String t, float x, float y, float ys, float action) {
   fill(96, 96, 96, 96);
   if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) {
     fill(56, 56, 56, 146);
-    if (mousePressed) {
+    if (mousePressed && !langpressed) {
       langtype = action;
+      langpressed = true;
+    } else if(!mousePressed && langpressed){
+      langpressed = false;
     }
   } 
   strokeWeight(1);
