@@ -1103,6 +1103,12 @@ void level(float l) {
       p.collision();
       p.render();
     }
+  } else if(l==9){
+  if(!setup){
+    setup = true;
+  } else {
+    background(0, 187, 255);
+  }
   } else {
     background(0);
     fill(255);
