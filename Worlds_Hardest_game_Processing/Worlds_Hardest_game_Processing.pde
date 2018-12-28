@@ -1,6 +1,3 @@
-import processing.sound.*;
-SoundFile music;
-
 float fail = 0, wins = 0, levels = 0;
 float psx, psy;
 PFont times;
